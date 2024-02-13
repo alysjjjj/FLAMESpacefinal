@@ -7,7 +7,7 @@ import android.os.Bundle
 import android.widget.ImageView
 import com.example.flamespace.R.id.btn1
 
-class Room : AppCompatActivity() {
+class Ptc_room : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

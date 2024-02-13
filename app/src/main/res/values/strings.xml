@@ -13,4 +13,10 @@
     <string name="todoo">TODO</string>
     <string name="todooo">TODO</string>
     <string name="todo1">TODO</string>
+    <string name="be">BE</string>
+    <string name="cahs">CAHS</string>
+    <string name="building">BUILDING</string>
+    <string name="nh">NH</string>
+    <string name="ptc">PTC</string>
+    <string name="ptc_rooms">PTC ROOMS</string>
 </resources>

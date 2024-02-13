@@ -7,109 +7,261 @@
     android:background="#F9FFF2"
     tools:context=".Home">
 
+
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="197dp"
-        android:layout_height="163dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="56dp"
+        android:layout_width="204dp"
+        android:layout_height="133dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/h" />
+        app:srcCompat="@drawable/logo" />
 
     <ImageView
         android:id="@+id/profile"
-        android:layout_width="71dp"
-        android:layout_height="66dp"
+        android:layout_width="55dp"
+        android:layout_height="54dp"
         android:layout_marginTop="96dp"
         android:layout_marginEnd="36dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/baseline_account_circle_24" />
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="139dp"
-        android:layout_height="58dp"
-        android:layout_marginTop="44dp"
-        android:text="Buildings"
-        android:backgroundTint="#697B54"
-        app:layout_constraintEnd_toStartOf="@+id/button5"
-        app:layout_constraintHorizontal_bias="0.753"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="139dp"
-        android:layout_height="58dp"
-        android:layout_marginEnd="56dp"
-        android:backgroundTint="#A6A6A6"
-        android:text="Map"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="263dp"
-        tools:ignore="MissingConstraints" />
-
 
     <androidx.cardview.widget.CardView
-        android:layout_width="107dp"
-        android:layout_height="130dp"
-        android:layout_marginStart="16dp"
+        android:id="@+id/cardView2"
+        android:layout_width="98dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
         android:backgroundTint="#697B54"
         app:cardCornerRadius="15dp"
-        app:layout_constraintEnd_toStartOf="@+id/cardView"
-        app:layout_constraintHorizontal_bias="0.275"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="332dp">
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        tools:ignore="MissingConstraints">
 
         <ImageView
             android:id="@+id/cite"
-            android:layout_width="107dp"
-            android:layout_height="90dp"
+            android:layout_width="121dp"
+            android:layout_height="114dp"
             android:layout_marginEnd="36dp"
+            android:contentDescription="TODO"
             android:paddingTop="10dp"
-            app:srcCompat="@drawable/cite" />
+            android:paddingEnd="23dp"
+            app:srcCompat="@drawable/ptc"
+            tools:ignore="RtlSymmetry" />
     </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/ptc"
+        android:layout_width="95dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#697B54"
+        android:text="@string/ptc"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="107dp"
-        android:layout_height="130dp"
+        android:layout_width="98dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
         android:backgroundTint="#697B54"
         app:cardCornerRadius="15dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.468"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="332dp">
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        tools:ignore="MissingConstraints">
 
         <ImageView
             android:id="@+id/cma"
-            android:layout_width="107dp"
-            android:layout_height="90dp"
+            android:layout_width="121dp"
+            android:layout_height="114dp"
             android:layout_marginEnd="36dp"
+            android:contentDescription="TODO"
             android:paddingTop="10dp"
+            android:paddingEnd="23dp"
             app:srcCompat="@drawable/cma" />
     </androidx.cardview.widget.CardView>
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="95dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#697B54"
+        android:text="CMA"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
     <androidx.cardview.widget.CardView
-        android:layout_width="107dp"
-        android:layout_height="130dp"
-        android:layout_marginEnd="28dp"
+        android:id="@+id/cardView3"
+        android:layout_width="98dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="20dp"
         android:backgroundTint="#697B54"
         app:cardCornerRadius="15dp"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="332dp">
+        app:layout_constraintTop_toBottomOf="@+id/textView6">
+
 
         <ImageView
-            android:id="@+id/cea"
-            android:layout_width="107dp"
-            android:layout_height="90dp"
+            android:id="@+id/cma"
+            android:layout_width="121dp"
+            android:layout_height="114dp"
             android:layout_marginEnd="36dp"
+            android:contentDescription="TODO"
             android:paddingTop="10dp"
-            app:srcCompat="@drawable/cea" />
+            android:paddingEnd="23dp"
+            app:srcCompat="@drawable/mba"
+            tools:ignore="DuplicateIds" />
     </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/button33"
+        android:layout_width="95dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#697B54"
+        android:text="MBA"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView4"
+        android:layout_width="98dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="20dp"
+        android:backgroundTint="#697B54"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toStartOf="@+id/cardView5"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="468dp">
+
+        <ImageView
+            android:id="@+id/c"
+            android:layout_width="121dp"
+            android:layout_height="114dp"
+            android:contentDescription="TODO"
+            android:paddingTop="10dp"
+            android:paddingEnd="23dp"
+            app:srcCompat="@drawable/nh" />
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="95dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#697B54"
+        android:text="@string/nh"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView4" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView5"
+        android:layout_width="98dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#697B54"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/cc"
+            android:layout_width="121dp"
+            android:layout_height="114dp"
+            android:layout_marginEnd="36dp"
+            android:contentDescription="TODO"
+            android:paddingTop="10dp"
+            android:paddingEnd="23dp"
+            app:srcCompat="@drawable/cahs"
+            tools:layout_editor_absoluteY="486dp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="95dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#697B54"
+        android:text="@string/cahs"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView5" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView6"
+        android:layout_width="98dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#697B54"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button33"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/cx"
+            android:layout_width="121dp"
+            android:layout_height="114dp"
+            android:layout_marginEnd="36dp"
+            android:contentDescription="TODO"
+            android:paddingTop="10dp"
+            android:paddingEnd="23dp"
+            app:srcCompat="@drawable/be" />
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="95dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#697B54"
+        android:text="@string/be"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.91"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView6" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/archivo_black"
+        android:text="@string/building"
+        android:textColor="#697B54"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

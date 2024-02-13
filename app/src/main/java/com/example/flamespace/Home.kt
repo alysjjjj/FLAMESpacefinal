@@ -8,22 +8,25 @@ import android.widget.Button
 import android.widget.ImageView
 import com.example.flamespace.R.id.cite
 import com.example.flamespace.R.id.profile
+import com.example.flamespace.R.id.ptc
 
 class Home : AppCompatActivity() {
-    @SuppressLint("WrongViewCast", "MissingInflatedId")
+    @SuppressLint( "MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        val buttonClick = findViewById<Button>(profile)
-        buttonClick.setOnClickListener {
-            val int= Intent(this, Profile::class.java)
-            startActivity(int)
+
+
+        val button = findViewById<Button>(ptc)
+        button.setOnClickListener {
+            val intent = Intent(this, Ptc_room::class.java)
+            startActivity(intent)
         }
 
-        val button = findViewById<ImageView>(cite)
-        button.setOnClickListener {
-            val intent = Intent(this, Room::class.java)
+        val btn = findViewById<ImageView>(profile)
+        btn.setOnClickListener {
+            val intent = Intent(this, Profile::class.java)
             startActivity(intent)
         }
     }
