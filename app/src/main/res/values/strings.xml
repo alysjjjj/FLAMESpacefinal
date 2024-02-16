@@ -19,4 +19,8 @@
     <string name="nh">NH</string>
     <string name="ptc">PTC</string>
     <string name="ptc_rooms">PTC ROOMS</string>
+    <string name="mba">MBA</string>
+    <string name="vv">TODO</string>
+    <string name="cma">CMA</string>
+    <string name="account">Account</string>
 </resources>

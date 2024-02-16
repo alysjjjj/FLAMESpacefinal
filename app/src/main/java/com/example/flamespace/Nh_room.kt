@@ -5,18 +5,17 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
-import com.example.flamespace.R.id.bt
 
-class Settings : AppCompatActivity() {
+class Nh_room : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_settings)
+        setContentView(R.layout.activity_nh_room)
 
-        val button = findViewById<ImageView>(bt)
-        button.setOnClickListener {
-            val int = Intent(this, Profile::class.java)
-            startActivity(int)
+        val buttonClick = findViewById<ImageView>(R.id.boton)
+        buttonClick.setOnClickListener {
+            val intent = Intent(this, Home::class.java)
+            startActivity(intent)
         }
     }
 }

@@ -1,21 +1,20 @@
 package com.example.flamespace
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
-import com.example.flamespace.R.id.bt
 
-class Settings : AppCompatActivity() {
-    @SuppressLint("MissingInflatedId")
+
+class Reservation : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_settings)
+        setContentView(R.layout.activity_reservation)
 
-        val button = findViewById<ImageView>(bt)
+        val button = findViewById<ImageView>(R.id.btn1)
         button.setOnClickListener {
-            val int = Intent(this, Profile::class.java)
+            val int = Intent(this, Ptc_room::class.java)
             startActivity(int)
         }
     }

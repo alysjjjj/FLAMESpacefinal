@@ -5,11 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#697B54"
-    tools:context=".Ptc_room">
+    tools:context=".Be_room">
 
 
     <ImageView
-        android:id="@+id/btn1"
+        android:id="@+id/boton"
         android:layout_width="32dp"
         android:layout_height="33dp"
         android:layout_marginStart="32dp"
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
         android:fontFamily="@font/archivo_black"
-        android:text="@string/ptc_rooms"
+        android:text="BE ROOMS"
         android:textColor="@color/white"
         android:textSize="23sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -67,7 +67,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="135dp"
                     android:layout_marginTop="28dp"
-                    android:text="PTC 301"
+                    android:text="BE 301"
                     android:textSize="25dp"
                     android:textStyle="bold" />
 
@@ -103,7 +103,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="135dp"
                     android:layout_marginTop="30dp"
-                    android:text="PTC 301"
+                    android:text="BE 301"
                     android:textSize="25dp"
                     android:textStyle="bold" />
 
@@ -140,7 +140,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="135dp"
                     android:layout_marginTop="30dp"
-                    android:text="PTC 301"
+                    android:text="BE 301"
                     android:textSize="25dp"
                     android:textStyle="bold" />
 
@@ -176,7 +176,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="135dp"
                     android:layout_marginTop="30dp"
-                    android:text="PTC 301"
+                    android:text="BE 301"
                     android:textSize="25dp"
                     android:textStyle="bold" />
 
@@ -212,7 +212,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="135dp"
                     android:layout_marginTop="30dp"
-                    android:text="PTC 301"
+                    android:text="BE 301"
                     android:textSize="25dp"
                     android:textStyle="bold" />
 
@@ -248,7 +248,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="135dp"
                     android:layout_marginTop="30dp"
-                    android:text="PTC 301"
+                    android:text="BE 301"
                     android:textSize="25dp"
                     android:textStyle="bold" />
 
@@ -284,7 +284,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="135dp"
                     android:layout_marginTop="30dp"
-                    android:text="PTC 301"
+                    android:text="BE 301"
                     android:textSize="25dp"
                     android:textStyle="bold" />
 
@@ -320,7 +320,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="135dp"
                     android:layout_marginTop="30dp"
-                    android:text="PTC 301"
+                    android:text="BE 301"
                     android:textSize="25dp"
                     android:textStyle="bold" />
 
@@ -357,7 +357,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="135dp"
                     android:layout_marginTop="30dp"
-                    android:text="PTC 301"
+                    android:text="BE 301"
                     android:textSize="25dp"
                     android:textStyle="bold" />
 
