@@ -23,4 +23,7 @@
     <string name="vv">TODO</string>
     <string name="cma">CMA</string>
     <string name="account">Account</string>
+    <string name="jan_01_2020">JAN 01 2020</string>
+    <string name="cancel">CANCEL</string>
+    <string name="current_reservation">CURRENT RESERVATION</string>
 </resources>

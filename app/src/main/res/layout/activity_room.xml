@@ -54,19 +54,11 @@
                 app:cardCornerRadius="20dp"
                 app:cardElevation="5dp">
 
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="70dp"
-                    android:layout_margin="10dp"
-                    android:elevation="3dp"
-                    android:src="@drawable/mac" />
-
                 <TextView
                     android:id="@+id/textView8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="135dp"
-                    android:layout_marginTop="28dp"
+                    android:layout_gravity="center"
                     android:text="PTC 301"
                     android:textSize="25dp"
                     android:textStyle="bold" />
@@ -90,19 +82,11 @@
                 app:cardCornerRadius="20dp"
                 app:cardElevation="5dp">
 
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="70dp"
-                    android:layout_margin="10dp"
-                    android:elevation="3dp"
-                    android:src="@drawable/mac" />
-
                 <TextView
                     android:id="@+id/textView9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="135dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_gravity="center"
                     android:text="PTC 301"
                     android:textSize="25dp"
                     android:textStyle="bold" />
@@ -127,19 +111,11 @@
                 app:cardCornerRadius="20dp"
                 app:cardElevation="5dp">
 
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="70dp"
-                    android:layout_margin="10dp"
-                    android:elevation="3dp"
-                    android:src="@drawable/mac" />
-
                 <TextView
                     android:id="@+id/textView10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="135dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_gravity="center"
                     android:text="PTC 301"
                     android:textSize="25dp"
                     android:textStyle="bold" />
@@ -163,19 +139,11 @@
                 app:cardCornerRadius="20dp"
                 app:cardElevation="5dp">
 
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="70dp"
-                    android:layout_margin="10dp"
-                    android:elevation="3dp"
-                    android:src="@drawable/mac"/>
-
                 <TextView
                     android:id="@+id/textView12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="135dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_gravity="center"
                     android:text="PTC 301"
                     android:textSize="25dp"
                     android:textStyle="bold" />
@@ -199,19 +167,11 @@
                 app:cardCornerRadius="20dp"
                 app:cardElevation="5dp">
 
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="70dp"
-                    android:layout_margin="10dp"
-                    android:elevation="3dp"
-                    android:src="@drawable/mac"/>
-
                 <TextView
                     android:id="@+id/textView15"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="135dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_gravity="center"
                     android:text="PTC 301"
                     android:textSize="25dp"
                     android:textStyle="bold" />
@@ -235,19 +195,11 @@
                 app:cardCornerRadius="20dp"
                 app:cardElevation="5dp">
 
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="70dp"
-                    android:layout_margin="10dp"
-                    android:elevation="3dp"
-                    android:src="@drawable/mac"/>
-
                 <TextView
                     android:id="@+id/textView16"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="135dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_gravity="center"
                     android:text="PTC 301"
                     android:textSize="25dp"
                     android:textStyle="bold" />
@@ -271,19 +223,11 @@
                 app:cardCornerRadius="20dp"
                 app:cardElevation="5dp">
 
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="70dp"
-                    android:layout_margin="10dp"
-                    android:elevation="3dp"
-                    android:src="@drawable/mac"/>
-
                 <TextView
                     android:id="@+id/textView18"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="135dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_gravity="center"
                     android:text="PTC 301"
                     android:textSize="25dp"
                     android:textStyle="bold" />
@@ -307,19 +251,11 @@
                 app:cardCornerRadius="20dp"
                 app:cardElevation="5dp">
 
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="70dp"
-                    android:layout_margin="10dp"
-                    android:elevation="3dp"
-                    android:src="@drawable/mac"/>
-
                 <TextView
                     android:id="@+id/textView20"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="135dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_gravity="center"
                     android:text="PTC 301"
                     android:textSize="25dp"
                     android:textStyle="bold" />
@@ -344,19 +280,11 @@
                 app:cardCornerRadius="20dp"
                 app:cardElevation="5dp">
 
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="70dp"
-                    android:layout_margin="10dp"
-                    android:elevation="3dp"
-                    android:src="@drawable/mac" />
-
                 <TextView
                     android:id="@+id/textView33"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="135dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_gravity="center"
                     android:text="PTC 301"
                     android:textSize="25dp"
                     android:textStyle="bold" />

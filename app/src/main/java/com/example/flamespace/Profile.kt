@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import com.example.flamespace.R.id.btn1
+import com.example.flamespace.R.id.currentbtn
 import com.example.flamespace.R.id.setting
 
 class Profile : AppCompatActivity() {
@@ -25,6 +26,12 @@ class Profile : AppCompatActivity() {
         val btn = findViewById<ImageView>(setting)
         btn.setOnClickListener {
             val intent = Intent(this, Settings::class.java)
+            startActivity(intent)
+        }
+
+        val btnn = findViewById<ImageView>(currentbtn)
+        btnn.setOnClickListener {
+            val intent = Intent(this, Current::class.java)
             startActivity(intent)
         }
     }
