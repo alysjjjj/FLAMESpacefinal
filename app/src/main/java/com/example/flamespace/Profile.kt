@@ -4,11 +4,10 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import android.widget.ImageView
 import com.example.flamespace.R.id.btn1
 import com.example.flamespace.R.id.currentbtn
-import com.example.flamespace.R.id.setting
+import com.example.flamespace.R.id.edit
 
 class Profile : AppCompatActivity() {
 
@@ -23,11 +22,12 @@ class Profile : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val btn = findViewById<ImageView>(setting)
+        val btn = findViewById<ImageView>(edit)
         btn.setOnClickListener {
-            val intent = Intent(this, Settings::class.java)
+            val intent = Intent(this, Edit_profile::class.java)
             startActivity(intent)
         }
+
 
         val btnn = findViewById<ImageView>(currentbtn)
         btnn.setOnClickListener {

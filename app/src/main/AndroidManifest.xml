@@ -39,9 +39,7 @@
         <activity
             android:name=".Cma_room"
             android:exported="false" />
-        <activity
-            android:name=".Settings"
-            android:exported="false" />
+
         <activity
             android:name=".Ptc_room"
             android:exported="false" />

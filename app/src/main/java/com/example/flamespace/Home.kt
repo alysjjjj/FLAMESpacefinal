@@ -4,17 +4,14 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import android.widget.ImageView
-import com.example.flamespace.R.id.button2
-import com.example.flamespace.R.id.button33
-import com.example.flamespace.R.id.button4
-import com.example.flamespace.R.id.button5
-import com.example.flamespace.R.id.button6
+import com.example.flamespace.R.id.be
+import com.example.flamespace.R.id.cahs
 import com.example.flamespace.R.id.cite
 import com.example.flamespace.R.id.cma
+import com.example.flamespace.R.id.mba
+import com.example.flamespace.R.id.nh
 import com.example.flamespace.R.id.profile
-import com.example.flamespace.R.id.ptc
 
 class Home : AppCompatActivity() {
     @SuppressLint( "MissingInflatedId")
@@ -24,7 +21,7 @@ class Home : AppCompatActivity() {
 
 
 
-        val button = findViewById<Button>(ptc)
+        val button = findViewById<ImageView>(cite)
         button.setOnClickListener {
             val int = Intent(this, Ptc_room::class.java)
             startActivity(int)
@@ -36,31 +33,31 @@ class Home : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val btn2 = findViewById<Button>(button2)
+        val btn2 = findViewById<ImageView>(cma)
         btn2.setOnClickListener {
             val int = Intent(this, Cma_room::class.java)
             startActivity(int)
         }
 
-        val btn3 = findViewById<Button>(button33)
+        val btn3 = findViewById<ImageView>(mba)
         btn3.setOnClickListener {
             val int = Intent(this, Mba_room::class.java)
             startActivity(int)
         }
 
-        val btn4 = findViewById<Button>(button4)
+        val btn4 = findViewById<ImageView>(nh)
         btn4.setOnClickListener {
             val int = Intent(this, Nh_room::class.java)
             startActivity(int)
         }
 
-        val btn5 = findViewById<Button>(button5)
+        val btn5 = findViewById<ImageView>(cahs)
         btn5.setOnClickListener {
             val int = Intent(this, Cahs_rooms::class.java)
             startActivity(int)
         }
 
-        val btn6 = findViewById<Button>(button6)
+        val btn6 = findViewById<ImageView>(be)
         btn6.setOnClickListener {
             val int = Intent(this, Be::class.java)
             startActivity(int)

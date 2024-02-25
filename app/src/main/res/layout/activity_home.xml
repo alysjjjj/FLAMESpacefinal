@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F9FFF2"
+    android:padding="20dp"
     tools:context=".Home">
 
 
@@ -20,8 +21,8 @@
 
     <ImageView
         android:id="@+id/profile"
-        android:layout_width="55dp"
-        android:layout_height="54dp"
+        android:layout_width="51dp"
+        android:layout_height="50dp"
         android:layout_marginTop="44dp"
         android:layout_marginEnd="20dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,18 +53,6 @@
             tools:ignore="RtlSymmetry" />
     </androidx.cardview.widget.CardView>
 
-    <Button
-        android:id="@+id/ptc"
-        android:layout_width="95dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#697B54"
-        android:text="@string/ptc"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView2" />
-
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
@@ -80,7 +69,7 @@
         tools:ignore="MissingConstraints">
 
         <ImageView
-            android:id="@+id/cma"
+            android:id="@+id/mba"
             android:layout_width="121dp"
             android:layout_height="114dp"
             android:layout_marginEnd="36dp"
@@ -88,19 +77,6 @@
             android:paddingEnd="23dp"
             app:srcCompat="@drawable/cma" />
     </androidx.cardview.widget.CardView>
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="95dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#697B54"
-        android:text="@string/cma"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView3"
@@ -126,34 +102,22 @@
             tools:ignore="DuplicateIds,RtlSymmetry" />
     </androidx.cardview.widget.CardView>
 
-    <Button
-        android:id="@+id/button33"
-        android:layout_width="95dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="20dp"
-        android:backgroundTint="#697B54"
-        android:text="@string/mba"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView3" />
-
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView4"
         android:layout_width="98dp"
         android:layout_height="125dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="52dp"
         android:backgroundTint="#697B54"
         app:cardCornerRadius="15dp"
         app:layout_constraintEnd_toStartOf="@+id/cardView5"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ptc"
+        app:layout_constraintTop_toBottomOf="@+id/ptctx"
         tools:ignore="MissingConstraints">
 
         <ImageView
-            android:id="@+id/c"
+            android:id="@+id/nh"
             android:layout_width="121dp"
             android:layout_height="114dp"
 
@@ -162,35 +126,23 @@
             app:srcCompat="@drawable/nh" />
     </androidx.cardview.widget.CardView>
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="95dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#697B54"
-        android:text="@string/nh"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView4" />
-
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView5"
         android:layout_width="98dp"
         android:layout_height="125dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24.5dp"
+        android:layout_marginTop="56dp"
         android:backgroundTint="#697B54"
         app:cardCornerRadius="15dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/cmatx"
         tools:ignore="MissingConstraints">
 
         <ImageView
-            android:id="@+id/cc"
-            android:layout_width="121dp"
+            android:id="@+id/cahs"
+            android:layout_width="118dp"
             android:layout_height="114dp"
             android:layout_marginEnd="36dp"
 
@@ -201,32 +153,20 @@
 
     </androidx.cardview.widget.CardView>
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="95dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#697B54"
-        android:text="@string/cahs"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView5" />
-
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView6"
         android:layout_width="98dp"
         android:layout_height="125dp"
-        android:layout_marginTop="24.5dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="16dp"
         android:backgroundTint="#697B54"
         app:cardCornerRadius="15dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button33"
+        app:layout_constraintTop_toBottomOf="@+id/mbatx"
         tools:ignore="MissingConstraints">
 
         <ImageView
-            android:id="@+id/cx"
+            android:id="@+id/be"
             android:layout_width="121dp"
             android:layout_height="114dp"
             android:layout_marginEnd="36dp"
@@ -236,31 +176,84 @@
             app:srcCompat="@drawable/be" />
     </androidx.cardview.widget.CardView>
 
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="95dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="9dp"
-        android:backgroundTint="#697B54"
-        android:text="@string/be"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.91"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView6" />
-
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:fontFamily="@font/archivo_black"
+        android:fontFamily="@font/gilgann"
         android:text="@string/building"
         android:textColor="#697B54"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/ptctx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/gilgann"
+        android:text="PTC"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+
+    <TextView
+        android:id="@+id/cmatx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="CMA"
+        android:fontFamily="@font/gilgann"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <TextView
+        android:id="@+id/mbatx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="52dp"
+        android:text="MBA"
+        android:fontFamily="@font/gilgann"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="8dp"
+        android:text="NH"
+        android:fontFamily="@font/gilgann"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView4" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="CAHS"
+        android:fontFamily="@font/gilgann"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView5" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/gilgann"
+        android:layout_marginEnd="60dp"
+        android:text="BE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView6" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
