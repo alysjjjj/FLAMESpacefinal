@@ -18,8 +18,8 @@ class Profile : AppCompatActivity() {
 
         val buttonClick = findViewById<ImageView>(btn1)
         buttonClick.setOnClickListener {
-            val intent = Intent(this, Home::class.java)
-            startActivity(intent)
+            val int = Intent(this, Home::class.java)
+            startActivity(int)
         }
 
         val btn = findViewById<ImageView>(edit)

@@ -26,8 +26,8 @@ class Edit_profile : AppCompatActivity() {
 
         val buttonClick = findViewById<ImageView>(R.id.btn1)
         buttonClick.setOnClickListener {
-            val intent = Intent(this, Profile::class.java)
-            startActivity(intent)
+            val int = Intent(this, Profile::class.java)
+            startActivity(int)
         }
 
 

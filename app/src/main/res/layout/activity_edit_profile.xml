@@ -63,7 +63,7 @@
         android:layout_height="62dp"
         android:layout_below="@+id/pass"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="42dp"
+        android:layout_marginTop="43dp"
         android:backgroundTint="#697B54"
         android:fontFamily="@font/gilgann"
         android:text="Save"
