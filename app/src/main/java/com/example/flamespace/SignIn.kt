@@ -14,16 +14,6 @@ class SignIn : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
 
-        val btn = findViewById<ImageView>(R.id.back)
-        btn.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
 
-        val btn2 = findViewById<Button>(R.id.homi)
-        btn2.setOnClickListener {
-            val int = Intent(this, Home::class.java)
-            startActivity(int)
-        }
     }
 }

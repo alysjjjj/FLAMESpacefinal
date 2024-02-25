@@ -33,4 +33,24 @@
     <string name="save">Save</string>
     <string name="name">Name</string>
     <string name="block">Block</string>
+    <string name="login_password" />
+    <string name="signup_re_password" />
+    <string name="signup_title" />
+    <string name="signup_have_account" />
+    <string name="signup_phinma_email" />
+    <string name="signup_student_id" />
+    <string name="signup_last_name" />
+    <string name="signup_middle_name" />
+    <string name="signup_first_name" />
+    <string name="signup_sub_title" />
+    <string name="title_sign_up">\n</string>
+    <string name="login_havent_account" />
+    <string name="login_title" />
+    <string name="login_forgot_pw" />
+    <string name="login_email" />
+    <string name="login_sub_title" />
+    <string name="history">HISTORY</string>
+    <string name="his">History</string>
+    <string name="tv_capacity" />
+    <string name="second_fragment_label">\n</string>
 </resources>

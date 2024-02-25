@@ -7,15 +7,6 @@
     android:background="#F9FFF2"
     tools:context=".Reservation">
 
-    <ImageView
-        android:id="@+id/bt"
-        android:layout_width="37dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="52dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/back2" />
 
 
     <TextView
@@ -270,6 +261,25 @@
 
         </ScrollView>
     </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:background="@drawable/circular_dark_bg"
+        android:contentDescription="Back Button"
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="39dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="36dp"
+        android:contentDescription="Back Button Icon"
+        android:paddingStart="7dp"
+        android:src="@drawable/ic_arrow_back_white"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="55dp" />
 
     <Button
         android:id="@+id/save"

@@ -19,10 +19,6 @@ class Current : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val button = findViewById<ImageView>(/* id = */ R.id.bt)
-        button.setOnClickListener {
-            val int = Intent(this, Profile::class.java)
-            startActivity(int)
-        }
+
     }
 }

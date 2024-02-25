@@ -1,212 +1,203 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="360dp"
-    android:layout_height="match_parent"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#697B54"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
     tools:context=".Sign_up">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="360dp"
-        android:layout_height="650dp"
-        android:layout_marginTop="80dp"
-        android:backgroundTint="@color/white"
-        app:cardCornerRadius="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/stud"
+    <TextView
+        android:id="@+id/tv_signup_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/title_sign_up"
+        android:fontFamily="@font/gilgan"
+        style="@style/Title"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-
-        <EditText
-            android:id="@+id/editTextTextPassword"
-            android:layout_width="240dp"
-            android:layout_height="39dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="-180dp"
-            android:background="#D9D9D9"
-            android:ems="10"
-            android:textSize="15sp"
-            android:hint="Middle Name"
-            android:inputType="text"
-            android:padding="10dp"
-            android:textColor="@color/black"
-            tools:ignore="TouchTargetSizeCheck" />
-
-
-        <EditText
-            android:id="@+id/editTextTextEmailAddress2"
-            android:layout_width="240dp"
-            android:layout_height="39dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="-255dp"
-            android:background="#D9D9D9"
-            android:ems="10"
-            android:textSize="15sp"
-            android:hint="First Name"
-            android:inputType="text"
-            android:padding="10dp"
-            android:textColor="@color/black"
-            tools:ignore="TouchTargetSizeCheck" />
-
-        <Button
-            android:id="@+id/homi"
-            android:layout_width="195dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="230dp"
-            android:backgroundTint="#697B54"
-            android:text="SIGN UP"
-            android:textSize="20dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="25dp"
-            android:text="First Name"
-            android:textSize="17sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="98dp"
-            android:text="Middle Name"
-            android:textSize="17sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/te"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="170dp"
-            android:text="Last Name"
-            android:textSize="17sp"
-            android:textStyle="bold" />
-        <EditText
-            android:layout_width="240dp"
-            android:layout_height="39dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="-110dp"
-            android:autofillHints="Student Number"
-            android:background="#D9D9D9"
-            android:ems="10"
-            android:textSize="15sp"
-            android:hint="Last Name"
-            android:inputType="text"
-            android:padding="10dp"
-            tools:ignore="TouchTargetSizeCheck" />
-
-
-        <TextView
-            android:id="@+id/tre"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="240dp"
-            android:text="PHINMA Email"
-            android:textSize="17sp"
-            android:textStyle="bold" />
-        <EditText
-            android:id="@+id/editTerxtTed"
-            android:layout_width="240dp"
-            android:layout_height="39dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="-40dp"
-            android:autofillHints="Student Number"
-            android:background="#D9D9D9"
-            android:ems="10"
-            android:textSize="15sp"
-            android:hint="Email"
-            android:inputType="textEmailAddress"
-            android:padding="10dp"
-            tools:ignore="TouchTargetSizeCheck" />
-
-        <TextView
-            android:id="@+id/re"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="310dp"
-            android:text="Student Number"
-            android:textSize="17sp"
-            android:textStyle="bold" />
-        <EditText
-            android:id="@+id/editTe"
-            android:layout_width="240dp"
-            android:layout_height="39dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="30dp"
-            android:autofillHints="Student Number"
-            android:background="#D9D9D9"
-            android:ems="10"
-            android:textSize="15sp"
-            android:hint="Student Number"
-            android:inputType="number"
-            android:padding="10dp"
-            tools:ignore="TouchTargetSizeCheck" />
-        <TextView
-            android:id="@+id/rgge"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="380dp"
-            android:text="Password"
-            android:textSize="17sp"
-            android:textStyle="bold" />
-        <EditText
-            android:id="@+id/edigtTe"
-            android:layout_width="240dp"
-            android:layout_height="39dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="100dp"
-            android:autofillHints="Student Number"
-            android:background="#D9D9D9"
-            android:ems="10"
-            android:textSize="15sp"
-            android:hint="@string/password"
-            android:inputType="textPassword"
-            android:padding="10dp"
-            tools:ignore="TouchTargetSizeCheck" />
-        <TextView
-            android:id="@+id/reg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="450dp"
-            android:text="Confirm Password"
-            android:textSize="17sp"
-            android:textStyle="bold" />
-        <EditText
-            android:id="@+id/edTe"
-            android:layout_width="240dp"
-            android:layout_height="39dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="170dp"
-            android:autofillHints="Student Number"
-            android:background="#D9D9D9"
-            android:ems="10"
-            android:textSize="15sp"
-            android:hint="Confirm Password"
-            android:inputType="textPassword"
-            android:padding="10dp"
-            tools:ignore="TouchTargetSizeCheck" />
-
-
-    </androidx.cardview.widget.CardView>
-
-    <ImageView
-        android:id="@+id/back"
-        android:layout_width="95dp"
-        android:layout_height="68dp"
-        android:layout_marginStart="-10dp"
+    <TextView
+        android:id="@+id/tv_signup_sub_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:contentDescription="@string/todooo"
-        android:src="@drawable/back" />
-</FrameLayout>
+        android:text="@string/signup_sub_title"
+        style="@style/SubTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_signup_title"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_first_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:hint="@string/signup_first_name"
+        style="@style/TextInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_signup_sub_title"
+        app:startIconDrawable="@drawable/ic_account_circle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_first_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="48dp"
+            tools:ignore="RtlSymmetry"
+            style="@style/TextInputEditText"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_middle_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="@string/signup_middle_name"
+        style="@style/TextInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_first_name"
+        app:startIconDrawable="@drawable/ic_account_circle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_middle_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="48dp"
+            tools:ignore="RtlSymmetry"
+            style="@style/TextInputEditText"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_last_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="@string/signup_last_name"
+        style="@style/TextInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_middle_name"
+        app:startIconDrawable="@drawable/ic_account_circle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_last_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="48dp"
+            tools:ignore="RtlSymmetry"
+            style="@style/TextInputEditText"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_student_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="@string/signup_student_id"
+        style="@style/TextInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_last_name"
+        app:startIconDrawable="@drawable/ic_account_circle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_student_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="48dp"
+            tools:ignore="RtlSymmetry"
+            style="@style/TextInputEditText"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_signup_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="@string/signup_phinma_email"
+        style="@style/TextInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_student_id"
+        app:startIconDrawable="@drawable/ic_account_circle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_signup_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="48dp"
+            style="@style/TextInputEditText"
+            tools:ignore="RtlSymmetry" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_signup_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="@string/login_password"
+        style="@style/TextInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_signup_email"
+        app:startIconDrawable="@drawable/ic_lock">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_signup_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="48dp"
+            tools:ignore="RtlSymmetry"
+            style="@style/TextInputEditText"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_signup_re_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="@string/signup_re_password"
+        style="@style/TextInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_signup_password"
+        app:startIconDrawable="@drawable/ic_lock">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_signup_re_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="48dp"
+            tools:ignore="RtlSymmetry"
+            style="@style/TextInputEditText"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:text="@string/signup_title"
+        style="@style/ButtonGreen"
+        app:layout_constraintBottom_toTopOf="@id/tv_havent_account"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_havent_account"
+        style="@style/SubTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="@string/signup_have_account"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
-import com.example.flamespace.R.id.bt
 import com.example.flamespace.R.id.save
 import java.util.*
 import android.app.TimePickerDialog
@@ -44,11 +43,7 @@ class Reservation : AppCompatActivity() {
         initDatePicker()
         initTimePicker()
 
-        val button = findViewById<ImageView>(/* id = */ bt)
-        button.setOnClickListener {
-            val int = Intent(this, Ptc_room::class.java)
-            startActivity(int)
-        }
+
         val but = findViewById<Button>(/* id = */ save)
         but.setOnClickListener {
             val intent = Intent(this, Home::class.java)
