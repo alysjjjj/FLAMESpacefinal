@@ -24,7 +24,13 @@
     <string name="cma">CMA</string>
     <string name="account">Account</string>
     <string name="jan_01_2020">JAN 01 2020</string>
-    <string name="cancel">CANCEL</string>
+    <string name="cancel">Cancel</string>
     <string name="current_reservation">CURRENT RESERVATION</string>
     <string name="subject">Subject</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="enter_your_block">Enter your block</string>
+    <string name="enter_your_new_password">Enter your new password</string>
+    <string name="save">Save</string>
+    <string name="name">Name</string>
+    <string name="block">Block</string>
 </resources>
