@@ -42,9 +42,8 @@
         android:background="@drawable/custom_edittxt"
         android:fontFamily="@font/gilgann"
         android:hint="@string/enter_your_block"
-        android:paddingStart="15dp"
 
-         />
+        android:paddingStart="15dp" />
 
     <EditText
         android:id="@+id/pass"

@@ -5,19 +5,46 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F9FFF2"
+    android:padding="20dp"
     tools:context=".Reservation">
 
+    <FrameLayout
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:background="@drawable/circular_dark_bg"
+            android:contentDescription="Back Button" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="7dp"
+            android:src="@drawable/ic_arrow_back_white"
+            android:layout_gravity="center"
+            android:contentDescription="Back Button Icon"/>
+    </FrameLayout>
 
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/tit_reservation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="56dp"
+        android:fontFamily="@font/lemonmilk"
+        android:padding="20dp"
         android:text="RESERVATION"
-        android:textSize="20sp"
+        android:textColor="@color/new_darkGreen"
+        android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,16 +52,18 @@
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Reserve room PTC 301"
+        android:fontFamily="@font/gilgan"
+        android:text="PTC 301"
+        android:textSize="17dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+        app:layout_constraintTop_toBottomOf="@+id/tit_reservation" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView11"
         android:layout_width="285dp"
-        android:layout_height="384dp"
+        android:layout_height="420dp"
         android:layout_marginTop="40dp"
         android:backgroundTint="#697B54"
         app:cardCornerRadius="10dp"
@@ -61,7 +90,7 @@
                     android:layout_width="250dp"
                     android:layout_height="50dp"
                     android:layout_marginLeft="13dp"
-                    android:layout_marginTop="55dp"
+                    android:layout_marginTop="40dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent">
 
@@ -73,8 +102,9 @@
                         android:layout_margin="5dp"
                         android:layout_marginTop="10dp"
                         android:text="@string/jan_01_2020"
+                        android:fontFamily="@font/gilgan"
                         android:textColor="@color/black"
-                        android:textSize="15sp"
+                        android:textSize="16sp"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -87,6 +117,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="-75dp"
                     android:text="Date"
+                    android:fontFamily="@font/gilgan"
                     android:textColor="@color/white"
                     android:textSize="18dp" />
 
@@ -97,6 +128,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="60dp"
                     android:text="Time"
+                    android:fontFamily="@font/gilgan"
                     android:textColor="@color/white"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -117,8 +149,9 @@
                         android:layout_margin="5dp"
                         android:layout_marginTop="10dp"
                         android:text="Set Time"
+                        android:fontFamily="@font/gilgan"
                         android:textColor="@color/black"
-                        android:textSize="18sp" />
+                        android:textSize="16sp" />
 
                 </androidx.cardview.widget.CardView>
 
@@ -130,6 +163,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="10dp"
                     android:text="Purpose"
+                    android:fontFamily="@font/gilgan"
                     android:textColor="@color/white"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -199,7 +233,7 @@
                             android:layout_width="250dp"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:hint="@string/subject"
+                            android:hint="Subject"
                             android:inputType="text"
                             android:textColorHint="#808080"
                             android:textSize="18sp" />
@@ -262,32 +296,14 @@
         </ScrollView>
     </androidx.cardview.widget.CardView>
 
-    <ImageView
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:background="@drawable/circular_dark_bg"
-        android:contentDescription="Back Button"
-        tools:layout_editor_absoluteX="24dp"
-        tools:layout_editor_absoluteY="39dp" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginStart="36dp"
-        android:contentDescription="Back Button Icon"
-        android:paddingStart="7dp"
-        android:src="@drawable/ic_arrow_back_white"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="55dp" />
-
     <Button
         android:id="@+id/save"
         android:layout_width="152dp"
         android:layout_height="56dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:backgroundTint="#697B54"
         android:text="CONFIRM"
+        android:fontFamily="@font/gilgan"
         android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
