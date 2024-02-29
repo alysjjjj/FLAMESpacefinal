@@ -17,7 +17,8 @@
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo2" />
+        app:srcCompat="@drawable/logo2"
+        android:contentDescription="@string/logo" />
 
     <ImageView
         android:id="@+id/profile"
@@ -27,7 +28,8 @@
         android:layout_marginEnd="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/baseline_account_circle_24" />
+        app:srcCompat="@drawable/baseline_account_circle_24"
+        android:contentDescription="@string/profile" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView2"
@@ -50,7 +52,8 @@
             android:paddingTop="10dp"
             android:paddingEnd="23dp"
             app:srcCompat="@drawable/ptc"
-            tools:ignore="RtlSymmetry" />
+            tools:ignore="RtlSymmetry"
+            android:contentDescription="@string/cite" />
     </androidx.cardview.widget.CardView>
 
 
@@ -75,7 +78,9 @@
             android:layout_marginEnd="36dp"
             android:paddingTop="10dp"
             android:paddingEnd="23dp"
-            app:srcCompat="@drawable/cma" />
+            app:srcCompat="@drawable/cma"
+            android:contentDescription="@string/cma"
+            tools:ignore="RtlSymmetry" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -120,10 +125,11 @@
             android:id="@+id/nh"
             android:layout_width="121dp"
             android:layout_height="114dp"
-
             android:paddingTop="10dp"
             android:paddingEnd="23dp"
-            app:srcCompat="@drawable/nh" />
+            app:srcCompat="@drawable/nh"
+            android:contentDescription="@string/nh"
+            tools:ignore="RtlSymmetry" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -145,11 +151,12 @@
             android:layout_width="118dp"
             android:layout_height="114dp"
             android:layout_marginEnd="36dp"
-
             android:paddingTop="10dp"
             android:paddingEnd="23dp"
             app:srcCompat="@drawable/cahs"
-            tools:layout_editor_absoluteY="486dp" />
+            tools:layout_editor_absoluteY="486dp"
+            android:contentDescription="@string/cahs"
+            tools:ignore="RtlSymmetry" />
 
     </androidx.cardview.widget.CardView>
 
@@ -173,7 +180,9 @@
 
             android:paddingTop="10dp"
             android:paddingEnd="23dp"
-            app:srcCompat="@drawable/be" />
+            app:srcCompat="@drawable/be"
+            android:contentDescription="@string/be"
+            tools:ignore="RtlSymmetry" />
     </androidx.cardview.widget.CardView>
 
     <TextView
@@ -196,7 +205,7 @@
         android:layout_marginStart="53dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/gilgann"
-        android:text="PTC"
+        android:text="@string/ptcbuilding"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView2" />
 
@@ -205,7 +214,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="CMA"
+        android:text="@string/cmabulding"
         android:fontFamily="@font/gilgann"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -217,7 +226,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="52dp"
-        android:text="MBA"
+        android:text="@string/buildingmba"
         android:fontFamily="@font/gilgann"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView3" />
@@ -228,7 +237,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:layout_marginTop="8dp"
-        android:text="NH"
+        android:text="@string/nh_bulding"
         android:fontFamily="@font/gilgann"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView4" />
@@ -238,7 +247,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="CAHS"
+        android:text="@string/cahs_building"
         android:fontFamily="@font/gilgann"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -251,7 +260,7 @@
         android:layout_marginTop="8dp"
         android:fontFamily="@font/gilgann"
         android:layout_marginEnd="60dp"
-        android:text="BE"
+        android:text="@string/be_buil"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView6" />
 

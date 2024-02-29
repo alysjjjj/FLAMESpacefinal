@@ -1,9 +1,7 @@
 package com.example.flamespace
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ImageView
 
 class Cahs : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

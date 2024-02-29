@@ -18,10 +18,7 @@ import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.Spinner
 import android.widget.Toast
-import com.example.flamespace.R.id.datee
-import java.text.SimpleDateFormat
-import com.example.flamespace.R.id.spinnerPurpose
-
+import java.text.SimpleDateFormat as SimpleDateFormat1
 
 
 class Reservation : AppCompatActivity() {
@@ -188,7 +185,7 @@ class Reservation : AppCompatActivity() {
     }
 
     private fun makeTimeString(hour: Int, minute: Int): String {
-        val timeFormat = SimpleDateFormat("hh:mm a", Locale.getDefault())
+        val timeFormat = SimpleDateFormat1("hh:mm a", Locale.getDefault())
         val calendar = Calendar.getInstance()
         calendar.set(Calendar.HOUR_OF_DAY, hour)
         calendar.set(Calendar.MINUTE, minute)

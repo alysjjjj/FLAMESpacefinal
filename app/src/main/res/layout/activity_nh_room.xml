@@ -33,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="NH"
+        android:text="@string/nhh"
         android:contentDescription="@string/nh_des"
         android:textAlignment="center"
         android:fontFamily="@font/lemonmilk"

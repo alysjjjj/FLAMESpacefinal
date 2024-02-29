@@ -43,7 +43,9 @@
         android:fontFamily="@font/gilgann"
         android:hint="@string/enter_your_block"
 
-        android:paddingStart="15dp" />
+        android:paddingStart="15dp"
+        tools:ignore="RtlSymmetry,TextFields"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/pass"
@@ -59,7 +61,8 @@
         android:hint="@string/enter_your_new_password"
         android:inputType="textPassword"
         android:paddingStart="15dp"
-        tools:ignore="RtlSymmetry" />
+        tools:ignore="RtlSymmetry"
+        android:importantForAutofill="no" />
 
 
     <Button
@@ -107,7 +110,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="43dp"
         android:layout_marginTop="380dp"
-        android:text="Password"
+        android:text="@string/passwordd"
         android:textSize="15sp"
         android:textStyle="bold" />
 

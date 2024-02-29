@@ -17,7 +17,8 @@
         android:layout_marginTop="32dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/newback" />
+        app:srcCompat="@drawable/newback"
+        android:contentDescription="@string/todod" />
 
 
 
@@ -42,8 +43,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/gilgan"
-        android:text="PTC 301"
-        android:textSize="17dp"
+        android:text="@string/roomptc_301"
+        android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -78,7 +79,7 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="250dp"
                     android:layout_height="50dp"
-                    android:layout_marginLeft="13dp"
+                    android:layout_marginStart="13dp"
                     android:layout_marginTop="40dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent">
@@ -105,21 +106,21 @@
                     android:id="@+id/textView3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
                     android:layout_marginTop="-75dp"
                     android:fontFamily="@font/gilgan"
-                    android:text="Date"
+                    android:text="@string/date"
                     android:textColor="@color/white"
-                    android:textSize="18dp" />
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/textView17"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
                     android:layout_marginTop="60dp"
                     android:fontFamily="@font/gilgan"
-                    android:text="Time"
+                    android:text="@string/time"
                     android:textColor="@color/white"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -128,7 +129,7 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="250dp"
                     android:layout_height="50dp"
-                    android:layout_marginLeft="13sp"
+                    android:layout_marginStart="13sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent">
 
@@ -141,7 +142,7 @@
                         android:layout_marginTop="10dp"
                         android:backgroundTint="#697B54"
                         android:fontFamily="@font/gilgan"
-                        android:text="Set Time"
+                        android:text="@string/set_time"
                         android:textColor="@color/black"
                         android:textColorHighlight="@color/black"
                         android:textColorHint="#697B54"
@@ -157,10 +158,10 @@
                     android:id="@+id/purpose"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/gilgan"
-                    android:text="Purpose"
+                    android:text="@string/purpose"
                     android:textColor="@color/white"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -170,7 +171,7 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="250dp"
                     android:layout_height="50dp"
-                    android:layout_marginLeft="13dp"
+                    android:layout_marginStart="13dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent">
 
@@ -178,7 +179,7 @@
                         android:id="@+id/spinnerPurpose"
                         android:layout_width="249dp"
                         android:layout_height="50dp"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/textViewPurpose" />
@@ -189,7 +190,7 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="250dp"
                     android:layout_height="193dp"
-                    android:layout_marginLeft="13dp"
+                    android:layout_marginStart="13dp"
                     android:layout_marginTop="30dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent">
@@ -210,30 +211,33 @@
                             android:layout_width="250dp"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:hint="Name of Instructor"
+                            android:hint="@string/name_of_instructor"
                             android:inputType="text"
                             android:textColorHint="#808080"
-                            android:textSize="18sp" />
+                            android:textSize="18sp"
+                            android:importantForAutofill="no" />
 
                         <EditText
                             android:id="@+id/blockEditText"
                             android:layout_width="250dp"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:hint="Block"
+                            android:hint="@string/blockr"
                             android:inputType="text"
                             android:textColorHint="#808080"
-                            android:textSize="18sp" />
+                            android:textSize="18sp"
+                            android:autofillHints="" />
 
                         <EditText
                             android:id="@+id/subjectEditText"
                             android:layout_width="250dp"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:hint="Subject"
+                            android:hint="@string/txtsubject"
                             android:inputType="text"
                             android:textColorHint="#808080"
-                            android:textSize="18sp" />
+                            android:textSize="18sp"
+                            android:autofillHints="" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -251,38 +255,40 @@
                             android:layout_width="250dp"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:hint="Subject"
+                            android:hint="@string/subjecttxt"
                             android:inputType="text"
                             android:textColorHint="#808080"
-                            android:textSize="18sp" />
+                            android:textSize="18sp"
+                            android:importantForAutofill="no" />
 
                         <EditText
                             android:id="@+id/numberOfStudentsEditText"
                             android:layout_width="250dp"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:hint="Number of Students"
+                            android:hint="@string/number_of_students"
                             android:inputType="number"
                             android:textColorHint="#808080"
-                            android:textSize="18sp" />
+                            android:textSize="18sp"
+                            android:autofillHints="no" />
                     </LinearLayout>
 
 
                     <EditText
                         android:id="@+id/otherDetailsEditText"
                         android:layout_width="250dp"
-
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:hint="Other details"
+                        android:hint="@string/other_details"
                         android:inputType="text"
                         android:textColorHint="#808080"
                         android:textSize="18sp"
-
                         android:visibility="gone"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/spinnerPurpose" />
+                        app:layout_constraintTop_toBottomOf="@+id/spinnerPurpose"
+                        android:importantForAutofill="no"
+                        android:autofillHints="" />
 
                 </androidx.cardview.widget.CardView>
 
@@ -300,7 +306,7 @@
         android:layout_marginTop="16dp"
         android:backgroundTint="#697B54"
         android:fontFamily="@font/gilgan"
-        android:text="CONFIRM"
+        android:text="@string/confirm"
         android:textColor="@color/white"
         android:textColorHighlight="#EFEBEB"
         android:textColorLink="#697B54"

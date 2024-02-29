@@ -29,11 +29,11 @@
     </FrameLayout>
 
     <TextView
-        android:id="@+id/tit_cahs"
+        android:id="@+id/title_cahs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="CAHS"
+        android:text="@string/cahss"
         android:contentDescription="@string/cahs_des"
         android:textAlignment="center"
         android:fontFamily="@font/lemonmilk"
@@ -53,7 +53,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tit_cahs">
+        app:layout_constraintTop_toBottomOf="@+id/title_cahs">
 
         <LinearLayout
             android:layout_width="match_parent"
