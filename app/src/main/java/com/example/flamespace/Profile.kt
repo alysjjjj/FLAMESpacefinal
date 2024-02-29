@@ -10,7 +10,6 @@ import com.example.flamespace.R.id.currentbtn
 import com.example.flamespace.R.id.edit
 
 class Profile : AppCompatActivity() {
-
     @SuppressLint("WrongViewCast", "MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

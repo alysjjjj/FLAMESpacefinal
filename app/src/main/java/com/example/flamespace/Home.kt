@@ -19,8 +19,6 @@ class Home : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-
-
         val button = findViewById<ImageView>(cite)
         button.setOnClickListener {
             val int = Intent(this, Ptc::class.java)

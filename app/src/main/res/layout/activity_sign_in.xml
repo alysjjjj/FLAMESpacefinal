@@ -67,11 +67,11 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_password"
+            style="@style/TextInputEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingStart="48dp"
-            style="@style/TextInputEditText"
             android:inputType="textPassword"
+            android:paddingStart="48dp"
             tools:ignore="RtlSymmetry" />
 
     </com.google.android.material.textfield.TextInputLayout>

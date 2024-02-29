@@ -8,6 +8,7 @@
     android:padding="20dp"
     tools:context=".Current">
 
+
     <FrameLayout
         android:id="@+id/backButtonFrame"
         android:layout_width="wrap_content"

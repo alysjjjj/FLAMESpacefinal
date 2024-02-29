@@ -16,7 +16,5 @@ class Ptc : AppCompatActivity() {
             startActivity(int)
         }
 
-
-
     }
 }

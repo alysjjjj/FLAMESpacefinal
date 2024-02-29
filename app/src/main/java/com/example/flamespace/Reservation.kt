@@ -75,8 +75,6 @@ class Reservation : AppCompatActivity() {
 
             }
         }
-
-
     }
 
     private fun showClassDetails() {

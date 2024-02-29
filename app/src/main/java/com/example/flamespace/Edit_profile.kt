@@ -20,9 +20,7 @@ class Edit_profile : AppCompatActivity() {
         blockEditText = findViewById(R.id.blk)
         buttonsave = findViewById(R.id.buttonsave)
 
-
         loadProfileData()
-
 
         val buttonClick = findViewById<ImageView>(R.id.btn1)
         buttonClick.setOnClickListener {
@@ -32,17 +30,13 @@ class Edit_profile : AppCompatActivity() {
 
 
     }
-
     private fun loadProfileData() {
 
         val profileName = "Elyssa Salvador"
         val profileBlock = "Block 6"
 
-
         nameEditText.setText(profileName)
         blockEditText.setText(profileBlock)
     }
-
-
 
 }

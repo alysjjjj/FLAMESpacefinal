@@ -9,16 +9,25 @@
     tools:context=".Reservation">
 
 
-    <ImageView
+    <FrameLayout
         android:id="@+id/backButton"
-        android:layout_width="33dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="1dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/newback"
-        android:contentDescription="@string/todod" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:padding="15dp"
+            app:tint="@color/new_darkGreen"
+            android:src="@drawable/ic_arrow_back_white"
+            android:layout_gravity="center"
+            android:contentDescription="@string/back_button"
+            tools:ignore="RtlSymmetry" />
+    </FrameLayout>
 
 
 
@@ -52,11 +61,10 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView11"
-        android:layout_width="285dp"
-        android:layout_height="420dp"
+        android:layout_width="292dp"
+        android:layout_height="443dp"
         android:layout_marginTop="40dp"
-        android:backgroundTint="#697B54"
-        app:cardCornerRadius="10dp"
+        android:backgroundTint="@color/darkGreen"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
@@ -65,7 +73,7 @@
         <ScrollView
             android:id="@+id/scrollView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="461dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -212,32 +220,32 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
                             android:hint="@string/name_of_instructor"
+                            android:importantForAutofill="no"
                             android:inputType="text"
                             android:textColorHint="#808080"
-                            android:textSize="18sp"
-                            android:importantForAutofill="no" />
+                            android:textSize="18sp" />
 
                         <EditText
                             android:id="@+id/blockEditText"
                             android:layout_width="250dp"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
+                            android:autofillHints=""
                             android:hint="@string/blockr"
                             android:inputType="text"
                             android:textColorHint="#808080"
-                            android:textSize="18sp"
-                            android:autofillHints="" />
+                            android:textSize="18sp" />
 
                         <EditText
                             android:id="@+id/subjectEditText"
                             android:layout_width="250dp"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
+                            android:autofillHints=""
                             android:hint="@string/txtsubject"
                             android:inputType="text"
                             android:textColorHint="#808080"
-                            android:textSize="18sp"
-                            android:autofillHints="" />
+                            android:textSize="18sp" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -256,21 +264,21 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
                             android:hint="@string/subjecttxt"
+                            android:importantForAutofill="no"
                             android:inputType="text"
                             android:textColorHint="#808080"
-                            android:textSize="18sp"
-                            android:importantForAutofill="no" />
+                            android:textSize="18sp" />
 
                         <EditText
                             android:id="@+id/numberOfStudentsEditText"
                             android:layout_width="250dp"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
+                            android:autofillHints="no"
                             android:hint="@string/number_of_students"
                             android:inputType="number"
                             android:textColorHint="#808080"
-                            android:textSize="18sp"
-                            android:autofillHints="no" />
+                            android:textSize="18sp" />
                     </LinearLayout>
 
 
@@ -279,16 +287,16 @@
                         android:layout_width="250dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
+                        android:autofillHints=""
                         android:hint="@string/other_details"
+                        android:importantForAutofill="no"
                         android:inputType="text"
                         android:textColorHint="#808080"
                         android:textSize="18sp"
                         android:visibility="gone"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/spinnerPurpose"
-                        android:importantForAutofill="no"
-                        android:autofillHints="" />
+                        app:layout_constraintTop_toBottomOf="@+id/spinnerPurpose" />
 
                 </androidx.cardview.widget.CardView>
 
@@ -300,19 +308,13 @@
     </androidx.cardview.widget.CardView>
 
     <Button
-        android:id="@+id/save"
-        android:layout_width="152dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="#697B54"
-        android:fontFamily="@font/gilgan"
-        android:text="@string/confirm"
-        android:textColor="@color/white"
-        android:textColorHighlight="#EFEBEB"
-        android:textColorLink="#697B54"
-        android:textSize="18sp"
+        android:id="@+id/btn_signup"
+        style="@style/ButtonGreen"
+        android:layout_width="330dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="20dp"
+        android:text="CONFIRM"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView11" />
 

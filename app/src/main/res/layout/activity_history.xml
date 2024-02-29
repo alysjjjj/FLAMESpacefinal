@@ -17,15 +17,11 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:layout_width="56dp"
-            android:layout_height="56dp"
-            android:background="@drawable/circular_bg"
-            android:contentDescription="@string/back_button"/>
-
-        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingStart="8dp"
+            android:padding="15dp"
+            app:tint="@color/new_darkGreen"
             android:src="@drawable/ic_arrow_back_white"
             android:layout_gravity="center"
             android:contentDescription="@string/back_button"
