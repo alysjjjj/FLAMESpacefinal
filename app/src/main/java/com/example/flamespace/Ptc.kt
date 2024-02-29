@@ -1,8 +1,11 @@
 package com.example.flamespace
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.FrameLayout
+import android.widget.ImageView
 import android.widget.Toast
 
 class Ptc : AppCompatActivity(), View.OnClickListener {
@@ -23,9 +26,17 @@ class Ptc : AppCompatActivity(), View.OnClickListener {
         findViewById<View>(R.id.ptc_406).setOnClickListener(this)
 
         // Initialize backButton and set its onClickListener
-        val backButton = findViewById<View>(R.id.backButton)
-        backButton.setOnClickListener {
-            onBackPressed()
+        val button = findViewById<ImageView>(R.id.ptc_201_pic)
+        button.setOnClickListener {
+            val int = Intent(this, Reservation::class.java)
+            startActivity(int)
+        }
+
+
+        val buttonClick = findViewById<FrameLayout>(R.id.backButton)
+        buttonClick.setOnClickListener {
+            val int = Intent(this, Home::class.java)
+            startActivity(int)
         }
     }
 

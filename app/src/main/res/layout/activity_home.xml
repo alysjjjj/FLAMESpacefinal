@@ -190,7 +190,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
         android:fontFamily="@font/retroica"
-        android:text="@string/building"
+        android:text="BUILDINGS"
         android:textColor="@color/darkGreen"
         android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"

@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import android.widget.ImageView
+import android.widget.FrameLayout
 
 class Edit_profile : AppCompatActivity() {
 
@@ -24,7 +24,7 @@ class Edit_profile : AppCompatActivity() {
         loadProfileData()
 
 
-        val buttonClick = findViewById<ImageView>(R.id.backButton)
+        val buttonClick = findViewById<FrameLayout>(R.id.backButton)
         buttonClick.setOnClickListener {
             val int = Intent(this, Profile::class.java)
             startActivity(int)
