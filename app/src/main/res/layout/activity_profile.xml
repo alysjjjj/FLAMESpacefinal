@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F9FFF2"
     android:padding="20dp"
     tools:context=".Profile">
 
@@ -59,8 +58,8 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView7"
         android:layout_width="320dp"
-        android:layout_height="350dp"
-        android:backgroundTint="#697B54"
+        android:layout_height="330dp"
+        android:backgroundTint="@color/darkGreen"
         app:cardCornerRadius="30dp"
         app:cardElevation="-12dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -68,7 +67,7 @@
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.745">
+        app:layout_constraintVertical_bias="0.684">
 
 
         <androidx.cardview.widget.CardView
@@ -97,11 +96,11 @@
             <ImageView
                 android:id="@+id/edit"
                 android:layout_width="35dp"
-                android:layout_height="20dp"
+                android:layout_height="16dp"
                 android:layout_marginStart="205dp"
                 android:layout_marginTop="24dp"
-                app:srcCompat="@drawable/gobtn"
-                android:contentDescription="@string/edit_prof" />
+                android:contentDescription="@string/edit_prof"
+                app:srcCompat="@drawable/gobtn" />
 
         </androidx.cardview.widget.CardView>
 
@@ -129,11 +128,11 @@
             <ImageView
                 android:id="@+id/currentbtn"
                 android:layout_width="35dp"
-                android:layout_height="20dp"
+                android:layout_height="16dp"
                 android:layout_marginStart="205dp"
                 android:layout_marginTop="24dp"
-                app:srcCompat="@drawable/gobtn"
-                android:contentDescription="@string/currentbtn" />
+                android:contentDescription="@string/currentbtn"
+                app:srcCompat="@drawable/gobtn" />
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -160,11 +159,11 @@
             <ImageView
                 android:id="@+id/his"
                 android:layout_width="35dp"
-                android:layout_height="20dp"
+                android:layout_height="16dp"
                 android:layout_marginStart="205dp"
                 android:layout_marginTop="24dp"
-                app:srcCompat="@drawable/gobtn"
-                android:contentDescription="@string/history_btn" />
+                android:contentDescription="@string/history_btn"
+                app:srcCompat="@drawable/gobtn" />
 
         </androidx.cardview.widget.CardView>
 
@@ -189,19 +188,19 @@
         android:id="@+id/buttonLogout"
         android:layout_width="188dp"
         android:layout_height="62dp"
-        android:layout_marginBottom="64dp"
-        android:backgroundTint="@color/white"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/gray"
         android:elevation="60dp"
         android:fontFamily="@font/gilgann"
         android:gravity="center"
         android:text="@string/log_out"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="20sp"
         android:translationZ="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView7" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

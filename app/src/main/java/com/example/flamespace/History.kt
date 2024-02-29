@@ -13,10 +13,6 @@ class History : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_history)
 
-        val buttonClick = findViewById<ImageView>(R.id.btn1)
-        buttonClick.setOnClickListener {
-            val intent = Intent(this, Profile::class.java)
-            startActivity(intent)
-        }
+
     }
 }
