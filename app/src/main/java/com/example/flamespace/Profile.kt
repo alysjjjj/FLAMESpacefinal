@@ -5,7 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
-import com.example.flamespace.R.id.btn1
+import com.example.flamespace.R.id.backButton
 import com.example.flamespace.R.id.currentbtn
 import com.example.flamespace.R.id.edit
 
@@ -16,7 +16,7 @@ class Profile : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
 
-        val buttonClick = findViewById<ImageView>(btn1)
+        val buttonClick = findViewById<ImageView>(backButton)
         buttonClick.setOnClickListener {
             val int = Intent(this, Home::class.java)
             startActivity(int)
