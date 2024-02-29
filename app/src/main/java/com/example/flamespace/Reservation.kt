@@ -1,6 +1,5 @@
 package com.example.flamespace
 
-import android.annotation.SuppressLint
 import android.app.DatePickerDialog
 import android.app.AlertDialog
 import android.content.Intent
@@ -26,7 +25,7 @@ class Reservation : AppCompatActivity() {
     private lateinit var timePickerDialog: TimePickerDialog
     private lateinit var dateButton: Button
     private lateinit var timeButton: Button
-    @SuppressLint("MissingInflatedId", "WrongViewCast")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_reservation)

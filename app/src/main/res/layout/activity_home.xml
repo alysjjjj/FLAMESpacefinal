@@ -8,23 +8,23 @@
     android:padding="20dp"
     tools:context=".Home">
 
-
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="172dp"
-        android:layout_height="109dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="100dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo2"
+        app:layout_constraintEnd_toStartOf="@id/profile"
         android:contentDescription="@string/logo" />
 
     <ImageView
         android:id="@+id/profile"
         android:layout_width="51dp"
         android:layout_height="50dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -48,7 +48,6 @@
             android:layout_width="121dp"
             android:layout_height="114dp"
             android:layout_marginEnd="36dp"
-
             android:paddingTop="10dp"
             android:paddingEnd="23dp"
             app:srcCompat="@drawable/ptc"
@@ -189,11 +188,11 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="35dp"
         android:fontFamily="@font/retroica"
         android:text="@string/building"
         android:textColor="@color/darkGreen"
-        android:textSize="30sp"
+        android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -204,7 +203,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="53dp"
         android:layout_marginTop="8dp"
-        android:fontFamily="@font/gilgann"
+        android:fontFamily="@font/gilgan"
         android:text="@string/ptcbuilding"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView2" />
@@ -215,7 +214,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/cmabulding"
-        android:fontFamily="@font/gilgann"
+        android:fontFamily="@font/gilgan"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
@@ -227,7 +226,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="52dp"
         android:text="@string/buildingmba"
-        android:fontFamily="@font/gilgann"
+        android:fontFamily="@font/gilgan"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView3" />
 
@@ -238,7 +237,7 @@
         android:layout_marginStart="60dp"
         android:layout_marginTop="8dp"
         android:text="@string/nh_bulding"
-        android:fontFamily="@font/gilgann"
+        android:fontFamily="@font/gilgan"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView4" />
 
@@ -248,7 +247,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/cahs_building"
-        android:fontFamily="@font/gilgann"
+        android:fontFamily="@font/gilgan"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView5" />
@@ -258,7 +257,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:fontFamily="@font/gilgann"
+        android:fontFamily="@font/gilgan"
         android:layout_marginEnd="60dp"
         android:text="@string/be_buil"
         app:layout_constraintEnd_toEndOf="parent"

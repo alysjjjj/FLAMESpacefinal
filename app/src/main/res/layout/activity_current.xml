@@ -77,7 +77,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/sched_example"
-                android:fontFamily="@font/gilgan"
+                android:fontFamily="@font/gilgan2"
                 android:textSize="15sp"
                 android:textAlignment="center"
                 android:padding="10dp"

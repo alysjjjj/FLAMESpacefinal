@@ -85,7 +85,7 @@
                     android:layout_marginStart="120dp"
                     android:layout_marginTop="32dp"
                     android:text="@string/nh_111"
-                    android:fontFamily="@font/gilgan"
+                    android:fontFamily="@font/gilgan2"
                     android:textColor="@color/black"
                     android:textSize="25sp"
                     android:textStyle="bold" />
@@ -127,7 +127,7 @@
                     android:layout_marginStart="120dp"
                     android:layout_marginTop="32dp"
                     android:text="@string/nh_112"
-                    android:fontFamily="@font/gilgan"
+                    android:fontFamily="@font/gilgan2"
                     android:textColor="@color/black"
                     android:textSize="25sp"
                     android:textStyle="bold" />

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/lightGreen"
-    android:padding="15dp"
+    android:padding="20dp"
     tools:context=".Ptc">
 
     <FrameLayout
@@ -102,7 +102,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/ptc301"
+                android:id="@+id/ptc_301"
                 android:layout_width="340dp"
                 android:layout_height="90dp"
                 android:layout_marginStart="18dp"

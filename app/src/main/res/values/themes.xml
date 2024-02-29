@@ -7,7 +7,7 @@
 
     <style name="ButtonWhite">
         <item name="android:background">@drawable/bg_button</item>
-        <item name="fontFamily">@font/gilgann</item>
+        <item name="fontFamily">@font/gilgan</item>
         <item name="android:textColor">@color/darkGreen</item>
         <item name="android:textSize">14sp</item>
         <item name="android:textStyle">bold</item>
@@ -45,7 +45,7 @@
 
     <style name="TextInputEditText" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
         <item name="android:background">@drawable/bg_textfield</item>
-        <item name="android:fontFamily">@font/gilgann</item>
+        <item name="android:fontFamily">@font/gilgan</item>
     </style>
 
     <style name="Theme.FLAMESpace" parent="Base.Theme.FLAMESpace" />
