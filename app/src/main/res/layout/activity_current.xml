@@ -9,7 +9,7 @@
     tools:context=".Current">
 
     <FrameLayout
-        android:id="@+id/backButton"
+        android:id="@+id/backButtonFrame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="1dp"
@@ -17,22 +17,25 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
+            android:id="@+id/backButtonBackground"
             android:layout_width="56dp"
             android:layout_height="56dp"
             android:background="@drawable/circular_bg"
-            android:contentDescription="Back Button"/>
+            android:contentDescription="@string/back_button"/>
 
         <ImageView
+            android:id="@+id/backButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingStart="7dp"
             android:src="@drawable/ic_arrow_back_white"
             android:layout_gravity="center"
-            android:contentDescription="Back Button Icon"/>
+            android:contentDescription="@string/back_button"
+            tools:ignore="RtlSymmetry" />
     </FrameLayout>
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/tit_current"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="90dp"
@@ -58,7 +61,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        app:layout_constraintTop_toBottomOf="@+id/tit_current"
         app:layout_constraintVertical_bias="0.083">
 
         <RelativeLayout
@@ -69,7 +72,8 @@
                 android:id="@+id/current_room"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="PTC 301"
+                android:text="@string/room_code_example"
+                android:textColor="@color/new_darkGreen"
                 style="@style/Title"
                 android:textAlignment="center"
                 android:paddingTop="20dp"/>
@@ -78,29 +82,36 @@
                 android:id="@+id/current_schedule"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="7:30 am - 9:00 am"
+                android:text="@string/sched_example"
                 android:fontFamily="@font/gilgan"
                 android:textSize="15sp"
                 android:textAlignment="center"
                 android:padding="10dp"
                 android:layout_below="@id/current_room"/>
 
+            <ImageView
+                android:id="@+id/current_iv"
+                android:layout_width="142dp"
+                android:layout_height="143dp"
+                android:layout_below="@id/current_schedule"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/current_image"
+                android:src="@drawable/standard_classroom" />
         </RelativeLayout>
-
     </androidx.cardview.widget.CardView>
 
     <Button
-        android:id="@+id/btn22"
+        android:id="@+id/cancel_doneButton"
         android:layout_width="152dp"
         android:layout_height="56dp"
         android:layout_marginTop="15dp"
         android:backgroundTint="@color/white"
-        android:text="@string/cancel"
-        android:fontFamily="@font/gilgan"
-        android:textColor="#697B54"
+        android:fontFamily="@font/retroica"
+        android:contentDescription="@string/doneandcancel"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView10" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

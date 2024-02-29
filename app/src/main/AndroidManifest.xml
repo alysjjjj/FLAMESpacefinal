@@ -19,7 +19,7 @@
             android:name=".Current"
             android:exported="false" />
         <activity
-            android:name=".Sign_up"
+            android:name=".Signup"
             android:exported="false" />
         <activity
             android:name=".Reservation"
@@ -28,20 +28,20 @@
             android:name=".Be"
             android:exported="false" />
         <activity
-            android:name=".Cahs_rooms"
+            android:name=".Cahs"
             android:exported="false" />
         <activity
-            android:name=".Nh_room"
+            android:name=".Nh"
             android:exported="false" />
         <activity
-            android:name=".Mba_room"
+            android:name=".Mba"
             android:exported="false" />
         <activity
-            android:name=".Cma_room"
+            android:name=".Cma"
             android:exported="false" />
 
         <activity
-            android:name=".Ptc_room"
+            android:name=".Ptc"
             android:exported="false" />
         <activity
             android:name=".History"

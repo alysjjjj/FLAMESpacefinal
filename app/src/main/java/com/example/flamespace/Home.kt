@@ -23,7 +23,7 @@ class Home : AppCompatActivity() {
 
         val button = findViewById<ImageView>(cite)
         button.setOnClickListener {
-            val int = Intent(this, Ptc_room::class.java)
+            val int = Intent(this, Ptc::class.java)
             startActivity(int)
         }
 
@@ -35,25 +35,25 @@ class Home : AppCompatActivity() {
 
         val btn2 = findViewById<ImageView>(cma)
         btn2.setOnClickListener {
-            val int = Intent(this, Cma_room::class.java)
+            val int = Intent(this, Cma::class.java)
             startActivity(int)
         }
 
         val btn3 = findViewById<ImageView>(mba)
         btn3.setOnClickListener {
-            val int = Intent(this, Mba_room::class.java)
+            val int = Intent(this, Mba::class.java)
             startActivity(int)
         }
 
         val btn4 = findViewById<ImageView>(nh)
         btn4.setOnClickListener {
-            val int = Intent(this, Nh_room::class.java)
+            val int = Intent(this, Nh::class.java)
             startActivity(int)
         }
 
         val btn5 = findViewById<ImageView>(cahs)
         btn5.setOnClickListener {
-            val int = Intent(this, Cahs_rooms::class.java)
+            val int = Intent(this, Cahs::class.java)
             startActivity(int)
         }
 

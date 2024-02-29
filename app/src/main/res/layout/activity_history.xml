@@ -20,26 +20,27 @@
             android:layout_width="56dp"
             android:layout_height="56dp"
             android:background="@drawable/circular_bg"
-            android:contentDescription="Back Button"/>
+            android:contentDescription="@string/back_button"/>
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingStart="7dp"
+            android:paddingStart="8dp"
             android:src="@drawable/ic_arrow_back_white"
             android:layout_gravity="center"
-            android:contentDescription="Back Button Icon"/>
+            android:contentDescription="@string/back_button"
+            tools:ignore="RtlSymmetry" />
     </FrameLayout>
 
     <TextView
         android:id="@+id/tit_history"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="90dp"
-        android:text="HISTORY"
+        android:layout_marginTop="50dp"
+        android:text="@string/history"
         android:fontFamily="@font/lemonmilk"
         android:padding="20dp"
-        android:textSize="25sp"
+        android:textSize="40sp"
         android:textStyle="bold"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"

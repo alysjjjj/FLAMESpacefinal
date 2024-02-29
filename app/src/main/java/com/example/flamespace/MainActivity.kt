@@ -1,12 +1,9 @@
 package com.example.flamespace
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import com.example.flamespace.R.id.ins
-import com.example.flamespace.R.id.stud
 
 
 class MainActivity : AppCompatActivity() {
@@ -15,16 +12,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val buttonClick = findViewById<Button>(stud)
+        val buttonClick = findViewById<Button>(R.id.mainLogin)
         buttonClick.setOnClickListener {
             val intent = Intent(this, SignIn::class.java)
             startActivity(intent)
         }
 
-        val btn = findViewById<Button>(ins)
+        val btn = findViewById<Button>(R.id.mainSignup)
         btn.setOnClickListener {
-            val intent = Intent(this, Sign_up::class.java)
+            val intent = Intent(this, Signup::class.java)
             startActivity(intent)
         }
+
     }
 }

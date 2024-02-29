@@ -4,42 +4,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#697B54"
-    tools:context=".Cahs_rooms">
+    android:background="@color/lightGreen"
+    android:padding="20dp"
+    tools:context=".Cahs">
 
-
-    <ImageView
-        android:id="@+id/boton"
-        android:layout_width="32dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="64dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/back1" />
-
-    <TextView
-        android:id="@+id/textView7"
+    <FrameLayout
+        android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:padding="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        android:text="CAHS ROOMS"
-        android:textColor="@color/white"
-        android:textSize="23sp"
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:padding="15dp"
+            app:tint="@color/new_darkGreen"
+            android:src="@drawable/ic_arrow_back_white"
+            android:layout_gravity="center"
+            android:contentDescription="@string/back_button"
+            tools:ignore="RtlSymmetry" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tit_cahs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="CAHS"
+        android:contentDescription="@string/cahs_des"
+        android:textAlignment="center"
+        android:fontFamily="@font/lemonmilk"
+        android:padding="20dp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/new_darkGreen"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
         android:layout_width="376dp"
         android:layout_height="651dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7">
+        app:layout_constraintTop_toBottomOf="@+id/tit_cahs">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -47,331 +61,92 @@
             android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="321dp"
+                android:id="@+id/cahs_123"
+                android:layout_width="340dp"
                 android:layout_height="90dp"
-                android:layout_marginLeft="18dp"
+                android:layout_marginStart="18dp"
                 android:layout_marginTop="10dp"
-                app:cardCornerRadius="20dp"
+                app:cardCornerRadius="10dp"
                 app:cardElevation="5dp">
 
                 <ImageView
-                    android:layout_width="100dp"
+                    android:layout_width="90dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
                     android:elevation="3dp"
-                    android:src="@drawable/mac" />
+                    android:contentDescription="@string/computer_room"
+                    android:src="@drawable/computer_laboratory"
+                    app:tint="@color/new_darkGreen"/>
 
                 <TextView
-                    android:id="@+id/textView8"
+                    android:id="@+id/cahs_123_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="135dp"
-                    android:layout_marginTop="28dp"
-                    android:text="CAHS 301"
-                    android:textSize="25dp"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginTop="32dp"
+                    android:text="@string/cahs_123"
+                    android:fontFamily="@font/gilgan"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
                     android:textStyle="bold" />
 
                 <ImageView
-                    android:id="@+id/imageView5"
+                    android:id="@+id/cahs_123_pic"
                     android:layout_width="36dp"
                     android:layout_height="39dp"
-                    android:layout_marginLeft="260dp"
+                    android:layout_marginStart="290dp"
                     android:layout_marginTop="26dp"
-                    app:srcCompat="@drawable/baseline_keyboard_arrow_right_24" />
-
+                    app:tint="@color/new_midGreen"
+                    app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
+                    android:contentDescription="@string/next_schedule" />
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="321dp"
+                android:id="@+id/cahs_124"
+                android:layout_width="340dp"
                 android:layout_height="90dp"
-                android:layout_marginLeft="18dp"
+                android:layout_marginStart="18dp"
                 android:layout_marginTop="10dp"
-                app:cardCornerRadius="20dp"
+                app:cardCornerRadius="10dp"
                 app:cardElevation="5dp">
 
                 <ImageView
-                    android:layout_width="100dp"
+                    android:layout_width="90dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
                     android:elevation="3dp"
-                    android:src="@drawable/mac" />
+                    android:contentDescription="@string/computer_room"
+                    android:src="@drawable/computer_laboratory"
+                    app:tint="@color/new_darkGreen"/>
 
                 <TextView
-                    android:id="@+id/textView9"
+                    android:id="@+id/cahs_124_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="135dp"
-                    android:layout_marginTop="30dp"
-                    android:text="CAHS 301"
-                    android:textSize="25dp"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginTop="32dp"
+                    android:text="@string/cahs_124"
+                    android:fontFamily="@font/gilgan"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
                     android:textStyle="bold" />
 
                 <ImageView
-                    android:id="@+id/imageView10"
+                    android:id="@+id/cahs_124_pic"
                     android:layout_width="36dp"
                     android:layout_height="39dp"
-                    android:layout_marginLeft="260dp"
-                    android:layout_marginTop="29dp"
-
-                    app:srcCompat="@drawable/baseline_keyboard_arrow_right_24" />
-
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="321dp"
-                android:layout_height="90dp"
-                android:layout_marginLeft="18dp"
-                android:layout_marginTop="10dp"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="5dp">
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="70dp"
-                    android:layout_margin="10dp"
-                    android:elevation="3dp"
-                    android:src="@drawable/mac" />
-
-                <TextView
-                    android:id="@+id/textView10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="135dp"
-                    android:layout_marginTop="30dp"
-                    android:text="CAHS 301"
-                    android:textSize="25dp"
-                    android:textStyle="bold" />
-
-                <ImageView
-                    android:id="@+id/imrrew5"
-                    android:layout_width="36dp"
-                    android:layout_height="39dp"
-                    android:layout_marginLeft="260dp"
+                    android:layout_marginStart="290dp"
                     android:layout_marginTop="26dp"
-                    app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"/>
-
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="321dp"
-                android:layout_height="90dp"
-                android:layout_marginLeft="18dp"
-                android:layout_marginTop="10dp"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="5dp">
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="70dp"
-                    android:layout_margin="10dp"
-                    android:elevation="3dp"
-                    android:src="@drawable/mac"/>
-
-                <TextView
-                    android:id="@+id/textView12"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="135dp"
-                    android:layout_marginTop="30dp"
-                    android:text="CAHS 301"
-                    android:textSize="25dp"
-                    android:textStyle="bold" />
-
-                <ImageView
-                    android:id="@+id/imagyyew5"
-                    android:layout_width="36dp"
-                    android:layout_height="39dp"
-                    android:layout_marginLeft="260dp"
-                    android:layout_marginTop="26dp"
-                    app:srcCompat="@drawable/baseline_keyboard_arrow_right_24" />
-
+                    app:tint="@color/new_midGreen"
+                    app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
+                    android:contentDescription="@string/next_schedule" />
 
             </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="321dp"
-                android:layout_height="90dp"
-                android:layout_marginLeft="18dp"
-                android:layout_marginTop="10dp"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="5dp">
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="70dp"
-                    android:layout_margin="10dp"
-                    android:elevation="3dp"
-                    android:src="@drawable/mac"/>
-
-                <TextView
-                    android:id="@+id/textView15"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="135dp"
-                    android:layout_marginTop="30dp"
-                    android:text="CAHS 301"
-                    android:textSize="25dp"
-                    android:textStyle="bold" />
-
-                <ImageView
-                    android:id="@+id/imageVie5"
-                    android:layout_width="36dp"
-                    android:layout_height="39dp"
-                    android:layout_marginLeft="260dp"
-                    android:layout_marginTop="26dp"
-                    app:srcCompat="@drawable/baseline_keyboard_arrow_right_24" />
-
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="321dp"
-                android:layout_height="90dp"
-                android:layout_marginLeft="18dp"
-                android:layout_marginTop="10dp"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="5dp">
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="70dp"
-                    android:layout_margin="10dp"
-                    android:elevation="3dp"
-                    android:src="@drawable/mac"/>
-
-                <TextView
-                    android:id="@+id/textView16"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="135dp"
-                    android:layout_marginTop="30dp"
-                    android:text="CAHS 301"
-                    android:textSize="25dp"
-                    android:textStyle="bold" />
-
-                <ImageView
-                    android:id="@+id/iw5"
-                    android:layout_width="36dp"
-                    android:layout_height="39dp"
-                    android:layout_marginLeft="260dp"
-                    android:layout_marginTop="26dp"
-                    app:srcCompat="@drawable/baseline_keyboard_arrow_right_24" />
-
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="321dp"
-                android:layout_height="90dp"
-                android:layout_marginLeft="18dp"
-                android:layout_marginTop="10dp"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="5dp">
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="70dp"
-                    android:layout_margin="10dp"
-                    android:elevation="3dp"
-                    android:src="@drawable/mac"/>
-
-                <TextView
-                    android:id="@+id/textView18"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="135dp"
-                    android:layout_marginTop="30dp"
-                    android:text="CAHS 301"
-                    android:textSize="25dp"
-                    android:textStyle="bold" />
-
-                <ImageView
-                    android:id="@+id/imoageView5"
-                    android:layout_width="36dp"
-                    android:layout_height="39dp"
-                    android:layout_marginLeft="260dp"
-                    android:layout_marginTop="26dp"
-                    app:srcCompat="@drawable/baseline_keyboard_arrow_right_24" />
-
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="321dp"
-                android:layout_height="90dp"
-                android:layout_marginLeft="18dp"
-                android:layout_marginTop="10dp"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="5dp">
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="70dp"
-                    android:layout_margin="10dp"
-                    android:elevation="3dp"
-                    android:src="@drawable/mac"/>
-
-                <TextView
-                    android:id="@+id/textView20"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="135dp"
-                    android:layout_marginTop="30dp"
-                    android:text="CAHS 301"
-                    android:textSize="25dp"
-                    android:textStyle="bold" />
-
-                <ImageView
-                    android:id="@+id/imageVkw5"
-                    android:layout_width="36dp"
-                    android:layout_height="39dp"
-                    android:layout_marginLeft="260dp"
-                    android:layout_marginTop="26dp"
-                    app:srcCompat="@drawable/baseline_keyboard_arrow_right_24" />
-
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="321dp"
-                android:layout_height="90dp"
-                android:layout_marginLeft="18dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="50dp"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="5dp">
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="70dp"
-                    android:layout_margin="10dp"
-                    android:elevation="3dp"
-                    android:src="@drawable/mac" />
-
-                <TextView
-                    android:id="@+id/textView33"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="135dp"
-                    android:layout_marginTop="30dp"
-                    android:text="CAHS 301"
-                    android:textSize="25dp"
-                    android:textStyle="bold" />
-
-                <ImageView
-                    android:id="@+id/imView5"
-                    android:layout_width="36dp"
-                    android:layout_height="39dp"
-                    android:layout_marginLeft="260dp"
-                    android:layout_marginTop="26dp"
-                    app:srcCompat="@drawable/baseline_keyboard_arrow_right_24" />
-
-
-            </androidx.cardview.widget.CardView>
-
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
 
         </LinearLayout>
     </ScrollView>

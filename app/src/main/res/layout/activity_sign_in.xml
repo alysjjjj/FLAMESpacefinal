@@ -12,8 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="@string/login_title"
-        android:fontFamily="@font/gilgan"
+        android:text="@string/log_inX"
+        android:fontFamily="@font/retroica"
         style="@style/Title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,7 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:text="@string/login_sub_title"
+        android:text="@string/log_in_your_account"
         style="@style/SubTitle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,7 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:hint="@string/login_email"
+        android:hint="@string/emailx"
         style="@style/TextInputLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,7 +47,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingStart="48dp"
-            style="@style/TextInputEditText"/>
+            style="@style/TextInputEditText"
+            tools:ignore="RtlSymmetry" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -55,20 +56,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:hint="@string/login_password"
+        android:hint="@string/passwordX"
         style="@style/TextInputLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/til_email"
-        app:startIconDrawable="@drawable/ic_lock">
+        app:startIconDrawable="@drawable/iclock"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleDrawable="@drawable/ic_eye_custom">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingStart="48dp"
-            style="@style/TextInputEditText"/>
+            style="@style/TextInputEditText"
+            android:inputType="textPassword"
+            tools:ignore="RtlSymmetry" />
+
     </com.google.android.material.textfield.TextInputLayout>
+
 
     <TextView
         android:id="@+id/tv_forgot_pw"
@@ -76,7 +83,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:text="@string/login_forgot_pw"
+        android:text="@string/forgot_password"
         android:textAlignment="textEnd"
         android:textColor="@color/darkGreen"
         android:textStyle="bold"
@@ -89,7 +96,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
-        android:text="@string/login_title"
+        android:text="@string/log_inc"
         style="@style/ButtonGreen"
         app:layout_constraintBottom_toTopOf="@id/tv_havent_account"
         app:layout_constraintEnd_toEndOf="parent"
@@ -102,7 +109,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
-        android:text="@string/login_havent_account"
+        android:text="@string/don_t_have_an_account"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -14,7 +14,7 @@
         android:layout_marginTop="52dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/backwhite"
+        app:srcCompat="@drawable/newback"
         android:importantForAccessibility="no" />
 
     <EditText

@@ -44,6 +44,14 @@ class Reservation : AppCompatActivity() {
         initTimePicker()
 
 
+
+        val buttonClick = findViewById<ImageView>(R.id.backButton)
+        buttonClick.setOnClickListener {
+            val intent = Intent(this, Home::class.java)
+            startActivity(intent)
+        }
+
+
         val but = findViewById<Button>(/* id = */ save)
         but.setOnClickListener {
             val intent = Intent(this, Home::class.java)
