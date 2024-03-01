@@ -8,162 +8,128 @@
     android:padding="20dp"
     tools:context=".Reservation">
 
-
-    <ImageView
-        android:id="@+id/backButton"
-        android:layout_width="33dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="32dp"
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="1dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/newback"
-        android:contentDescription="@string/todod" />
+        app:layout_constraintTop_toTopOf="parent">
 
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:padding="15dp"
+            app:tint="@color/new_darkGreen"
+            android:src="@drawable/ic_arrow_back_white"
+            android:layout_gravity="center"
+            android:contentDescription="@string/back_button"
+            tools:ignore="RtlSymmetry" />
+    </FrameLayout>
 
 
     <TextView
         android:id="@+id/tit_reservation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/reservation"
+        android:contentDescription="@string/reservation"
+        android:textAlignment="center"
         android:fontFamily="@font/lemonmilk"
         android:padding="20dp"
-        android:text="@string/reservation"
-        android:textColor="@color/new_darkGreen"
-        android:textSize="25sp"
+        android:textSize="30sp"
         android:textStyle="bold"
+        android:textColor="@color/new_darkGreen"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/room_code"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/gilgan2"
+        android:fontFamily="@font/gilgan"
         android:text="@string/roomptc_301"
-        android:textSize="17sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tit_reservation" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView11"
+        android:id="@+id/cv_reservation"
         android:layout_width="285dp"
         android:layout_height="420dp"
-        android:layout_marginTop="40dp"
-        android:backgroundTint="#697B54"
+        android:layout_marginTop="20dp"
+        android:padding="20dp"
+        android:backgroundTint="@color/darkGreen"
         app:cardCornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14">
+        app:layout_constraintTop_toBottomOf="@+id/room_code">
 
         <ScrollView
-            android:id="@+id/scrollView"
+            android:id="@+id/sv_reservation"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:fadeScrollbars="false"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/cardView11"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cardView11">
 
-            <LinearLayout
+
+        <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="250dp"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="13dp"
-                    android:layout_marginTop="40dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent">
-
-                    <Button
-                        android:id="@+id/datee"
-                        style="?android:spinnerStyle"
-                        android:layout_width="250dp"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:layout_marginTop="10dp"
-                        android:fontFamily="@font/gilgan2"
-                        android:text="@string/jan_01_2020"
-                        android:textColor="@color/black"
-                        android:textColorHighlight="#101010"
-                        android:textColorLink="#697B54"
-                        android:textSize="16sp"
-                        app:layout_constraintLeft_toLeftOf="parent"
-                        app:layout_constraintRight_toRightOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView" />
-                </androidx.cardview.widget.CardView>
-
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/tv_time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
-                    android:layout_marginTop="-75dp"
-                    android:fontFamily="@font/gilgan2"
-                    android:text="@string/date"
-                    android:textColor="@color/white"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:id="@+id/textView17"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="60dp"
-                    android:fontFamily="@font/gilgan2"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/gilgan"
                     android:text="@string/time"
                     android:textColor="@color/white"
-                    android:textSize="18sp"
+                    android:textSize="15sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="250dp"
                     android:layout_height="50dp"
-                    android:layout_marginStart="13sp"
+                    android:layout_marginStart="13dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent">
 
-                    <Button
-                        android:id="@+id/timePickerButton"
-                        style="?android:spinnerStyle"
-                        android:layout_width="250dp"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:layout_marginTop="10dp"
-                        android:backgroundTint="#697B54"
-                        android:fontFamily="@font/gilgan2"
-                        android:text="@string/set_time"
-                        android:textColor="@color/black"
-                        android:textColorHighlight="@color/black"
-                        android:textColorHint="#697B54"
-                        android:textColorLink="#697B54"
-                        android:textSize="16sp"
-                        app:iconTint="#697B54"
-                        app:rippleColor="#697B54" />
+                    <Spinner
+                        android:id="@+id/time_spinner"
+                        android:layout_width="249dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="5dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewPurpose" />
 
                 </androidx.cardview.widget.CardView>
 
 
                 <TextView
-                    android:id="@+id/purpose"
+                    android:id="@+id/tv_purpose"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="10dp"
-                    android:fontFamily="@font/gilgan2"
+                    android:fontFamily="@font/gilgan"
                     android:text="@string/purpose"
                     android:textColor="@color/white"
-                    android:textSize="18sp"
+                    android:textSize="15sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -176,7 +142,7 @@
                     app:layout_constraintStart_toStartOf="parent">
 
                     <Spinner
-                        android:id="@+id/spinnerPurpose"
+                        android:id="@+id/purpose_spinner"
                         android:layout_width="249dp"
                         android:layout_height="50dp"
                         android:layout_marginStart="5dp"
@@ -292,29 +258,21 @@
 
                 </androidx.cardview.widget.CardView>
 
-
             </LinearLayout>
-
-
         </ScrollView>
     </androidx.cardview.widget.CardView>
 
     <Button
         android:id="@+id/save"
-        android:layout_width="152dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="#697B54"
-        android:fontFamily="@font/gilgan2"
-        android:text="@string/confirm"
-        android:textColor="@color/white"
-        android:textColorHighlight="#EFEBEB"
-        android:textColorLink="#697B54"
-        android:textSize="18sp"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="18dp"
+        style="@style/ButtonGreen"
+        android:text="@string/reserve"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView11" />
+        app:layout_constraintTop_toBottomOf="@+id/cv_reservation" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -122,6 +122,8 @@
     <string name="blk_6">BLK 6</string>
     <string name="log_out">Log out</string>
 
+    <string name="reserve">RESERVE</string>
+
         <string name="done">Done</string>
         <string name="title_activity_login">LoginActivity</string>
         <string name="next">Next</string>

@@ -9,7 +9,6 @@
     tools:context=".Ptc">
 
     <FrameLayout
-        android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="1dp"
@@ -17,6 +16,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
+            android:id="@+id/backButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingStart="8dp"
@@ -348,6 +348,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/ptc_403"
                 android:layout_width="340dp"
                 android:layout_height="90dp"
                 android:layout_marginStart="18dp"
@@ -365,7 +366,7 @@
                     app:tint="@color/new_darkGreen" />
 
                 <TextView
-                    android:id="@+id/ptc_403"
+                    android:id="@+id/ptc_403_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="120dp"
@@ -388,6 +389,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/ptc_404"
                 android:layout_width="340dp"
                 android:layout_height="90dp"
                 android:layout_marginStart="18dp"
@@ -405,7 +407,7 @@
                     app:tint="@color/new_darkGreen" />
 
                 <TextView
-                    android:id="@+id/ptc_404"
+                    android:id="@+id/ptc_404_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="120dp"
@@ -428,6 +430,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/ptc_405"
                 android:layout_width="340dp"
                 android:layout_height="90dp"
                 android:layout_marginStart="18dp"
@@ -445,7 +448,7 @@
                     app:tint="@color/new_darkGreen" />
 
                 <TextView
-                    android:id="@+id/ptc_405"
+                    android:id="@+id/ptc_405_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="120dp"
@@ -468,6 +471,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/ptc_406"
                 android:layout_width="340dp"
                 android:layout_height="90dp"
                 android:layout_marginStart="18dp"
@@ -485,7 +489,7 @@
                     app:tint="@color/new_darkGreen" />
 
                 <TextView
-                    android:id="@+id/ptc_406"
+                    android:id="@+id/ptc_406_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="120dp"

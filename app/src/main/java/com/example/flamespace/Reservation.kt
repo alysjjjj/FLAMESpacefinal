@@ -10,6 +10,7 @@ import android.widget.ImageView
 import com.example.flamespace.R.id.save
 import java.util.*
 import android.app.TimePickerDialog
+import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
@@ -17,6 +18,8 @@ import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.Spinner
 import android.widget.Toast
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat as SimpleDateFormat1
 
 
@@ -30,22 +33,26 @@ class Reservation : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_reservation)
 
-        dateButton = this.findViewById(R.id.datee)
-        dateButton.text = getTodaysDate()
-
-        timeButton = findViewById(R.id.timePickerButton)
-        timeButton.text = getCurrentTime()
-
-        initDatePicker()
-        initTimePicker()
-
-
 
         val buttonClick = findViewById<ImageView>(R.id.backButton)
         buttonClick.setOnClickListener {
             val intent = Intent(this, Home::class.java)
             startActivity(intent)
         }
+
+        val spinner = findViewById<Spinner>(R.id.time_spinner)
+
+
+        //retrofit
+        val serviceApi = RetrofitHelper.getInstance().create(ServiceAPI::class.java)
+
+        GlobalScope.launch {
+            val result = serviceApi.getPosts()
+            if (result != null) {
+                Log.d("ayush: ", result.body().toString())
+            }
+        }
+        //retrofit
 
 
         val but = findViewById<Button>(/* id = */ save)
@@ -54,7 +61,8 @@ class Reservation : AppCompatActivity() {
             startActivity(intent)
             Toast.makeText(this, "Reserved", Toast.LENGTH_SHORT).show()
         }
-        val spinnerPurpose = findViewById<Spinner>(R.id.spinnerPurpose)
+
+        val spinnerPurpose = findViewById<Spinner>(R.id.purpose_spinner)
         val purposeChoices = arrayOf("Class", "Project", "Others")
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, purposeChoices)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
@@ -69,13 +77,9 @@ class Reservation : AppCompatActivity() {
                     2 -> showOtherDetails()
                 }
     }
-
             override fun onNothingSelected(parent: AdapterView<*>?) {
-
             }
         }
-
-
     }
 
     private fun showClassDetails() {
