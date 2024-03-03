@@ -17,11 +17,16 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/circular_bg"
+            android:contentDescription="@string/back_button"/>
+
+        <ImageView
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingStart="8dp"
-            android:padding="15dp"
-            app:tint="@color/new_darkGreen"
             android:src="@drawable/ic_arrow_back_white"
             android:layout_gravity="center"
             android:contentDescription="@string/back_button"
@@ -32,11 +37,11 @@
         android:id="@+id/tit_current"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="90dp"
+        android:layout_marginTop="70dp"
         android:text="@string/current_reservation"
         android:fontFamily="@font/lemonmilk"
-        android:padding="20dp"
-        android:textSize="25sp"
+        android:textSize="40sp"
+        android:gravity="center"
         android:textStyle="bold"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
@@ -77,20 +82,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/sched_example"
-                android:fontFamily="@font/gilgan2"
+                android:fontFamily="@font/gilgan"
                 android:textSize="15sp"
                 android:textAlignment="center"
                 android:padding="10dp"
                 android:layout_below="@id/current_room"/>
 
-            <ImageView
-                android:id="@+id/current_iv"
-                android:layout_width="142dp"
-                android:layout_height="143dp"
-                android:layout_below="@id/current_schedule"
-                android:layout_centerInParent="true"
-                android:contentDescription="@string/current_image"
-                android:src="@drawable/standard_classroom" />
+
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 

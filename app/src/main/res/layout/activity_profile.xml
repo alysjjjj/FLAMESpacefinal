@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="20dp"
+    android:background="@color/lighterGreen"
     tools:context=".Profile">
 
 
@@ -17,17 +18,21 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/circular_dark_bg"
+            android:contentDescription="@string/back_button"/>
+
+        <ImageView
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingStart="8dp"
-            android:padding="15dp"
-            app:tint="@color/new_darkGreen"
             android:src="@drawable/ic_arrow_back_white"
             android:layout_gravity="center"
             android:contentDescription="@string/back_button"
             tools:ignore="RtlSymmetry" />
     </FrameLayout>
-
     <ImageView
         android:id="@+id/profile_pic"
         android:layout_width="131dp"
@@ -56,12 +61,12 @@
         app:layout_constraintTop_toBottomOf="@+id/profile_pic" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView7"
+        android:id="@+id/profile_cardview"
         android:layout_width="320dp"
-        android:layout_height="330dp"
+        android:layout_height="300dp"
         android:backgroundTint="@color/darkGreen"
         app:cardCornerRadius="30dp"
-        app:cardElevation="-12dp"
+        app:cardElevation="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
@@ -71,7 +76,7 @@
 
 
         <androidx.cardview.widget.CardView
-            android:id="@id/cardView7"
+            android:id="@+id/edit_cv"
             android:layout_width="250dp"
             android:layout_height="65dp"
             android:layout_gravity="center"
@@ -82,7 +87,7 @@
 
 
             <TextView
-                android:id="@+id/textView19"
+                android:id="@+id/tv_edit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -105,6 +110,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/current_cv"
             android:layout_width="250dp"
             android:layout_height="65dp"
             android:layout_gravity="center"
@@ -136,6 +142,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/history_cv"
             android:layout_width="250dp"
             android:layout_height="65dp"
             android:layout_gravity="center"
@@ -175,8 +182,8 @@
         android:layout_width="wrap_content"
         android:layout_height="35dp"
         android:fontFamily="@font/gilgan"
-        android:text="@string/cite_department"
-        android:layout_marginTop="-10dp"
+        android:text="@string/block"
+        android:layout_marginTop="1dp"
         android:textColor="@color/black"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -186,21 +193,20 @@
 
     <Button
         android:id="@+id/buttonLogout"
-        android:layout_width="188dp"
-        android:layout_height="62dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="@color/gray"
         android:elevation="60dp"
         android:fontFamily="@font/gilgan"
         android:gravity="center"
         android:text="@string/log_out"
-        android:textColor="@color/white"
-        android:textSize="20sp"
+        style="@style/ButtonWhite"
         android:translationZ="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView7" />
+        app:layout_constraintTop_toBottomOf="@+id/profile_cardview" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

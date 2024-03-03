@@ -47,8 +47,8 @@
         android:layout_alignStart="@+id/name"
         android:layout_centerInParent="true"
         android:layout_marginStart="2dp"
-
         android:layout_marginTop="50dp"
+
         android:autofillHints=""
         android:background="@drawable/custom_edittxt"
         android:fontFamily="@font/gilgan"
