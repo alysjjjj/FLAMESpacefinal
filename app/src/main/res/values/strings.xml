@@ -253,6 +253,8 @@
         <string name="next_schedule">Schedule</string>
         <string name="next_reservation">Reservation</string>
         <string name="back_button">Back Button</string>
+    <string name="department">Department</string>
+    <string name="cite_department">CITE</string>
 
 
 </resources>
