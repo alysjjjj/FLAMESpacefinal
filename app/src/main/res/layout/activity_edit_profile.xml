@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="20dp"
+    android:background="@color/darkGreen"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <FrameLayout
@@ -15,11 +16,16 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/circular_bg"
+            android:contentDescription="@string/back_button"/>
+
+        <ImageView
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingStart="8dp"
-            android:padding="15dp"
-            app:tint="@color/new_darkGreen"
             android:src="@drawable/ic_arrow_back_white"
             android:layout_gravity="center"
             android:contentDescription="@string/back_button"
@@ -33,6 +39,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="190dp"
+        android:backgroundTint="@color/white"
         android:background="@drawable/custom_edittxt"
         android:fontFamily="@font/gilgan"
         android:hint="@string/enter_your_name"
@@ -46,9 +53,9 @@
         android:layout_below="@+id/name"
         android:layout_alignStart="@+id/name"
         android:layout_centerInParent="true"
+        android:backgroundTint="@color/white"
         android:layout_marginStart="2dp"
         android:layout_marginTop="50dp"
-
         android:autofillHints=""
         android:background="@drawable/custom_edittxt"
         android:fontFamily="@font/gilgan"
@@ -70,7 +77,6 @@
         android:backgroundTint="#697B54"
         android:fontFamily="@font/gilgan"
         android:text="@string/save"
-        android:textColor="@color/white"
         android:textSize="20sp" />
 
     <TextView
@@ -79,11 +85,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="43dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="170dp"
         android:text="@string/name"
-        android:textSize="15sp"
-        android:textStyle="bold" />
+        android:textColor="@color/white"
+        android:fontFamily="@font/gilgan"
+        android:textSize="15sp" />
 
     <TextView
         android:id="@+id/blockEditText"
@@ -91,8 +98,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="43dp"
-        android:layout_marginTop="270dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/gilgan"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="280dp"
         android:text="@string/department"
         android:textSize="15sp"
         android:textStyle="bold" />

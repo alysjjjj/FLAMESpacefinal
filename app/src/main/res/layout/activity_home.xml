@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F9FFF2"
+    android:background="@color/white"
     android:padding="20dp"
     tools:context=".Home">
 
@@ -37,31 +37,24 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
         android:fontFamily="@font/retroica"
-        android:text="BUILDINGS"
+        android:text="@string/building"
         android:textColor="@color/darkGreen"
         android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-    <ScrollView
-        android:layout_width="367dp"
-        android:layout_height="509dp"
-        android:foregroundGravity="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6">
-
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/textView6">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="0dp"
                 android:layout_marginTop="30dp"
                 android:orientation="horizontal">
 
@@ -69,7 +62,7 @@
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp"
                     android:backgroundTint="@color/darkGreen"
                     app:cardCornerRadius="5dp">
 
@@ -78,6 +71,7 @@
                         android:layout_width="180dp"
                         android:layout_height="180dp"
                         android:layout_gravity="center"
+                        android:contentDescription="@string/ptc_des"
                         app:srcCompat="@drawable/ptc_building" />
 
 
@@ -97,6 +91,7 @@
                         android:layout_width="183dp"
                         android:layout_height="178dp"
                         android:layout_gravity="center"
+                        android:contentDescription="@string/mba_des"
                         app:srcCompat="@drawable/mba_building" />
 
 
@@ -128,7 +123,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/gilgan"
-                    android:text="@string/cmabulding"
+                    android:text="@string/mba"
                     android:textAlignment="center"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -138,7 +133,6 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="0dp"
                 android:layout_marginTop="15dp"
                 android:orientation="horizontal">
 
@@ -147,7 +141,7 @@
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp"
                     android:backgroundTint="@color/darkGreen"
                     app:cardCornerRadius="5dp">
 
@@ -156,6 +150,7 @@
                         android:layout_width="180dp"
                         android:layout_height="180dp"
                         android:layout_gravity="center"
+                        android:contentDescription="@string/cma_des"
                         app:srcCompat="@drawable/cma_building" />
 
 
@@ -174,6 +169,7 @@
                         android:layout_width="180dp"
                         android:layout_height="180dp"
                         android:layout_gravity="center"
+                        android:contentDescription="@string/nh_des"
                         app:srcCompat="@drawable/nh_building" />
 
                 </androidx.cardview.widget.CardView>
@@ -192,7 +188,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/gilgan"
-                    android:text="@string/buildingmba"
+                    android:text="@string/cma"
                     android:textAlignment="center"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/cardView3" />
@@ -212,7 +208,6 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="0dp"
                 android:layout_marginTop="15dp"
                 android:orientation="horizontal">
 
@@ -220,7 +215,7 @@
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp"
                     android:backgroundTint="@color/darkGreen"
                     app:cardCornerRadius="5dp">
 
@@ -229,6 +224,7 @@
                         android:layout_width="180dp"
                         android:layout_height="180dp"
                         android:layout_gravity="center"
+                        android:contentDescription="@string/cahs_des"
                         app:srcCompat="@drawable/cahs_building" />
 
                 </androidx.cardview.widget.CardView>
@@ -246,6 +242,7 @@
                         android:layout_width="180dp"
                         android:layout_height="180dp"
                         android:layout_gravity="center"
+                        android:contentDescription="@string/be_des"
                         app:srcCompat="@drawable/be_building" />
 
                 </androidx.cardview.widget.CardView>
@@ -285,7 +282,7 @@
 
 
         </LinearLayout>
-    </ScrollView>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
