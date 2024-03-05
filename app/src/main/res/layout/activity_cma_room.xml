@@ -61,7 +61,7 @@
             android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cma_323"
+                android:id="@+id/cma_123"
                 android:layout_width="340dp"
                 android:layout_height="90dp"
                 android:layout_marginStart="18dp"
@@ -79,7 +79,7 @@
                     app:tint="@color/new_darkGreen"/>
 
                 <TextView
-                    android:id="@+id/cma_323_tv"
+                    android:id="@+id/cma_123_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="120dp"
@@ -91,7 +91,7 @@
                     android:textStyle="bold" />
 
                 <ImageView
-                    android:id="@+id/cma_323_pic"
+                    android:id="@+id/cma_123_pic"
                     android:layout_width="36dp"
                     android:layout_height="39dp"
                     android:layout_marginStart="290dp"
@@ -103,7 +103,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cma_324"
+                android:id="@+id/cma_124"
                 android:layout_width="340dp"
                 android:layout_height="90dp"
                 android:layout_marginStart="18dp"
@@ -121,7 +121,7 @@
                     app:tint="@color/new_darkGreen"/>
 
                 <TextView
-                    android:id="@+id/cma_324_tv"
+                    android:id="@+id/cma_124_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="120dp"
@@ -133,7 +133,7 @@
                     android:textStyle="bold" />
 
                 <ImageView
-                    android:id="@+id/cma_324_pic"
+                    android:id="@+id/cma_124_pic"
                     android:layout_width="36dp"
                     android:layout_height="39dp"
                     android:layout_marginStart="290dp"
@@ -143,6 +143,343 @@
                     android:contentDescription="@string/next_schedule" />
 
             </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cma_125"
+                android:layout_width="340dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp">
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:elevation="3dp"
+                    android:contentDescription="@string/computer_room"
+                    android:src="@drawable/computer_laboratory"
+                    app:tint="@color/new_darkGreen"/>
+
+                <TextView
+                    android:id="@+id/cma_125_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginTop="32dp"
+                    android:text="CMA 125"
+                    android:fontFamily="@font/gilgan2"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/cma_125_pic"
+                    android:layout_width="36dp"
+                    android:layout_height="39dp"
+                    android:layout_marginStart="290dp"
+                    android:layout_marginTop="26dp"
+                    app:tint="@color/new_midGreen"
+                    app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
+                    android:contentDescription="@string/next_schedule" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cma_126"
+                android:layout_width="340dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp">
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:elevation="3dp"
+                    android:contentDescription="@string/computer_room"
+                    android:src="@drawable/computer_laboratory"
+                    app:tint="@color/new_darkGreen"/>
+
+                <TextView
+                    android:id="@+id/cma_126_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginTop="32dp"
+                    android:text="CMA 126"
+                    android:fontFamily="@font/gilgan2"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/cma_126_pic"
+                    android:layout_width="36dp"
+                    android:layout_height="39dp"
+                    android:layout_marginStart="290dp"
+                    android:layout_marginTop="26dp"
+                    app:tint="@color/new_midGreen"
+                    app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
+                    android:contentDescription="@string/next_schedule" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cma_127"
+                android:layout_width="340dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp">
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:elevation="3dp"
+                    android:contentDescription="@string/computer_room"
+                    android:src="@drawable/computer_laboratory"
+                    app:tint="@color/new_darkGreen"/>
+
+                <TextView
+                    android:id="@+id/cma_127_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginTop="32dp"
+                    android:text="CMA 127"
+                    android:fontFamily="@font/gilgan2"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/cma_127_pic"
+                    android:layout_width="36dp"
+                    android:layout_height="39dp"
+                    android:layout_marginStart="290dp"
+                    android:layout_marginTop="26dp"
+                    app:tint="@color/new_midGreen"
+                    app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
+                    android:contentDescription="@string/next_schedule" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cma_128"
+                android:layout_width="340dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp">
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:elevation="3dp"
+                    android:contentDescription="@string/computer_room"
+                    android:src="@drawable/computer_laboratory"
+                    app:tint="@color/new_darkGreen"/>
+
+                <TextView
+                    android:id="@+id/cma_128_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginTop="32dp"
+                    android:text="CMA 128"
+                    android:fontFamily="@font/gilgan2"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/cma_128_pic"
+                    android:layout_width="36dp"
+                    android:layout_height="39dp"
+                    android:layout_marginStart="290dp"
+                    android:layout_marginTop="26dp"
+                    app:tint="@color/new_midGreen"
+                    app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
+                    android:contentDescription="@string/next_schedule" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cma_129"
+                android:layout_width="340dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp">
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:elevation="3dp"
+                    android:contentDescription="@string/computer_room"
+                    android:src="@drawable/computer_laboratory"
+                    app:tint="@color/new_darkGreen"/>
+
+                <TextView
+                    android:id="@+id/cma_129_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginTop="32dp"
+                    android:text="CMA 129"
+                    android:fontFamily="@font/gilgan2"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/cma_129_pic"
+                    android:layout_width="36dp"
+                    android:layout_height="39dp"
+                    android:layout_marginStart="290dp"
+                    android:layout_marginTop="26dp"
+                    app:tint="@color/new_midGreen"
+                    app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
+                    android:contentDescription="@string/next_schedule" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cma_200"
+                android:layout_width="340dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp">
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:elevation="3dp"
+                    android:contentDescription="@string/computer_room"
+                    android:src="@drawable/computer_laboratory"
+                    app:tint="@color/new_darkGreen"/>
+
+                <TextView
+                    android:id="@+id/cma_200_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginTop="32dp"
+                    android:text="CMA 200"
+                    android:fontFamily="@font/gilgan2"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/cma_200_pic"
+                    android:layout_width="36dp"
+                    android:layout_height="39dp"
+                    android:layout_marginStart="290dp"
+                    android:layout_marginTop="26dp"
+                    app:tint="@color/new_midGreen"
+                    app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
+                    android:contentDescription="@string/next_schedule" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cma_201"
+                android:layout_width="340dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp">
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:elevation="3dp"
+                    android:contentDescription="@string/computer_room"
+                    android:src="@drawable/computer_laboratory"
+                    app:tint="@color/new_darkGreen"/>
+
+                <TextView
+                    android:id="@+id/cma_201_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginTop="32dp"
+                    android:text="CMA 201"
+                    android:fontFamily="@font/gilgan2"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/cma_201_pic"
+                    android:layout_width="36dp"
+                    android:layout_height="39dp"
+                    android:layout_marginStart="290dp"
+                    android:layout_marginTop="26dp"
+                    app:tint="@color/new_midGreen"
+                    app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
+                    android:contentDescription="@string/next_schedule" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cma_202"
+                android:layout_width="340dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp">
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:elevation="3dp"
+                    android:contentDescription="@string/computer_room"
+                    android:src="@drawable/computer_laboratory"
+                    app:tint="@color/new_darkGreen"/>
+
+                <TextView
+                    android:id="@+id/cma_202_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginTop="32dp"
+                    android:text="CMA 202"
+                    android:fontFamily="@font/gilgan2"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/cma_202_pic"
+                    android:layout_width="36dp"
+                    android:layout_height="39dp"
+                    android:layout_marginStart="290dp"
+                    android:layout_marginTop="26dp"
+                    app:tint="@color/new_midGreen"
+                    app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
+                    android:contentDescription="@string/next_schedule" />
+
+            </androidx.cardview.widget.CardView>
+
 
             <Space
                 android:layout_width="match_parent"

@@ -51,7 +51,7 @@
         android:layout_height="651dp"
         android:layout_marginTop="12dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tit_be">
 
@@ -134,6 +134,343 @@
 
                 <ImageView
                     android:id="@+id/be_124_pic"
+                    android:layout_width="36dp"
+                    android:layout_height="39dp"
+                    android:layout_marginStart="290dp"
+                    android:layout_marginTop="26dp"
+                    android:contentDescription="@string/next_schedule"
+                    app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
+                    app:tint="@color/new_midGreen" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/be_125"
+                android:layout_width="340dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp">
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:contentDescription="@string/computer_room"
+                    android:elevation="3dp"
+                    android:src="@drawable/computer_laboratory"
+                    app:tint="@color/new_darkGreen" />
+
+                <TextView
+                    android:id="@+id/be_125_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="@font/gilgan"
+                    android:text="BE 125"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/be_125_pic"
+                    android:layout_width="36dp"
+                    android:layout_height="39dp"
+                    android:layout_marginStart="290dp"
+                    android:layout_marginTop="26dp"
+                    android:contentDescription="@string/next_schedule"
+                    app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
+                    app:tint="@color/new_midGreen" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/be_126"
+                android:layout_width="340dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp">
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:contentDescription="@string/computer_room"
+                    android:elevation="3dp"
+                    android:src="@drawable/computer_laboratory"
+                    app:tint="@color/new_darkGreen" />
+
+                <TextView
+                    android:id="@+id/be_126_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="@font/gilgan"
+                    android:text="BE 126"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/be_126_pic"
+                    android:layout_width="36dp"
+                    android:layout_height="39dp"
+                    android:layout_marginStart="290dp"
+                    android:layout_marginTop="26dp"
+                    android:contentDescription="@string/next_schedule"
+                    app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
+                    app:tint="@color/new_midGreen" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/be_127"
+                android:layout_width="340dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp">
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:contentDescription="@string/computer_room"
+                    android:elevation="3dp"
+                    android:src="@drawable/computer_laboratory"
+                    app:tint="@color/new_darkGreen" />
+
+                <TextView
+                    android:id="@+id/be_127_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="@font/gilgan"
+                    android:text="BE 127"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/be_127_pic"
+                    android:layout_width="36dp"
+                    android:layout_height="39dp"
+                    android:layout_marginStart="290dp"
+                    android:layout_marginTop="26dp"
+                    android:contentDescription="@string/next_schedule"
+                    app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
+                    app:tint="@color/new_midGreen" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/be_128"
+                android:layout_width="340dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp">
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:contentDescription="@string/computer_room"
+                    android:elevation="3dp"
+                    android:src="@drawable/computer_laboratory"
+                    app:tint="@color/new_darkGreen" />
+
+                <TextView
+                    android:id="@+id/be_128_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="@font/gilgan"
+                    android:text="BE 128"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/be_128_pic"
+                    android:layout_width="36dp"
+                    android:layout_height="39dp"
+                    android:layout_marginStart="290dp"
+                    android:layout_marginTop="26dp"
+                    android:contentDescription="@string/next_schedule"
+                    app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
+                    app:tint="@color/new_midGreen" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/be_129"
+                android:layout_width="340dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp">
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:contentDescription="@string/computer_room"
+                    android:elevation="3dp"
+                    android:src="@drawable/computer_laboratory"
+                    app:tint="@color/new_darkGreen" />
+
+                <TextView
+                    android:id="@+id/be_129_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="@font/gilgan"
+                    android:text="BE 129"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/be_129_pic"
+                    android:layout_width="36dp"
+                    android:layout_height="39dp"
+                    android:layout_marginStart="290dp"
+                    android:layout_marginTop="26dp"
+                    android:contentDescription="@string/next_schedule"
+                    app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
+                    app:tint="@color/new_midGreen" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/be_130"
+                android:layout_width="340dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp">
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:contentDescription="@string/computer_room"
+                    android:elevation="3dp"
+                    android:src="@drawable/computer_laboratory"
+                    app:tint="@color/new_darkGreen" />
+
+                <TextView
+                    android:id="@+id/be_130_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="@font/gilgan"
+                    android:text="BE 130"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/be_130_pic"
+                    android:layout_width="36dp"
+                    android:layout_height="39dp"
+                    android:layout_marginStart="290dp"
+                    android:layout_marginTop="26dp"
+                    android:contentDescription="@string/next_schedule"
+                    app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
+                    app:tint="@color/new_midGreen" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/be_131"
+                android:layout_width="340dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp">
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:contentDescription="@string/computer_room"
+                    android:elevation="3dp"
+                    android:src="@drawable/computer_laboratory"
+                    app:tint="@color/new_darkGreen" />
+
+                <TextView
+                    android:id="@+id/be_131_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="@font/gilgan"
+                    android:text="BE 131"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/be_131_pic"
+                    android:layout_width="36dp"
+                    android:layout_height="39dp"
+                    android:layout_marginStart="290dp"
+                    android:layout_marginTop="26dp"
+                    android:contentDescription="@string/next_schedule"
+                    app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
+                    app:tint="@color/new_midGreen" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/be_132"
+                android:layout_width="340dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="10dp"
+                android:layout_marginBottom="47dp"
+                app:cardElevation="5dp">
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:contentDescription="@string/computer_room"
+                    android:elevation="3dp"
+                    android:src="@drawable/computer_laboratory"
+                    app:tint="@color/new_darkGreen" />
+
+                <TextView
+                    android:id="@+id/be_132_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="@font/gilgan"
+                    android:text="BE 132"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/be_132_pic"
                     android:layout_width="36dp"
                     android:layout_height="39dp"
                     android:layout_marginStart="290dp"

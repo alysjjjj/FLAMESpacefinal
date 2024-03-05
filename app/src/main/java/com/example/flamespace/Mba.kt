@@ -17,8 +17,8 @@ class Mba : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mba_room)
 
-        val backButton = findViewById<android.widget.ImageView>(R.id.backButton)
-        backButton.setOnClickListener {
+        val backBtn = findViewById<android.widget.FrameLayout>(R.id.backButton)
+        backBtn.setOnClickListener {
             val intent = Intent(this, Home::class.java)
             startActivity(intent)
         }
@@ -30,6 +30,36 @@ class Mba : AppCompatActivity(), View.OnClickListener {
             showPopup("MBA 308", "50 chairs\nno air conditioner working")
         }
 
+        findViewById<CardView>(R.id.mba_309).setOnClickListener {
+            showPopup("MBA 309", "60 chairs\n3 air conditioner working")
+        }
+
+        findViewById<CardView>(R.id.mba_310).setOnClickListener {
+            showPopup("MBA 310", "57 chairs\n2 air conditioner working")
+        }
+
+        findViewById<CardView>(R.id.mba_311).setOnClickListener {
+            showPopup("MBA 311", "44 chairs\n2 air conditioner working")
+        }
+
+        findViewById<CardView>(R.id.mba_312).setOnClickListener {
+            showPopup("MBA 312", "49 chairs\n2 air conditioner working")
+        }
+        findViewById<CardView>(R.id.mba_313).setOnClickListener {
+            showPopup("MBA 313", "52 chairs\n2 air conditioner working")
+        }
+
+        findViewById<CardView>(R.id.mba_314).setOnClickListener {
+            showPopup("MBA 314", "50 chairs\n2 air conditioner working")
+        }
+
+        findViewById<CardView>(R.id.mba_315).setOnClickListener {
+            showPopup("MBA 315", "45 chairs\n2 air conditioner working")
+        }
+
+        findViewById<CardView>(R.id.mba_316).setOnClickListener {
+            showPopup("MBA 316", "55 chairs\n2 air conditioner working")
+        }
 
 
 
@@ -71,6 +101,6 @@ class Mba : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(v: View?) {
-        TODO("Not yet implemented")
+
     }
 }
