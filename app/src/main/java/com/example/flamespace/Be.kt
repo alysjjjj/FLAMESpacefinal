@@ -16,11 +16,12 @@ class Be : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_be)
 
-        val buttonClick = findViewById<FrameLayout>(R.id.backButton)
-        buttonClick.setOnClickListener {
-            val int = Intent(this, Home::class.java)
-            startActivity(int)
+        val backButton = findViewById<android.widget.ImageView>(R.id.backButton)
+        backButton.setOnClickListener {
+
+            goBackToPreviousPage()
         }
+
         findViewById<CardView>(R.id.be_123).setOnClickListener {
             showPopup("BE 123", "40 chairs\n1 air conditioner working")
         }
@@ -60,6 +61,9 @@ class Be : AppCompatActivity() {
         }
 
 
+    }
+    private fun goBackToPreviousPage() {
+        onBackPressed()
     }
 
     private fun navigateToReservationActivity(roomCode: String) {

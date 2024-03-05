@@ -18,10 +18,11 @@ class Nh : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_nh_room)
 
-        val buttonClick = findViewById<FrameLayout>(R.id.backButton)
-        buttonClick.setOnClickListener {
-            val int = Intent(this, Home::class.java)
-            startActivity(int)
+
+        val backButton = findViewById<FrameLayout>(R.id.backButton)
+        backButton.setOnClickListener {
+
+            goBackToPreviousPage()
         }
 
         findViewById<CardView>(R.id.nh_111).setOnClickListener {
@@ -95,6 +96,9 @@ class Nh : AppCompatActivity() {
         }
 
         popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0)
+    }
+    private fun goBackToPreviousPage() {
+        onBackPressed()
     }
 
 }

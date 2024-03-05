@@ -19,8 +19,8 @@ class Ptc : AppCompatActivity(), View.OnClickListener {
 
         val backButton = findViewById<android.widget.ImageView>(R.id.backButton)
         backButton.setOnClickListener {
-            val intent = Intent(this, Home::class.java)
-            startActivity(intent)
+
+            goBackToPreviousPage()
         }
 
         findViewById<CardView>(R.id.ptc_201).setOnClickListener {
@@ -65,6 +65,10 @@ class Ptc : AppCompatActivity(), View.OnClickListener {
 
 
 
+    }
+
+    private fun goBackToPreviousPage() {
+        onBackPressed()
     }
 
 

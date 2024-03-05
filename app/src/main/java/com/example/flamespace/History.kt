@@ -14,10 +14,10 @@ class History : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_history)
 
-        val backButton = findViewById<FrameLayout>(id.backButton)
+        val backButton = findViewById<FrameLayout>(R.id.backButton)
         backButton.setOnClickListener {
-            val intent = Intent(this, Home::class.java)
-            startActivity(intent)
+
+            goBackToPreviousPage()
         }
 
         val recyclerView = findViewById<RecyclerView>(R.id.history_recycler)
@@ -32,5 +32,9 @@ class History : AppCompatActivity() {
         historyList.add(HistoryItem("PTC 301", "Sched Example", "February 29, 2024"))
         // Add more items as needed
         return historyList
+    }
+
+    private fun goBackToPreviousPage() {
+        onBackPressed()
     }
 }

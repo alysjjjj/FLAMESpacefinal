@@ -16,10 +16,10 @@ class Cahs : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cahs_rooms)
 
-        val buttonClick = findViewById<FrameLayout>(R.id.backButton)
-        buttonClick.setOnClickListener {
-            val int = Intent(this, Home::class.java)
-            startActivity(int)
+        val backButton = findViewById<android.widget.ImageView>(R.id.backButton)
+        backButton.setOnClickListener {
+
+            goBackToPreviousPage()
         }
 
         findViewById<CardView>(R.id.cahs_123).setOnClickListener {
@@ -60,7 +60,9 @@ class Cahs : AppCompatActivity() {
         intent.putExtra("ROOM_CODE", roomCode)
         startActivity(intent)
     }
-
+    private fun goBackToPreviousPage() {
+        onBackPressed()
+    }
     private fun showPopup(roomCode: String, roomDetails: String) {
         val inflater = getSystemService(LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val popupView = inflater.inflate(R.layout.fragment_modal_popup, null)

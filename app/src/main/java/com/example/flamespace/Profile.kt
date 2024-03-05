@@ -35,10 +35,15 @@ class Profile : AppCompatActivity() {
         }
 
         // Your existing code for backButton click goes here
-        val buttonClick = findViewById<FrameLayout>(R.id.backButton)
-        buttonClick.setOnClickListener {
-            val intent = Intent(this, Home::class.java)
-            startActivity(intent)
+
+        val backButton = findViewById<FrameLayout>(R.id.backButton)
+        backButton.setOnClickListener {
+
+            goBackToPreviousPage()
         }
+    }
+
+    private fun goBackToPreviousPage() {
+        onBackPressed()
     }
 }

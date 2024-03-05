@@ -17,10 +17,10 @@ class Cma : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cma_room)
 
-        val buttonClick = findViewById<FrameLayout>(R.id.backButton)
-        buttonClick.setOnClickListener {
-            val int = Intent(this, Home::class.java)
-            startActivity(int)
+        val backButton = findViewById<FrameLayout>(R.id.backButton)
+        backButton.setOnClickListener {
+
+            goBackToPreviousPage()
         }
 
         findViewById<CardView>(R.id.cma_123).setOnClickListener {
@@ -57,6 +57,9 @@ class Cma : AppCompatActivity() {
 
 
 
+    }
+    private fun goBackToPreviousPage() {
+        onBackPressed()
     }
 
     private fun navigateToReservationActivity(roomCode: String) {

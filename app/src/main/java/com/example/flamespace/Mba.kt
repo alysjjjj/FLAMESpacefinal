@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.FrameLayout
 import android.widget.LinearLayout
 import android.widget.PopupWindow
 import android.widget.Toast
@@ -17,10 +18,11 @@ class Mba : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mba_room)
 
-        val backBtn = findViewById<android.widget.FrameLayout>(R.id.backButton)
-        backBtn.setOnClickListener {
-            val intent = Intent(this, Home::class.java)
-            startActivity(intent)
+
+        val backButton = findViewById<FrameLayout>(R.id.backButton)
+        backButton.setOnClickListener {
+
+            goBackToPreviousPage()
         }
 
         findViewById<CardView>(R.id.mba_307).setOnClickListener {
@@ -64,7 +66,9 @@ class Mba : AppCompatActivity(), View.OnClickListener {
 
 
     }
-
+    private fun goBackToPreviousPage() {
+        onBackPressed()
+    }
 
 
     private fun navigateToReservationActivity(roomCode: String) {

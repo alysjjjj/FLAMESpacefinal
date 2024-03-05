@@ -24,13 +24,17 @@ class Edit_profile : AppCompatActivity() {
         loadProfileData()
 
 
-        val buttonClick = findViewById<FrameLayout>(R.id.backButton)
-        buttonClick.setOnClickListener {
-            val int = Intent(this, Profile::class.java)
-            startActivity(int)
+
+        val backButton = findViewById<FrameLayout>(R.id.backButton)
+        backButton.setOnClickListener {
+
+            goBackToPreviousPage()
         }
 
 
+    }
+    private fun goBackToPreviousPage() {
+        onBackPressed()
     }
 
     private fun loadProfileData() {
