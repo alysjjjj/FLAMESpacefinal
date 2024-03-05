@@ -264,6 +264,6 @@
     <string name="_50_chairs_n1_aircon_working_">50 chairs\n1 aircon working</string>
     <string name="reserve_">Reserve</string>
     <string name="enter_your_department">Enter your Department</string>
-
+    <string name="default_notification_channel_id">your_channel_id</string>
 
 </resources>
