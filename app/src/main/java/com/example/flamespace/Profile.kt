@@ -3,7 +3,11 @@ package com.example.flamespace
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Gravity
+import android.view.LayoutInflater
 import android.widget.FrameLayout
+import android.widget.LinearLayout
+import android.widget.PopupWindow
 import androidx.cardview.widget.CardView
 
 class Profile : AppCompatActivity() {
@@ -12,10 +16,10 @@ class Profile : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
 
-        // Find the main CardView
+
         val profileCardView = findViewById<CardView>(R.id.profile_cardview)
 
-        // Find and set OnClickListener to the inner CardViews
+
         val editCardView = profileCardView.findViewById<CardView>(R.id.edit_cv)
         editCardView.setOnClickListener {
             val intent = Intent(this, Edit_profile::class.java)
@@ -34,16 +38,61 @@ class Profile : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // Your existing code for backButton click goes here
-
         val backButton = findViewById<FrameLayout>(R.id.backButton)
         backButton.setOnClickListener {
-
             goBackToPreviousPage()
         }
+
+        val logoutbtn = findViewById<android.widget.Button>(R.id.buttonLogout)
+        logoutbtn.setOnClickListener {
+            showLogoutPopup()
+        }
+
+
+
     }
 
     private fun goBackToPreviousPage() {
         onBackPressed()
+    }
+
+    private fun showLogoutPopup() {
+        val inflater = getSystemService(LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        val popupView = inflater.inflate(R.layout.activity_logout, null)
+
+        val width = LinearLayout.LayoutParams.WRAP_CONTENT
+        val height = LinearLayout.LayoutParams.WRAP_CONTENT
+        val focusable = true
+
+        val popupWindow = PopupWindow(popupView, width, height, focusable)
+
+        val btnCancelLogout = popupView.findViewById<android.widget.Button>(R.id.btnCancel)
+        btnCancelLogout.setOnClickListener {
+            popupWindow.dismiss()
+        }
+
+        val btnConfirmLogout = popupView.findViewById<android.widget.Button>(R.id.btnLogout)
+        btnConfirmLogout.setOnClickListener {
+            logout()
+            popupWindow.dismiss()
+        }
+
+        popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0)
+    }
+
+    private fun logout() {
+
+        clearSessionData()
+        navigateToLoginScreen()
+    }
+
+    private fun clearSessionData() {
+        // Clear session data logic
+    }
+
+    private fun navigateToLoginScreen() {
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }

@@ -16,7 +16,7 @@ class Be : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_be)
 
-        val backButton = findViewById<android.widget.ImageView>(R.id.backButton)
+        val backButton = findViewById<FrameLayout>(R.id.backButton)
         backButton.setOnClickListener {
 
             goBackToPreviousPage()

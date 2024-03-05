@@ -4,14 +4,6 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ImageView
-        android:id="@+id/backgroundBlur"
-        android:layout_width="500dp"
-        android:layout_height="match_parent"
-        android:alpha="0.5"
-        android:src="@drawable/popup_bg"
-        android:scaleType="fitXY"
-        android:padding="0dp"/>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/popupCardView"
@@ -19,15 +11,17 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_marginHorizontal="20dp"
-        android:elevation="100dp"
-        android:padding="60dp"
+        android:elevation="1000dp"
+        android:layout_margin="8dp"
+        android:padding="16dp"
+        android:background="@drawable/outline"
         android:foregroundGravity="center"
         app:cardCornerRadius="20dp">
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <ImageView
@@ -69,15 +63,13 @@
                 style="@style/ButtonGreen"
                 android:layout_width="162dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/roomDetailsTextView"
-                android:layout_centerHorizontal="true"
                 android:layout_gravity="center"
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="50dp"
                 android:layout_marginBottom="30dp"
                 android:fontFamily="@font/retroica"
-                android:text="Reserve"
+                android:text="@string/reserve_"
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
         </LinearLayout>
@@ -86,6 +78,6 @@
     </androidx.cardview.widget.CardView>
 
 
-
-
 </RelativeLayout>
+
+
