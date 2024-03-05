@@ -40,11 +40,11 @@ class Edit_profile : AppCompatActivity() {
     private fun loadProfileData() {
 
         val profileName = "Elyssa Salvador"
-        val profileBlock = "Block 6"
+        val department = "CITE"
 
 
         nameEditText.setText(profileName)
-        blockEditText.setText(profileBlock)
+        blockEditText.setText(department)
     }
 
 
