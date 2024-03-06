@@ -128,7 +128,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-                android:id="@+id/editTextText"
+                android:id="@+id/subject_edittext"
                 android:layout_width="260dp"
                 android:layout_height="56dp"
                 android:layout_gravity="center"

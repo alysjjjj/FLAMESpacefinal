@@ -1,6 +1,5 @@
 package com.example.flamespace.buildings
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -16,7 +15,7 @@ import com.example.flamespace.R.id.profile
 import com.example.flamespace.profile.Profile
 
 class Home : AppCompatActivity() {
-    @SuppressLint( "MissingInflatedId")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)

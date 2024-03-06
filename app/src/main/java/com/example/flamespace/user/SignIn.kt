@@ -74,7 +74,7 @@ class SignIn : AppCompatActivity() {
         }
 
         binding.tvHaventAccount.setOnClickListener {
-            startActivity(Intent(this, Signup::class.java))
+                startActivity(Intent(this, Home::class.java))
         }
 
         binding.tvForgotPw.setOnClickListener {

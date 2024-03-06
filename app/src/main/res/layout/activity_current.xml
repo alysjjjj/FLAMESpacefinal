@@ -88,6 +88,18 @@
                 android:padding="10dp"
                 android:layout_below="@id/current_room"/>
 
+            <TextView
+                android:id="@+id/current_subject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MAT"
+                android:fontFamily="@font/gilgan"
+                android:textSize="15sp"
+                android:textAlignment="center"
+                android:padding="10dp"
+                android:layout_below="@id/current_schedule"/>
+
+
 
         </RelativeLayout>
     </androidx.cardview.widget.CardView>

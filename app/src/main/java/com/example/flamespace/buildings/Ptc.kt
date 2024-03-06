@@ -12,8 +12,8 @@ import android.content.Context
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
-import com.example.flamespace.profile.Current
 import com.example.flamespace.R
+import com.example.flamespace.user.Reservation
 
 
 class Ptc : AppCompatActivity(), View.OnClickListener {
@@ -21,8 +21,11 @@ class Ptc : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_room)
 
-        val backButton: FrameLayout = findViewById(R.id.backButton)
-        backButton.setOnClickListener { onBackPressed() }
+        val backButton = findViewById<android.widget.ImageView>(R.id.backButton)
+        backButton.setOnClickListener {
+
+            goBackToPreviousPage()
+        }
 
         findViewById<CardView>(R.id.ptc_201).setOnClickListener {
             showPopup("PTC 201", "50 chairs\n1 air conditioner working")
@@ -74,10 +77,8 @@ class Ptc : AppCompatActivity(), View.OnClickListener {
         startActivity(intent)
     }
 
-    private fun navigateToCurrentActivity(roomCode: String) {
-        val intent = Intent(this, Current::class.java)
-        intent.putExtra("ROOM_CODE", roomCode)
-        startActivity(intent)
+    private fun goBackToPreviousPage() {
+        onBackPressed()
     }
 
     private fun showPopup(roomCode: String, roomDetails: String) {
@@ -101,8 +102,6 @@ class Ptc : AppCompatActivity(), View.OnClickListener {
             navigateToReservationActivity(roomCode) // Pass room code to the reservation activity
             popupWindow.dismiss()
         }
-
-
 
         popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0)
     }

@@ -9,8 +9,8 @@ import android.widget.FrameLayout
 import android.widget.LinearLayout
 import android.widget.PopupWindow
 import androidx.cardview.widget.CardView
-import com.example.flamespace.user.MainActivity
 import com.example.flamespace.R
+import com.example.flamespace.user.MainActivity
 
 class Profile : AppCompatActivity() {
 

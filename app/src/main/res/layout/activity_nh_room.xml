@@ -436,7 +436,7 @@
                 android:layout_marginStart="18dp"
                 android:layout_marginTop="10dp"
                 app:cardCornerRadius="10dp"
-                android:layout_marginBottom="47dp"
+                android:layout_marginBottom="63dp"
                 app:cardElevation="5dp">
 
                 <ImageView
