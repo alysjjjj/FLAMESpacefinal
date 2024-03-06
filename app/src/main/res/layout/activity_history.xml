@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/darkGreen"
     android:padding="20dp"
-    tools:context=".History">
+    tools:context=".profile.History">
 
     <FrameLayout
         android:id="@+id/backButton"

@@ -1,10 +1,11 @@
-package com.example.flamespace
+package com.example.flamespace.profile
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.flamespace.R
 
 class HistoryAdapter(private val historyList: List<HistoryItem>) :
     RecyclerView.Adapter<HistoryAdapter.ViewHolder>() {

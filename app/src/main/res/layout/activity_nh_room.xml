@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/lightGreen"
     android:padding="20dp"
-    tools:context=".Nh">
+    tools:context=".buildings.Nh">
 
     <FrameLayout
         android:id="@+id/backButton"
@@ -33,12 +33,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="@string/nhh"
+        android:text="@string/nh"
         android:contentDescription="@string/nh_des"
         android:textAlignment="center"
         android:fontFamily="@font/lemonmilk"
         android:padding="20dp"
-        android:textSize="30sp"
+        android:textSize="45sp"
         android:textStyle="bold"
         android:textColor="@color/new_darkGreen"
         app:layout_constraintEnd_toEndOf="parent"
@@ -61,48 +61,6 @@
             android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/nh_112"
-                android:layout_width="340dp"
-                android:layout_height="90dp"
-                android:layout_marginStart="18dp"
-                android:layout_marginTop="10dp"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="5dp">
-
-                <ImageView
-                    android:layout_width="90dp"
-                    android:layout_height="70dp"
-                    android:layout_margin="10dp"
-                    android:elevation="3dp"
-                    android:contentDescription="@string/computer_room"
-                    android:src="@drawable/computer_laboratory"
-                    app:tint="@color/new_darkGreen"/>
-
-                <TextView
-                    android:id="@+id/nh_111_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="120dp"
-                    android:layout_marginTop="32dp"
-                    android:text="@string/nh_111"
-                    android:fontFamily="@font/gilgan2"
-                    android:textColor="@color/black"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
-
-                <ImageView
-                    android:id="@+id/nh_111_pic"
-                    android:layout_width="36dp"
-                    android:layout_height="39dp"
-                    android:layout_marginStart="290dp"
-                    android:layout_marginTop="26dp"
-                    app:tint="@color/new_midGreen"
-                    app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
-                    android:contentDescription="@string/next_schedule" />
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
                 android:id="@+id/nh_111"
                 android:layout_width="340dp"
                 android:layout_height="90dp"
@@ -115,10 +73,51 @@
                     android:layout_width="90dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
+                    android:contentDescription="@string/class_room"
                     android:elevation="3dp"
-                    android:contentDescription="@string/computer_room"
-                    android:src="@drawable/computer_laboratory"
-                    app:tint="@color/new_darkGreen"/>
+                    android:src="@drawable/standard_classroom"
+                    app:tint="@color/new_darkGreen" />
+
+                <TextView
+                    android:id="@+id/nh_111_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="@font/gilgan"
+                    android:text="@string/nh111"
+                    android:textColor="@color/black"
+                    android:textSize="25sp" />
+
+                <ImageView
+                    android:id="@+id/nh_111_pic"
+                    android:layout_width="36dp"
+                    android:layout_height="39dp"
+                    android:layout_marginStart="290dp"
+                    android:layout_marginTop="26dp"
+                    android:contentDescription="@string/next_schedule"
+                    app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
+                    app:tint="@color/new_midGreen" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/nh_112"
+                android:layout_width="340dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp">
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:contentDescription="@string/class_room"
+                    android:elevation="3dp"
+                    android:src="@drawable/standard_classroom"
+                    app:tint="@color/new_darkGreen" />
 
                 <TextView
                     android:id="@+id/nh_112_tv"
@@ -126,11 +125,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="120dp"
                     android:layout_marginTop="32dp"
-                    android:text="@string/nh_112"
-                    android:fontFamily="@font/gilgan2"
+                    android:fontFamily="@font/gilgan"
+                    android:text="@string/nh112"
                     android:textColor="@color/black"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+                    android:textSize="25sp" />
 
                 <ImageView
                     android:id="@+id/nh_112_pic"
@@ -138,9 +136,9 @@
                     android:layout_height="39dp"
                     android:layout_marginStart="290dp"
                     android:layout_marginTop="26dp"
-                    app:tint="@color/new_midGreen"
+                    android:contentDescription="@string/next_schedule"
                     app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
-                    android:contentDescription="@string/next_schedule" />
+                    app:tint="@color/new_midGreen" />
 
             </androidx.cardview.widget.CardView>
 
@@ -157,10 +155,10 @@
                     android:layout_width="90dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
+                    android:contentDescription="@string/class_room"
                     android:elevation="3dp"
-                    android:contentDescription="@string/computer_room"
-                    android:src="@drawable/computer_laboratory"
-                    app:tint="@color/new_darkGreen"/>
+                    android:src="@drawable/standard_classroom"
+                    app:tint="@color/new_darkGreen" />
 
                 <TextView
                     android:id="@+id/nh_113_tv"
@@ -168,11 +166,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="120dp"
                     android:layout_marginTop="32dp"
-                    android:text="NH 113"
-                    android:fontFamily="@font/gilgan2"
+                    android:fontFamily="@font/gilgan"
+                    android:text="@string/nh113"
                     android:textColor="@color/black"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+                    android:textSize="25sp" />
 
                 <ImageView
                     android:id="@+id/nh_113_pic"
@@ -180,9 +177,9 @@
                     android:layout_height="39dp"
                     android:layout_marginStart="290dp"
                     android:layout_marginTop="26dp"
-                    app:tint="@color/new_midGreen"
+                    android:contentDescription="@string/next_schedule"
                     app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
-                    android:contentDescription="@string/next_schedule" />
+                    app:tint="@color/new_midGreen" />
 
             </androidx.cardview.widget.CardView>
 
@@ -199,10 +196,10 @@
                     android:layout_width="90dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
+                    android:contentDescription="@string/class_room"
                     android:elevation="3dp"
-                    android:contentDescription="@string/computer_room"
-                    android:src="@drawable/computer_laboratory"
-                    app:tint="@color/new_darkGreen"/>
+                    android:src="@drawable/standard_classroom"
+                    app:tint="@color/new_darkGreen" />
 
                 <TextView
                     android:id="@+id/nh_114_tv"
@@ -210,11 +207,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="120dp"
                     android:layout_marginTop="32dp"
-                    android:text="NH 114"
-                    android:fontFamily="@font/gilgan2"
+                    android:fontFamily="@font/gilgan"
+                    android:text="@string/nh114"
                     android:textColor="@color/black"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+                    android:textSize="25sp" />
 
                 <ImageView
                     android:id="@+id/nh_114_pic"
@@ -222,9 +218,9 @@
                     android:layout_height="39dp"
                     android:layout_marginStart="290dp"
                     android:layout_marginTop="26dp"
-                    app:tint="@color/new_midGreen"
+                    android:contentDescription="@string/next_schedule"
                     app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
-                    android:contentDescription="@string/next_schedule" />
+                    app:tint="@color/new_midGreen" />
 
             </androidx.cardview.widget.CardView>
 
@@ -241,10 +237,10 @@
                     android:layout_width="90dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
+                    android:contentDescription="@string/class_room"
                     android:elevation="3dp"
-                    android:contentDescription="@string/computer_room"
-                    android:src="@drawable/computer_laboratory"
-                    app:tint="@color/new_darkGreen"/>
+                    android:src="@drawable/standard_classroom"
+                    app:tint="@color/new_darkGreen" />
 
                 <TextView
                     android:id="@+id/nh_115_tv"
@@ -252,11 +248,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="120dp"
                     android:layout_marginTop="32dp"
-                    android:text="NH 115"
-                    android:fontFamily="@font/gilgan2"
+                    android:fontFamily="@font/gilgan"
+                    android:text="@string/nh115"
                     android:textColor="@color/black"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+                    android:textSize="25sp" />
 
                 <ImageView
                     android:id="@+id/nh_115_pic"
@@ -264,9 +259,9 @@
                     android:layout_height="39dp"
                     android:layout_marginStart="290dp"
                     android:layout_marginTop="26dp"
-                    app:tint="@color/new_midGreen"
+                    android:contentDescription="@string/next_schedule"
                     app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
-                    android:contentDescription="@string/next_schedule" />
+                    app:tint="@color/new_midGreen" />
 
             </androidx.cardview.widget.CardView>
 
@@ -283,10 +278,10 @@
                     android:layout_width="90dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
+                    android:contentDescription="@string/class_room"
                     android:elevation="3dp"
-                    android:contentDescription="@string/computer_room"
-                    android:src="@drawable/computer_laboratory"
-                    app:tint="@color/new_darkGreen"/>
+                    android:src="@drawable/standard_classroom"
+                    app:tint="@color/new_darkGreen" />
 
                 <TextView
                     android:id="@+id/nh_116_tv"
@@ -294,11 +289,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="120dp"
                     android:layout_marginTop="32dp"
-                    android:text="NH 116"
-                    android:fontFamily="@font/gilgan2"
+                    android:fontFamily="@font/gilgan"
+                    android:text="@string/nh116"
                     android:textColor="@color/black"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+                    android:textSize="25sp" />
 
                 <ImageView
                     android:id="@+id/nh_116_pic"
@@ -306,9 +300,9 @@
                     android:layout_height="39dp"
                     android:layout_marginStart="290dp"
                     android:layout_marginTop="26dp"
-                    app:tint="@color/new_midGreen"
+                    android:contentDescription="@string/next_schedule"
                     app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
-                    android:contentDescription="@string/next_schedule" />
+                    app:tint="@color/new_midGreen" />
 
             </androidx.cardview.widget.CardView>
 
@@ -325,10 +319,10 @@
                     android:layout_width="90dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
+                    android:contentDescription="@string/class_room"
                     android:elevation="3dp"
-                    android:contentDescription="@string/computer_room"
-                    android:src="@drawable/computer_laboratory"
-                    app:tint="@color/new_darkGreen"/>
+                    android:src="@drawable/standard_classroom"
+                    app:tint="@color/new_darkGreen" />
 
                 <TextView
                     android:id="@+id/nh_117_tv"
@@ -336,11 +330,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="120dp"
                     android:layout_marginTop="32dp"
-                    android:text="NH 117"
-                    android:fontFamily="@font/gilgan2"
+                    android:fontFamily="@font/gilgan"
+                    android:text="@string/nh117"
                     android:textColor="@color/black"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+                    android:textSize="25sp" />
 
                 <ImageView
                     android:id="@+id/nh_117_pic"
@@ -348,9 +341,9 @@
                     android:layout_height="39dp"
                     android:layout_marginStart="290dp"
                     android:layout_marginTop="26dp"
-                    app:tint="@color/new_midGreen"
+                    android:contentDescription="@string/next_schedule"
                     app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
-                    android:contentDescription="@string/next_schedule" />
+                    app:tint="@color/new_midGreen" />
 
             </androidx.cardview.widget.CardView>
 
@@ -367,10 +360,10 @@
                     android:layout_width="90dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
+                    android:contentDescription="@string/class_room"
                     android:elevation="3dp"
-                    android:contentDescription="@string/computer_room"
-                    android:src="@drawable/computer_laboratory"
-                    app:tint="@color/new_darkGreen"/>
+                    android:src="@drawable/standard_classroom"
+                    app:tint="@color/new_darkGreen" />
 
                 <TextView
                     android:id="@+id/nh_118_tv"
@@ -378,11 +371,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="120dp"
                     android:layout_marginTop="32dp"
-                    android:text="NH 118"
-                    android:fontFamily="@font/gilgan2"
+                    android:fontFamily="@font/gilgan"
+                    android:text="@string/nh118"
                     android:textColor="@color/black"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+                    android:textSize="25sp" />
 
                 <ImageView
                     android:id="@+id/nh_118_pic"
@@ -390,9 +382,9 @@
                     android:layout_height="39dp"
                     android:layout_marginStart="290dp"
                     android:layout_marginTop="26dp"
-                    app:tint="@color/new_midGreen"
+                    android:contentDescription="@string/next_schedule"
                     app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
-                    android:contentDescription="@string/next_schedule" />
+                    app:tint="@color/new_midGreen" />
 
             </androidx.cardview.widget.CardView>
 
@@ -409,10 +401,10 @@
                     android:layout_width="90dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
+                    android:contentDescription="@string/class_room"
                     android:elevation="3dp"
-                    android:contentDescription="@string/computer_room"
-                    android:src="@drawable/computer_laboratory"
-                    app:tint="@color/new_darkGreen"/>
+                    android:src="@drawable/standard_classroom"
+                    app:tint="@color/new_darkGreen" />
 
                 <TextView
                     android:id="@+id/nh_119_tv"
@@ -420,11 +412,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="120dp"
                     android:layout_marginTop="32dp"
-                    android:text="NH 119"
-                    android:fontFamily="@font/gilgan2"
+                    android:fontFamily="@font/gilgan"
+                    android:text="@string/nh119"
                     android:textColor="@color/black"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+                    android:textSize="25sp" />
 
                 <ImageView
                     android:id="@+id/nh_119_pic"
@@ -432,14 +423,14 @@
                     android:layout_height="39dp"
                     android:layout_marginStart="290dp"
                     android:layout_marginTop="26dp"
-                    app:tint="@color/new_midGreen"
+                    android:contentDescription="@string/next_schedule"
                     app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
-                    android:contentDescription="@string/next_schedule" />
+                    app:tint="@color/new_midGreen" />
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/nh_200"
+                android:id="@+id/nh_120"
                 android:layout_width="340dp"
                 android:layout_height="90dp"
                 android:layout_marginStart="18dp"
@@ -452,32 +443,31 @@
                     android:layout_width="90dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
+                    android:contentDescription="@string/class_room"
                     android:elevation="3dp"
-                    android:contentDescription="@string/computer_room"
-                    android:src="@drawable/computer_laboratory"
-                    app:tint="@color/new_darkGreen"/>
+                    android:src="@drawable/standard_classroom"
+                    app:tint="@color/new_darkGreen" />
 
                 <TextView
-                    android:id="@+id/nh_200_tv"
+                    android:id="@+id/nh_120_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="120dp"
                     android:layout_marginTop="32dp"
-                    android:text="NH 200"
-                    android:fontFamily="@font/gilgan2"
+                    android:fontFamily="@font/gilgan"
+                    android:text="@string/nh120"
                     android:textColor="@color/black"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+                    android:textSize="25sp" />
 
                 <ImageView
-                    android:id="@+id/nh_200_pic"
+                    android:id="@+id/nh_120_pic"
                     android:layout_width="36dp"
                     android:layout_height="39dp"
                     android:layout_marginStart="290dp"
                     android:layout_marginTop="26dp"
-                    app:tint="@color/new_midGreen"
+                    android:contentDescription="@string/next_schedule"
                     app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
-                    android:contentDescription="@string/next_schedule" />
+                    app:tint="@color/new_midGreen" />
 
             </androidx.cardview.widget.CardView>
 

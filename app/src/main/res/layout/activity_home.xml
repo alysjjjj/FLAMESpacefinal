@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#F9FFF2"
     android:padding="20dp"
-    tools:context=".Home">
+    tools:context=".buildings.Home">
 
 
     <ImageView

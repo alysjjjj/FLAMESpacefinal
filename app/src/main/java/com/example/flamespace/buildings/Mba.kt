@@ -1,77 +1,68 @@
-package com.example.flamespace
+package com.example.flamespace.buildings
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.FrameLayout
 import android.widget.LinearLayout
 import android.widget.PopupWindow
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
+import com.example.flamespace.profile.Current
+import com.example.flamespace.R
 
 
-class Ptc : AppCompatActivity(), View.OnClickListener {
+class Mba : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_room)
-
-        val backButton = findViewById<android.widget.ImageView>(R.id.backButton)
-        backButton.setOnClickListener {
-
-            goBackToPreviousPage()
-        }
-
-        findViewById<CardView>(R.id.ptc_201).setOnClickListener {
-            showPopup("PTC 201", "50 chairs\n1 air conditioner working")
-        }
-
-        findViewById<CardView>(R.id.ptc_301).setOnClickListener {
-            showPopup("PTC 301", "45 chairs\n2 air conditioner working")
-        }
-
-        findViewById<CardView>(R.id.ptc_302).setOnClickListener {
-            showPopup("PTC 302", "60 chairs\n3 air conditioner working")
-        }
-
-        findViewById<CardView>(R.id.ptc_303).setOnClickListener {
-            showPopup("PTC 303", "55 chairs\n2 air conditioner working")
-        }
-
-        findViewById<CardView>(R.id.ptc_304).setOnClickListener {
-            showPopup("PTC 304", "40 chairs\n1 air conditioner working")
-        }
-
-        findViewById<CardView>(R.id.ptc_305).setOnClickListener {
-            showPopup("PTC 305", "48 chairs\n2 air conditioner working")
-        }
-
-        findViewById<CardView>(R.id.ptc_306).setOnClickListener {
-            showPopup("PTC 306", "48 chairs\n2 air conditioner working")
-        }
-        findViewById<CardView>(R.id.ptc_403).setOnClickListener {
-            showPopup("PTC 403", "48 chairs\n2 air conditioner working")
-        }
-        findViewById<CardView>(R.id.ptc_404).setOnClickListener {
-            showPopup("PTC 404", "48 chairs\n2 air conditioner working")
-        }
-        findViewById<CardView>(R.id.ptc_405).setOnClickListener {
-            showPopup("PTC 405", "48 chairs\n2 air conditioner working")
-        }
-        findViewById<CardView>(R.id.ptc_406).setOnClickListener {
-            showPopup("PTC 406", "48 chairs\n2 air conditioner working")
-        }
+        setContentView(R.layout.activity_mba_room)
 
 
+        val backButton: FrameLayout = findViewById(R.id.backButton)
+        backButton.setOnClickListener { onBackPressed() }
+
+        findViewById<CardView>(R.id.mba_307).setOnClickListener {
+            showPopup("MBA 307", "40 chairs\n1 air conditioner working")
+        }
+        findViewById<CardView>(R.id.mba_308).setOnClickListener {
+            showPopup("MBA 308", "50 chairs\nno air conditioner working")
+        }
+
+        findViewById<CardView>(R.id.mba_309).setOnClickListener {
+            showPopup("MBA 309", "60 chairs\n3 air conditioner working")
+        }
+
+        findViewById<CardView>(R.id.mba_310).setOnClickListener {
+            showPopup("MBA 310", "57 chairs\n2 air conditioner working")
+        }
+
+        findViewById<CardView>(R.id.mba_405).setOnClickListener {
+            showPopup("MBA 311", "44 chairs\n2 air conditioner working")
+        }
+
+        findViewById<CardView>(R.id.mba_406).setOnClickListener {
+            showPopup("MBA 312", "49 chairs\n2 air conditioner working")
+        }
+        findViewById<CardView>(R.id.mba_407).setOnClickListener {
+            showPopup("MBA 313", "52 chairs\n2 air conditioner working")
+        }
+
+        findViewById<CardView>(R.id.mba_504).setOnClickListener {
+            showPopup("MBA 314", "50 chairs\n2 air conditioner working")
+        }
+
+        findViewById<CardView>(R.id.mba_505).setOnClickListener {
+            showPopup("MBA 315", "45 chairs\n2 air conditioner working")
+        }
+
+        findViewById<CardView>(R.id.mba_506).setOnClickListener {
+            showPopup("MBA 316", "55 chairs\n2 air conditioner working")
+        }
 
     }
-
-    private fun goBackToPreviousPage() {
-        onBackPressed()
-    }
-
-
 
     private fun navigateToReservationActivity(roomCode: String) {
         val intent = Intent(this, Reservation::class.java)
@@ -107,5 +98,6 @@ class Ptc : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(v: View?) {
+
     }
 }

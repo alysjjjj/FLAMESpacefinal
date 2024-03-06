@@ -1,8 +1,6 @@
-package com.example.flamespace
-
+package com.example.flamespace.buildings
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
 import android.view.LayoutInflater
@@ -10,58 +8,52 @@ import android.widget.FrameLayout
 import android.widget.LinearLayout
 import android.widget.PopupWindow
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
+import com.example.flamespace.profile.Current
+import com.example.flamespace.R
 
-class Nh : AppCompatActivity() {
-
+class Cma : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_nh_room)
+        setContentView(R.layout.activity_cma_room)
 
+        val backButton: FrameLayout = findViewById(R.id.backButton)
+        backButton.setOnClickListener { onBackPressed() }
 
-        val backButton = findViewById<FrameLayout>(R.id.backButton)
-        backButton.setOnClickListener {
-
-            goBackToPreviousPage()
+        findViewById<CardView>(R.id.cma_123).setOnClickListener {
+            showPopup("CMA 123", "40 chairs\n1 air conditioner working")
         }
 
-        findViewById<CardView>(R.id.nh_111).setOnClickListener {
-            showPopup("NH 111", "40 chairs\n1 air conditioner working")
+        findViewById<CardView>(R.id.cma_124).setOnClickListener {
+            showPopup("CMA 124", "40 chairs\n1 air conditioner working")
         }
-        findViewById<CardView>(R.id.nh_112).setOnClickListener {
-            showPopup("NH 112", "50 chairs\nno air conditioner working")
+        findViewById<CardView>(R.id.cma_125).setOnClickListener {
+            showPopup("CMA 125", "40 chairs\n1 air conditioner working")
         }
-
-        findViewById<CardView>(R.id.nh_113).setOnClickListener {
-            showPopup("NH 113", "60 chairs\n3 air conditioner working")
+        findViewById<CardView>(R.id.cma_126).setOnClickListener {
+            showPopup("CMA 126", "40 chairs\n1 air conditioner working")
         }
-
-        findViewById<CardView>(R.id.nh_114).setOnClickListener {
-            showPopup("NH 114", "57 chairs\n2 air conditioner working")
+        findViewById<CardView>(R.id.cma_127).setOnClickListener {
+            showPopup("CMA 127", "40 chairs\n1 air conditioner working")
         }
-
-        findViewById<CardView>(R.id.nh_115).setOnClickListener {
-            showPopup("NH 115", "44 chairs\n2 air conditioner working")
+        findViewById<CardView>(R.id.cma_323).setOnClickListener {
+            showPopup("CMA 128", "40 chairs\n1 air conditioner working")
         }
-
-        findViewById<CardView>(R.id.nh_116).setOnClickListener {
-            showPopup("NH 116", "49 chairs\n2 air conditioner working")
+        findViewById<CardView>(R.id.cma_324).setOnClickListener {
+            showPopup("CMA 129", "40 chairs\n1 air conditioner working")
         }
-        findViewById<CardView>(R.id.nh_117).setOnClickListener {
-            showPopup("NH 117", "52 chairs\n2 air conditioner working")
+        findViewById<CardView>(R.id.cma_325).setOnClickListener {
+            showPopup("CMA 200", "40 chairs\n1 air conditioner working")
         }
-
-        findViewById<CardView>(R.id.nh_118).setOnClickListener {
-            showPopup("NH 118", "50 chairs\n2 air conditioner working")
+        findViewById<CardView>(R.id.cma_326).setOnClickListener {
+            showPopup("CMA 201", "40 chairs\n1 air conditioner working")
+        }
+        findViewById<CardView>(R.id.cma_327).setOnClickListener {
+            showPopup("CMA 202", "40 chairs\n1 air conditioner working")
         }
 
-        findViewById<CardView>(R.id.nh_119).setOnClickListener {
-            showPopup("NH 119", "45 chairs\n2 air conditioner working")
-        }
 
-        findViewById<CardView>(R.id.nh_200).setOnClickListener {
-            showPopup("NH 200", "55 chairs\n2 air conditioner working")
-        }
 
     }
 
@@ -96,9 +88,6 @@ class Nh : AppCompatActivity() {
         }
 
         popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0)
-    }
-    private fun goBackToPreviousPage() {
-        onBackPressed()
     }
 
 }

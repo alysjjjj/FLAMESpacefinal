@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/lightGreen"
     android:padding="20dp"
-    tools:context=".Cahs">
+    tools:context=".buildings.Cahs">
 
     <FrameLayout
         android:id="@+id/backButton"
@@ -38,7 +38,7 @@
         android:textAlignment="center"
         android:fontFamily="@font/lemonmilk"
         android:padding="20dp"
-        android:textSize="30sp"
+        android:textSize="45sp"
         android:textStyle="bold"
         android:textColor="@color/new_darkGreen"
         app:layout_constraintEnd_toEndOf="parent"
@@ -73,10 +73,10 @@
                     android:layout_width="90dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
+                    android:contentDescription="@string/class_room"
                     android:elevation="3dp"
-                    android:contentDescription="@string/computer_room"
-                    android:src="@drawable/computer_laboratory"
-                    app:tint="@color/new_darkGreen"/>
+                    android:src="@drawable/standard_classroom"
+                    app:tint="@color/new_darkGreen" />
 
                 <TextView
                     android:id="@+id/cahs_123_tv"
@@ -84,11 +84,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="120dp"
                     android:layout_marginTop="32dp"
-                    android:text="@string/cahs_123"
                     android:fontFamily="@font/gilgan"
+                    android:text="@string/cahs123"
                     android:textColor="@color/black"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+                    android:textSize="25sp" />
 
                 <ImageView
                     android:id="@+id/cahs_123_pic"
@@ -96,9 +95,9 @@
                     android:layout_height="39dp"
                     android:layout_marginStart="290dp"
                     android:layout_marginTop="26dp"
-                    app:tint="@color/new_midGreen"
+                    android:contentDescription="@string/next_schedule"
                     app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
-                    android:contentDescription="@string/next_schedule" />
+                    app:tint="@color/new_midGreen" />
 
             </androidx.cardview.widget.CardView>
 
@@ -115,10 +114,10 @@
                     android:layout_width="90dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
+                    android:contentDescription="@string/class_room"
                     android:elevation="3dp"
-                    android:contentDescription="@string/computer_room"
-                    android:src="@drawable/computer_laboratory"
-                    app:tint="@color/new_darkGreen"/>
+                    android:src="@drawable/standard_classroom"
+                    app:tint="@color/new_darkGreen" />
 
                 <TextView
                     android:id="@+id/cahs_124_tv"
@@ -126,11 +125,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="120dp"
                     android:layout_marginTop="32dp"
-                    android:text="@string/cahs_124"
                     android:fontFamily="@font/gilgan"
+                    android:text="@string/cahs124"
                     android:textColor="@color/black"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+                    android:textSize="25sp" />
 
                 <ImageView
                     android:id="@+id/cahs_124_pic"
@@ -138,9 +136,9 @@
                     android:layout_height="39dp"
                     android:layout_marginStart="290dp"
                     android:layout_marginTop="26dp"
-                    app:tint="@color/new_midGreen"
+                    android:contentDescription="@string/next_schedule"
                     app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
-                    android:contentDescription="@string/next_schedule" />
+                    app:tint="@color/new_midGreen" />
 
             </androidx.cardview.widget.CardView>
 
@@ -157,10 +155,10 @@
                     android:layout_width="90dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
+                    android:contentDescription="@string/class_room"
                     android:elevation="3dp"
-                    android:contentDescription="@string/computer_room"
-                    android:src="@drawable/computer_laboratory"
-                    app:tint="@color/new_darkGreen"/>
+                    android:src="@drawable/standard_classroom"
+                    app:tint="@color/new_darkGreen" />
 
                 <TextView
                     android:id="@+id/cahs_125_tv"
@@ -168,11 +166,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="120dp"
                     android:layout_marginTop="32dp"
-                    android:text="CAHS 125"
                     android:fontFamily="@font/gilgan"
+                    android:text="@string/cahs125"
                     android:textColor="@color/black"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+                    android:textSize="25sp" />
 
                 <ImageView
                     android:id="@+id/cahs_125_pic"
@@ -180,14 +177,14 @@
                     android:layout_height="39dp"
                     android:layout_marginStart="290dp"
                     android:layout_marginTop="26dp"
-                    app:tint="@color/new_midGreen"
+                    android:contentDescription="@string/next_schedule"
                     app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
-                    android:contentDescription="@string/next_schedule" />
+                    app:tint="@color/new_midGreen" />
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cahs_126"
+                android:id="@+id/cahs_223"
                 android:layout_width="340dp"
                 android:layout_height="90dp"
                 android:layout_marginStart="18dp"
@@ -199,37 +196,36 @@
                     android:layout_width="90dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
+                    android:contentDescription="@string/class_room"
                     android:elevation="3dp"
-                    android:contentDescription="@string/computer_room"
-                    android:src="@drawable/computer_laboratory"
-                    app:tint="@color/new_darkGreen"/>
+                    android:src="@drawable/standard_classroom"
+                    app:tint="@color/new_darkGreen" />
 
                 <TextView
-                    android:id="@+id/cahs_126_tv"
+                    android:id="@+id/cahs_223_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="120dp"
                     android:layout_marginTop="32dp"
-                    android:text="CAHS 126"
                     android:fontFamily="@font/gilgan"
+                    android:text="@string/cahs223"
                     android:textColor="@color/black"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+                    android:textSize="25sp" />
 
                 <ImageView
-                    android:id="@+id/cahs_126_pic"
+                    android:id="@+id/cahs_223_pic"
                     android:layout_width="36dp"
                     android:layout_height="39dp"
                     android:layout_marginStart="290dp"
                     android:layout_marginTop="26dp"
-                    app:tint="@color/new_midGreen"
+                    android:contentDescription="@string/next_schedule"
                     app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
-                    android:contentDescription="@string/next_schedule" />
+                    app:tint="@color/new_midGreen" />
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cahs_127"
+                android:id="@+id/cahs_224"
                 android:layout_width="340dp"
                 android:layout_height="90dp"
                 android:layout_marginStart="18dp"
@@ -241,37 +237,36 @@
                     android:layout_width="90dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
+                    android:contentDescription="@string/class_room"
                     android:elevation="3dp"
-                    android:contentDescription="@string/computer_room"
-                    android:src="@drawable/computer_laboratory"
-                    app:tint="@color/new_darkGreen"/>
+                    android:src="@drawable/standard_classroom"
+                    app:tint="@color/new_darkGreen" />
 
                 <TextView
-                    android:id="@+id/cahs_127_tv"
+                    android:id="@+id/cahs_224_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="120dp"
                     android:layout_marginTop="32dp"
-                    android:text="CAHS 127"
                     android:fontFamily="@font/gilgan"
+                    android:text="@string/cahs224"
                     android:textColor="@color/black"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+                    android:textSize="25sp" />
 
                 <ImageView
-                    android:id="@+id/cahs_127_pic"
+                    android:id="@+id/cahs_224_pic"
                     android:layout_width="36dp"
                     android:layout_height="39dp"
                     android:layout_marginStart="290dp"
                     android:layout_marginTop="26dp"
-                    app:tint="@color/new_midGreen"
+                    android:contentDescription="@string/next_schedule"
                     app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
-                    android:contentDescription="@string/next_schedule" />
+                    app:tint="@color/new_midGreen" />
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cahs_128"
+                android:id="@+id/cahs_225"
                 android:layout_width="340dp"
                 android:layout_height="90dp"
                 android:layout_marginStart="18dp"
@@ -283,37 +278,36 @@
                     android:layout_width="90dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
+                    android:contentDescription="@string/class_room"
                     android:elevation="3dp"
-                    android:contentDescription="@string/computer_room"
-                    android:src="@drawable/computer_laboratory"
-                    app:tint="@color/new_darkGreen"/>
+                    android:src="@drawable/standard_classroom"
+                    app:tint="@color/new_darkGreen" />
 
                 <TextView
-                    android:id="@+id/cahs_128_tv"
+                    android:id="@+id/cahs_225_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="120dp"
                     android:layout_marginTop="32dp"
-                    android:text="CAHS 128"
                     android:fontFamily="@font/gilgan"
+                    android:text="@string/cahs225"
                     android:textColor="@color/black"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+                    android:textSize="25sp" />
 
                 <ImageView
-                    android:id="@+id/cahs_128_pic"
+                    android:id="@+id/cahs_225_pic"
                     android:layout_width="36dp"
                     android:layout_height="39dp"
                     android:layout_marginStart="290dp"
                     android:layout_marginTop="26dp"
-                    app:tint="@color/new_midGreen"
+                    android:contentDescription="@string/next_schedule"
                     app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
-                    android:contentDescription="@string/next_schedule" />
+                    app:tint="@color/new_midGreen" />
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cahs_129"
+                android:id="@+id/cahs_323"
                 android:layout_width="340dp"
                 android:layout_height="90dp"
                 android:layout_marginStart="18dp"
@@ -325,37 +319,36 @@
                     android:layout_width="90dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
+                    android:contentDescription="@string/class_room"
                     android:elevation="3dp"
-                    android:contentDescription="@string/computer_room"
-                    android:src="@drawable/computer_laboratory"
-                    app:tint="@color/new_darkGreen"/>
+                    android:src="@drawable/standard_classroom"
+                    app:tint="@color/new_darkGreen" />
 
                 <TextView
-                    android:id="@+id/cahs_129_tv"
+                    android:id="@+id/cahs_323_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="120dp"
                     android:layout_marginTop="32dp"
-                    android:text="CAHS 129"
                     android:fontFamily="@font/gilgan"
+                    android:text="@string/cahs323"
                     android:textColor="@color/black"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+                    android:textSize="25sp" />
 
                 <ImageView
-                    android:id="@+id/cahs_129_pic"
+                    android:id="@+id/cahs_323_pic"
                     android:layout_width="36dp"
                     android:layout_height="39dp"
                     android:layout_marginStart="290dp"
                     android:layout_marginTop="26dp"
-                    app:tint="@color/new_midGreen"
+                    android:contentDescription="@string/next_schedule"
                     app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
-                    android:contentDescription="@string/next_schedule" />
+                    app:tint="@color/new_midGreen" />
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cahs_130"
+                android:id="@+id/cahs_324"
                 android:layout_width="340dp"
                 android:layout_height="90dp"
                 android:layout_marginStart="18dp"
@@ -367,37 +360,36 @@
                     android:layout_width="90dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
+                    android:contentDescription="@string/class_room"
                     android:elevation="3dp"
-                    android:contentDescription="@string/computer_room"
-                    android:src="@drawable/computer_laboratory"
-                    app:tint="@color/new_darkGreen"/>
+                    android:src="@drawable/standard_classroom"
+                    app:tint="@color/new_darkGreen" />
 
                 <TextView
-                    android:id="@+id/cahs_130_tv"
+                    android:id="@+id/cahs_324_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="120dp"
                     android:layout_marginTop="32dp"
-                    android:text="CAHS 130"
                     android:fontFamily="@font/gilgan"
+                    android:text="@string/cahs324"
                     android:textColor="@color/black"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+                    android:textSize="25sp" />
 
                 <ImageView
-                    android:id="@+id/cahs_130_pic"
+                    android:id="@+id/cahs_324_pic"
                     android:layout_width="36dp"
                     android:layout_height="39dp"
                     android:layout_marginStart="290dp"
                     android:layout_marginTop="26dp"
-                    app:tint="@color/new_midGreen"
+                    android:contentDescription="@string/next_schedule"
                     app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
-                    android:contentDescription="@string/next_schedule" />
+                    app:tint="@color/new_midGreen" />
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cahs_131"
+                android:id="@+id/cahs_325"
                 android:layout_width="340dp"
                 android:layout_height="90dp"
                 android:layout_marginStart="18dp"
@@ -409,75 +401,72 @@
                     android:layout_width="90dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
+                    android:contentDescription="@string/class_room"
                     android:elevation="3dp"
-                    android:contentDescription="@string/computer_room"
-                    android:src="@drawable/computer_laboratory"
-                    app:tint="@color/new_darkGreen"/>
+                    android:src="@drawable/standard_classroom"
+                    app:tint="@color/new_darkGreen" />
 
                 <TextView
-                    android:id="@+id/cahs_131_tv"
+                    android:id="@+id/cahs_325_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="120dp"
                     android:layout_marginTop="32dp"
-                    android:text="CAHS 131"
                     android:fontFamily="@font/gilgan"
+                    android:text="@string/cahs325"
                     android:textColor="@color/black"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+                    android:textSize="25sp" />
 
                 <ImageView
-                    android:id="@+id/cahs_131_pic"
+                    android:id="@+id/cahs_325_pic"
                     android:layout_width="36dp"
                     android:layout_height="39dp"
                     android:layout_marginStart="290dp"
                     android:layout_marginTop="26dp"
-                    app:tint="@color/new_midGreen"
+                    android:contentDescription="@string/next_schedule"
                     app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
-                    android:contentDescription="@string/next_schedule" />
+                    app:tint="@color/new_midGreen" />
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cahs_132"
+                android:id="@+id/cahs_326"
                 android:layout_width="340dp"
                 android:layout_height="90dp"
                 android:layout_marginStart="18dp"
                 android:layout_marginTop="10dp"
                 app:cardCornerRadius="10dp"
-                android:layout_marginBottom="47dp"
                 app:cardElevation="5dp">
 
                 <ImageView
                     android:layout_width="90dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
+                    android:contentDescription="@string/class_room"
                     android:elevation="3dp"
-                    android:contentDescription="@string/computer_room"
-                    android:src="@drawable/computer_laboratory"
-                    app:tint="@color/new_darkGreen"/>
+                    android:src="@drawable/standard_classroom"
+                    app:tint="@color/new_darkGreen" />
 
                 <TextView
-                    android:id="@+id/cahs_132_tv"
+                    android:id="@+id/cahs_326_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="120dp"
                     android:layout_marginTop="32dp"
-                    android:text="CAHS 132"
                     android:fontFamily="@font/gilgan"
+                    android:text="@string/cahs326"
                     android:textColor="@color/black"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+                    android:textSize="25sp" />
 
                 <ImageView
-                    android:id="@+id/cahs_132_pic"
+                    android:id="@+id/cahs_326_pic"
                     android:layout_width="36dp"
                     android:layout_height="39dp"
                     android:layout_marginStart="290dp"
                     android:layout_marginTop="26dp"
-                    app:tint="@color/new_midGreen"
+                    android:contentDescription="@string/next_schedule"
                     app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
-                    android:contentDescription="@string/next_schedule" />
+                    app:tint="@color/new_midGreen" />
 
             </androidx.cardview.widget.CardView>
 

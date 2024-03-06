@@ -1,3 +1,5 @@
+package com.example.flamespace.buildings
+
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -6,7 +8,7 @@ import android.view.ViewGroup
 import com.example.flamespace.R
 
 
-class modal_popup : Fragment() {
+class Modal_popup : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
