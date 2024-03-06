@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/lightGreen"
     android:padding="20dp"
-    tools:context=".Be">
+    tools:context=".buildings.Be">
 
     <FrameLayout
         android:id="@+id/backButton"
@@ -33,12 +33,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="@string/basic_education"
+        android:text="@string/be"
         android:contentDescription="@string/be_des"
         android:textAlignment="center"
         android:fontFamily="@font/lemonmilk"
         android:padding="20dp"
-        android:textSize="30sp"
+        android:textSize="45sp"
         android:textStyle="bold"
         android:textColor="@color/new_darkGreen"
         app:layout_constraintEnd_toEndOf="parent"
@@ -61,6 +61,88 @@
             android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/be_121"
+                android:layout_width="340dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp">
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:contentDescription="@string/class_room"
+                    android:elevation="3dp"
+                    android:src="@drawable/standard_classroom"
+                    app:tint="@color/new_darkGreen" />
+
+                <TextView
+                    android:id="@+id/be_121_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="@font/gilgan"
+                    android:text="@string/be121"
+                    android:textColor="@color/black"
+                    android:textSize="25sp" />
+
+                <ImageView
+                    android:id="@+id/be_121_pic"
+                    android:layout_width="36dp"
+                    android:layout_height="39dp"
+                    android:layout_marginStart="290dp"
+                    android:layout_marginTop="26dp"
+                    android:contentDescription="@string/next_schedule"
+                    app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
+                    app:tint="@color/new_midGreen" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/be_122"
+                android:layout_width="340dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp">
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:contentDescription="@string/class_room"
+                    android:elevation="3dp"
+                    android:src="@drawable/standard_classroom"
+                    app:tint="@color/new_darkGreen" />
+
+                <TextView
+                    android:id="@+id/be_122_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="@font/gilgan"
+                    android:text="@string/be122"
+                    android:textColor="@color/black"
+                    android:textSize="25sp" />
+
+                <ImageView
+                    android:id="@+id/be_122_pic"
+                    android:layout_width="36dp"
+                    android:layout_height="39dp"
+                    android:layout_marginStart="290dp"
+                    android:layout_marginTop="26dp"
+                    android:contentDescription="@string/next_schedule"
+                    app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
+                    app:tint="@color/new_midGreen" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
                 android:id="@+id/be_123"
                 android:layout_width="340dp"
                 android:layout_height="90dp"
@@ -73,9 +155,9 @@
                     android:layout_width="90dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
-                    android:contentDescription="@string/computer_room"
+                    android:contentDescription="@string/class_room"
                     android:elevation="3dp"
-                    android:src="@drawable/computer_laboratory"
+                    android:src="@drawable/standard_classroom"
                     app:tint="@color/new_darkGreen" />
 
                 <TextView
@@ -85,10 +167,9 @@
                     android:layout_marginStart="120dp"
                     android:layout_marginTop="32dp"
                     android:fontFamily="@font/gilgan"
-                    android:text="@string/be_123"
+                    android:text="@string/be123"
                     android:textColor="@color/black"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+                    android:textSize="25sp" />
 
                 <ImageView
                     android:id="@+id/be_123_pic"
@@ -115,9 +196,9 @@
                     android:layout_width="90dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
-                    android:contentDescription="@string/computer_room"
+                    android:contentDescription="@string/class_room"
                     android:elevation="3dp"
-                    android:src="@drawable/computer_laboratory"
+                    android:src="@drawable/standard_classroom"
                     app:tint="@color/new_darkGreen" />
 
                 <TextView
@@ -127,10 +208,9 @@
                     android:layout_marginStart="120dp"
                     android:layout_marginTop="32dp"
                     android:fontFamily="@font/gilgan"
-                    android:text="@string/be_124"
+                    android:text="@string/be124"
                     android:textColor="@color/black"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+                    android:textSize="25sp" />
 
                 <ImageView
                     android:id="@+id/be_124_pic"
@@ -145,7 +225,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/be_125"
+                android:id="@+id/be_221"
                 android:layout_width="340dp"
                 android:layout_height="90dp"
                 android:layout_marginStart="18dp"
@@ -157,25 +237,24 @@
                     android:layout_width="90dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
-                    android:contentDescription="@string/computer_room"
+                    android:contentDescription="@string/class_room"
                     android:elevation="3dp"
-                    android:src="@drawable/computer_laboratory"
+                    android:src="@drawable/standard_classroom"
                     app:tint="@color/new_darkGreen" />
 
                 <TextView
-                    android:id="@+id/be_125_tv"
+                    android:id="@+id/be_221_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="120dp"
                     android:layout_marginTop="32dp"
                     android:fontFamily="@font/gilgan"
-                    android:text="BE 125"
+                    android:text="@string/be221"
                     android:textColor="@color/black"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+                    android:textSize="25sp" />
 
                 <ImageView
-                    android:id="@+id/be_125_pic"
+                    android:id="@+id/be_221_pic"
                     android:layout_width="36dp"
                     android:layout_height="39dp"
                     android:layout_marginStart="290dp"
@@ -187,7 +266,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/be_126"
+                android:id="@+id/be_222"
                 android:layout_width="340dp"
                 android:layout_height="90dp"
                 android:layout_marginStart="18dp"
@@ -199,25 +278,24 @@
                     android:layout_width="90dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
-                    android:contentDescription="@string/computer_room"
+                    android:contentDescription="@string/class_room"
                     android:elevation="3dp"
-                    android:src="@drawable/computer_laboratory"
+                    android:src="@drawable/standard_classroom"
                     app:tint="@color/new_darkGreen" />
 
                 <TextView
-                    android:id="@+id/be_126_tv"
+                    android:id="@+id/be_222_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="120dp"
                     android:layout_marginTop="32dp"
                     android:fontFamily="@font/gilgan"
-                    android:text="BE 126"
+                    android:text="@string/be222"
                     android:textColor="@color/black"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+                    android:textSize="25sp" />
 
                 <ImageView
-                    android:id="@+id/be_126_pic"
+                    android:id="@+id/be_222_pic"
                     android:layout_width="36dp"
                     android:layout_height="39dp"
                     android:layout_marginStart="290dp"
@@ -229,7 +307,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/be_127"
+                android:id="@+id/be_223"
                 android:layout_width="340dp"
                 android:layout_height="90dp"
                 android:layout_marginStart="18dp"
@@ -241,25 +319,64 @@
                     android:layout_width="90dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
-                    android:contentDescription="@string/computer_room"
+                    android:contentDescription="@string/class_room"
                     android:elevation="3dp"
-                    android:src="@drawable/computer_laboratory"
+                    android:src="@drawable/standard_classroom"
                     app:tint="@color/new_darkGreen" />
 
                 <TextView
-                    android:id="@+id/be_127_tv"
+                    android:id="@+id/be_223_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="120dp"
                     android:layout_marginTop="32dp"
                     android:fontFamily="@font/gilgan"
-                    android:text="BE 127"
+                    android:text="@string/be223"
                     android:textColor="@color/black"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+                    android:textSize="25sp" />
 
                 <ImageView
-                    android:id="@+id/be_127_pic"
+                    android:id="@+id/be_223_pic"
+                    android:layout_width="36dp"
+                    android:layout_height="39dp"
+                    android:layout_marginStart="290dp"
+                    android:layout_marginTop="26dp"
+                    android:contentDescription="@string/next_schedule"
+                    app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
+                    app:tint="@color/new_midGreen" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/be_224"
+                android:layout_width="340dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp">
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:contentDescription="@string/class_room"
+                    android:elevation="3dp"
+                    android:src="@drawable/standard_classroom"
+                    app:tint="@color/new_darkGreen" />
+
+                <TextView
+                    android:id="@+id/be_224_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="@font/gilgan"
+                    android:text="@string/be224"
+                    android:textColor="@color/black"
+                    android:textSize="25sp" />
+
+                <ImageView
+                    android:id="@+id/be_224_pic"
                     android:layout_width="36dp"
                     android:layout_height="39dp"
                     android:layout_marginStart="290dp"
@@ -271,7 +388,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/be_128"
+                android:id="@+id/be_321"
                 android:layout_width="340dp"
                 android:layout_height="90dp"
                 android:layout_marginStart="18dp"
@@ -283,25 +400,24 @@
                     android:layout_width="90dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
-                    android:contentDescription="@string/computer_room"
+                    android:contentDescription="@string/class_room"
                     android:elevation="3dp"
-                    android:src="@drawable/computer_laboratory"
+                    android:src="@drawable/standard_classroom"
                     app:tint="@color/new_darkGreen" />
 
                 <TextView
-                    android:id="@+id/be_128_tv"
+                    android:id="@+id/be_321_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="120dp"
                     android:layout_marginTop="32dp"
                     android:fontFamily="@font/gilgan"
-                    android:text="BE 128"
+                    android:text="@string/be321"
                     android:textColor="@color/black"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+                    android:textSize="25sp" />
 
                 <ImageView
-                    android:id="@+id/be_128_pic"
+                    android:id="@+id/be_321_pic"
                     android:layout_width="36dp"
                     android:layout_height="39dp"
                     android:layout_marginStart="290dp"
@@ -313,7 +429,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/be_129"
+                android:id="@+id/be_322"
                 android:layout_width="340dp"
                 android:layout_height="90dp"
                 android:layout_marginStart="18dp"
@@ -325,152 +441,24 @@
                     android:layout_width="90dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
-                    android:contentDescription="@string/computer_room"
+                    android:contentDescription="@string/class_room"
                     android:elevation="3dp"
-                    android:src="@drawable/computer_laboratory"
+                    android:src="@drawable/standard_classroom"
                     app:tint="@color/new_darkGreen" />
 
                 <TextView
-                    android:id="@+id/be_129_tv"
+                    android:id="@+id/be_322_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="120dp"
                     android:layout_marginTop="32dp"
                     android:fontFamily="@font/gilgan"
-                    android:text="BE 129"
+                    android:text="@string/be322"
                     android:textColor="@color/black"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+                    android:textSize="25sp" />
 
                 <ImageView
-                    android:id="@+id/be_129_pic"
-                    android:layout_width="36dp"
-                    android:layout_height="39dp"
-                    android:layout_marginStart="290dp"
-                    android:layout_marginTop="26dp"
-                    android:contentDescription="@string/next_schedule"
-                    app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
-                    app:tint="@color/new_midGreen" />
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/be_130"
-                android:layout_width="340dp"
-                android:layout_height="90dp"
-                android:layout_marginStart="18dp"
-                android:layout_marginTop="10dp"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="5dp">
-
-                <ImageView
-                    android:layout_width="90dp"
-                    android:layout_height="70dp"
-                    android:layout_margin="10dp"
-                    android:contentDescription="@string/computer_room"
-                    android:elevation="3dp"
-                    android:src="@drawable/computer_laboratory"
-                    app:tint="@color/new_darkGreen" />
-
-                <TextView
-                    android:id="@+id/be_130_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="120dp"
-                    android:layout_marginTop="32dp"
-                    android:fontFamily="@font/gilgan"
-                    android:text="BE 130"
-                    android:textColor="@color/black"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
-
-                <ImageView
-                    android:id="@+id/be_130_pic"
-                    android:layout_width="36dp"
-                    android:layout_height="39dp"
-                    android:layout_marginStart="290dp"
-                    android:layout_marginTop="26dp"
-                    android:contentDescription="@string/next_schedule"
-                    app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
-                    app:tint="@color/new_midGreen" />
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/be_131"
-                android:layout_width="340dp"
-                android:layout_height="90dp"
-                android:layout_marginStart="18dp"
-                android:layout_marginTop="10dp"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="5dp">
-
-                <ImageView
-                    android:layout_width="90dp"
-                    android:layout_height="70dp"
-                    android:layout_margin="10dp"
-                    android:contentDescription="@string/computer_room"
-                    android:elevation="3dp"
-                    android:src="@drawable/computer_laboratory"
-                    app:tint="@color/new_darkGreen" />
-
-                <TextView
-                    android:id="@+id/be_131_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="120dp"
-                    android:layout_marginTop="32dp"
-                    android:fontFamily="@font/gilgan"
-                    android:text="BE 131"
-                    android:textColor="@color/black"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
-
-                <ImageView
-                    android:id="@+id/be_131_pic"
-                    android:layout_width="36dp"
-                    android:layout_height="39dp"
-                    android:layout_marginStart="290dp"
-                    android:layout_marginTop="26dp"
-                    android:contentDescription="@string/next_schedule"
-                    app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
-                    app:tint="@color/new_midGreen" />
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/be_132"
-                android:layout_width="340dp"
-                android:layout_height="90dp"
-                android:layout_marginStart="18dp"
-                android:layout_marginTop="10dp"
-                app:cardCornerRadius="10dp"
-                android:layout_marginBottom="47dp"
-                app:cardElevation="5dp">
-
-                <ImageView
-                    android:layout_width="90dp"
-                    android:layout_height="70dp"
-                    android:layout_margin="10dp"
-                    android:contentDescription="@string/computer_room"
-                    android:elevation="3dp"
-                    android:src="@drawable/computer_laboratory"
-                    app:tint="@color/new_darkGreen" />
-
-                <TextView
-                    android:id="@+id/be_132_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="120dp"
-                    android:layout_marginTop="32dp"
-                    android:fontFamily="@font/gilgan"
-                    android:text="BE 132"
-                    android:textColor="@color/black"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
-
-                <ImageView
-                    android:id="@+id/be_132_pic"
+                    android:id="@+id/be_322_pic"
                     android:layout_width="36dp"
                     android:layout_height="39dp"
                     android:layout_marginStart="290dp"
@@ -483,7 +471,7 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="50dp" />
+                android:layout_height="130dp" />
 
         </LinearLayout>
     </ScrollView>

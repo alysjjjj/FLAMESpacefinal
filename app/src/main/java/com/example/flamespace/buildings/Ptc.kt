@@ -1,16 +1,19 @@
-package com.example.flamespace
+package com.example.flamespace.buildings
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.FrameLayout
 import android.widget.LinearLayout
 import android.widget.PopupWindow
 import android.content.Context
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
+import com.example.flamespace.profile.Current
+import com.example.flamespace.R
 
 
 class Ptc : AppCompatActivity(), View.OnClickListener {
@@ -18,11 +21,8 @@ class Ptc : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_room)
 
-        val backButton = findViewById<android.widget.ImageView>(R.id.backButton)
-        backButton.setOnClickListener {
-
-            goBackToPreviousPage()
-        }
+        val backButton: FrameLayout = findViewById(R.id.backButton)
+        backButton.setOnClickListener { onBackPressed() }
 
         findViewById<CardView>(R.id.ptc_201).setOnClickListener {
             showPopup("PTC 201", "50 chairs\n1 air conditioner working")
@@ -67,12 +67,6 @@ class Ptc : AppCompatActivity(), View.OnClickListener {
 
 
     }
-
-    private fun goBackToPreviousPage() {
-        onBackPressed()
-    }
-
-
 
     private fun navigateToReservationActivity(roomCode: String) {
         val intent = Intent(this, Reservation::class.java)

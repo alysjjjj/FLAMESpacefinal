@@ -1,7 +1,9 @@
-package com.example.flamespace
+package com.example.flamespace.buildings
+
 
 import android.content.Context
 import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
 import android.view.LayoutInflater
@@ -10,57 +12,49 @@ import android.widget.FrameLayout
 import android.widget.LinearLayout
 import android.widget.PopupWindow
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
+import com.example.flamespace.profile.Current
+import com.example.flamespace.R
 
-class Cma : AppCompatActivity() {
+class Cahs : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_cma_room)
+        setContentView(R.layout.activity_cahs_rooms)
 
-        val backButton = findViewById<FrameLayout>(R.id.backButton)
-        backButton.setOnClickListener {
+        val backButton: FrameLayout = findViewById(R.id.backButton)
+        backButton.setOnClickListener { onBackPressed() }
 
-            goBackToPreviousPage()
+        findViewById<CardView>(R.id.cahs_123).setOnClickListener {
+            showPopup("CAHS 123", "40 chairs\n1 air conditioner working")
         }
-
-        findViewById<CardView>(R.id.cma_123).setOnClickListener {
-            showPopup("CMA 123", "40 chairs\n1 air conditioner working")
+        findViewById<CardView>(R.id.cahs_124).setOnClickListener {
+            showPopup("CAHS 124", "50 chairs\n2 air conditioner working")
         }
-
-        findViewById<CardView>(R.id.cma_124).setOnClickListener {
-            showPopup("CMA 124", "40 chairs\n1 air conditioner working")
+        findViewById<CardView>(R.id.cahs_125).setOnClickListener {
+            showPopup("CAHS 125", "53 chairs\n1 air conditioner working")
         }
-        findViewById<CardView>(R.id.cma_125).setOnClickListener {
-            showPopup("CMA 125", "40 chairs\n1 air conditioner working")
+        findViewById<CardView>(R.id.cahs_223).setOnClickListener {
+            showPopup("CAHS 126", "56 chairs\n1 air conditioner working")
         }
-        findViewById<CardView>(R.id.cma_126).setOnClickListener {
-            showPopup("CMA 126", "40 chairs\n1 air conditioner working")
+        findViewById<CardView>(R.id.cahs_224).setOnClickListener {
+            showPopup("CAHS 127", "40 chairs\n2 air conditioner working")
         }
-        findViewById<CardView>(R.id.cma_127).setOnClickListener {
-            showPopup("CMA 127", "40 chairs\n1 air conditioner working")
+        findViewById<CardView>(R.id.cahs_225).setOnClickListener {
+            showPopup("CAHS 128", "60 chairs\n1 air conditioner working")
         }
-        findViewById<CardView>(R.id.cma_128).setOnClickListener {
-            showPopup("CMA 128", "40 chairs\n1 air conditioner working")
+        findViewById<CardView>(R.id.cahs_323).setOnClickListener {
+            showPopup("CAHS 129", "39 chairs\n2 air conditioner working")
         }
-        findViewById<CardView>(R.id.cma_129).setOnClickListener {
-            showPopup("CMA 129", "40 chairs\n1 air conditioner working")
+        findViewById<CardView>(R.id.cahs_324).setOnClickListener {
+            showPopup("CAHS 130", "49 chairs\n1 air conditioner working")
         }
-        findViewById<CardView>(R.id.cma_200).setOnClickListener {
-            showPopup("CMA 200", "40 chairs\n1 air conditioner working")
+        findViewById<CardView>(R.id.cahs_325).setOnClickListener {
+            showPopup("CAHS 131", "55 chairs\n1 air conditioner working")
         }
-        findViewById<CardView>(R.id.cma_201).setOnClickListener {
-            showPopup("CMA 201", "40 chairs\n1 air conditioner working")
-        }
-        findViewById<CardView>(R.id.cma_202).setOnClickListener {
-            showPopup("CMA 202", "40 chairs\n1 air conditioner working")
+        findViewById<CardView>(R.id.cahs_326).setOnClickListener {
+            showPopup("CAHS 132", "50 chairs\n2 air conditioner working")
         }
 
-
-
-    }
-    private fun goBackToPreviousPage() {
-        onBackPressed()
     }
 
     private fun navigateToReservationActivity(roomCode: String) {
@@ -68,7 +62,6 @@ class Cma : AppCompatActivity() {
         intent.putExtra("ROOM_CODE", roomCode)
         startActivity(intent)
     }
-
     private fun showPopup(roomCode: String, roomDetails: String) {
         val inflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val popupView = inflater.inflate(R.layout.fragment_modal_popup, null)

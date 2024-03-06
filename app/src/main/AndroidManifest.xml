@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <application
         android:allowBackup="true"
@@ -14,52 +16,55 @@
         android:theme="@style/Theme.FLAMESpace"
         tools:targetApi="31">
         <activity
-            android:name=".Logout"
+            android:name=".user.ForgotActivity"
             android:exported="false" />
         <activity
-            android:name=".Edit_profile"
+            android:name=".user.Logout"
             android:exported="false" />
         <activity
-            android:name=".Current"
+            android:name=".profile.Edit_profile"
             android:exported="false" />
         <activity
-            android:name=".Signup"
+            android:name=".profile.Current"
             android:exported="false" />
         <activity
-            android:name=".Reservation"
+            android:name=".user.Signup"
             android:exported="false" />
         <activity
-            android:name=".Be"
+            android:name=".buildings.Reservation"
             android:exported="false" />
         <activity
-            android:name=".Cahs"
+            android:name=".buildings.Be"
             android:exported="false" />
         <activity
-            android:name=".Nh"
+            android:name=".buildings.Cahs"
             android:exported="false" />
         <activity
-            android:name=".Mba"
+            android:name=".buildings.Nh"
             android:exported="false" />
         <activity
-            android:name=".Cma"
+            android:name=".buildings.Mba"
             android:exported="false" />
         <activity
-            android:name=".Ptc"
+            android:name=".buildings.Cma"
             android:exported="false" />
         <activity
-            android:name=".History"
+            android:name=".buildings.Ptc"
             android:exported="false" />
         <activity
-            android:name=".Profile"
+            android:name=".profile.History"
             android:exported="false" />
         <activity
-            android:name=".Home"
+            android:name=".profile.Profile"
             android:exported="false" />
         <activity
-            android:name=".SignIn"
+            android:name=".buildings.Home"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".user.SignIn"
+            android:exported="false" />
+        <activity
+            android:name=".user.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

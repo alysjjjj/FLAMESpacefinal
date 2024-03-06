@@ -1,15 +1,11 @@
-package com.example.flamespace
+package com.example.flamespace.user
 
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.view.Gravity
-import android.view.LayoutInflater
-import android.widget.LinearLayout
-import android.widget.PopupWindow
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import com.example.flamespace.R
 
 class Logout : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

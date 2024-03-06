@@ -1,12 +1,11 @@
-package com.example.flamespace
+package com.example.flamespace.profile
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.FrameLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.flamespace.R.id
+import com.example.flamespace.R
 
 class History : AppCompatActivity() {
 
@@ -14,11 +13,8 @@ class History : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_history)
 
-        val backButton = findViewById<FrameLayout>(R.id.backButton)
-        backButton.setOnClickListener {
-
-            goBackToPreviousPage()
-        }
+        val backButton: FrameLayout = findViewById(R.id.backButton)
+        backButton.setOnClickListener { onBackPressed() }
 
         val recyclerView = findViewById<RecyclerView>(R.id.history_recycler)
         recyclerView.layoutManager = LinearLayoutManager(this)
@@ -34,7 +30,4 @@ class History : AppCompatActivity() {
         return historyList
     }
 
-    private fun goBackToPreviousPage() {
-        onBackPressed()
-    }
 }

@@ -1,68 +1,67 @@
-package com.example.flamespace
-
+package com.example.flamespace.buildings
 
 import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
 import android.view.LayoutInflater
+import android.view.View
 import android.widget.Button
 import android.widget.FrameLayout
 import android.widget.LinearLayout
 import android.widget.PopupWindow
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
+import com.example.flamespace.profile.Current
+import com.example.flamespace.R
 
-class Nh : AppCompatActivity() {
 
+class Mba : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_nh_room)
+        setContentView(R.layout.activity_mba_room)
 
 
-        val backButton = findViewById<FrameLayout>(R.id.backButton)
-        backButton.setOnClickListener {
+        val backButton: FrameLayout = findViewById(R.id.backButton)
+        backButton.setOnClickListener { onBackPressed() }
 
-            goBackToPreviousPage()
+        findViewById<CardView>(R.id.mba_307).setOnClickListener {
+            showPopup("MBA 307", "40 chairs\n1 air conditioner working")
+        }
+        findViewById<CardView>(R.id.mba_308).setOnClickListener {
+            showPopup("MBA 308", "50 chairs\nno air conditioner working")
         }
 
-        findViewById<CardView>(R.id.nh_111).setOnClickListener {
-            showPopup("NH 111", "40 chairs\n1 air conditioner working")
-        }
-        findViewById<CardView>(R.id.nh_112).setOnClickListener {
-            showPopup("NH 112", "50 chairs\nno air conditioner working")
+        findViewById<CardView>(R.id.mba_309).setOnClickListener {
+            showPopup("MBA 309", "60 chairs\n3 air conditioner working")
         }
 
-        findViewById<CardView>(R.id.nh_113).setOnClickListener {
-            showPopup("NH 113", "60 chairs\n3 air conditioner working")
+        findViewById<CardView>(R.id.mba_310).setOnClickListener {
+            showPopup("MBA 310", "57 chairs\n2 air conditioner working")
         }
 
-        findViewById<CardView>(R.id.nh_114).setOnClickListener {
-            showPopup("NH 114", "57 chairs\n2 air conditioner working")
+        findViewById<CardView>(R.id.mba_405).setOnClickListener {
+            showPopup("MBA 311", "44 chairs\n2 air conditioner working")
         }
 
-        findViewById<CardView>(R.id.nh_115).setOnClickListener {
-            showPopup("NH 115", "44 chairs\n2 air conditioner working")
+        findViewById<CardView>(R.id.mba_406).setOnClickListener {
+            showPopup("MBA 312", "49 chairs\n2 air conditioner working")
+        }
+        findViewById<CardView>(R.id.mba_407).setOnClickListener {
+            showPopup("MBA 313", "52 chairs\n2 air conditioner working")
         }
 
-        findViewById<CardView>(R.id.nh_116).setOnClickListener {
-            showPopup("NH 116", "49 chairs\n2 air conditioner working")
-        }
-        findViewById<CardView>(R.id.nh_117).setOnClickListener {
-            showPopup("NH 117", "52 chairs\n2 air conditioner working")
+        findViewById<CardView>(R.id.mba_504).setOnClickListener {
+            showPopup("MBA 314", "50 chairs\n2 air conditioner working")
         }
 
-        findViewById<CardView>(R.id.nh_118).setOnClickListener {
-            showPopup("NH 118", "50 chairs\n2 air conditioner working")
+        findViewById<CardView>(R.id.mba_505).setOnClickListener {
+            showPopup("MBA 315", "45 chairs\n2 air conditioner working")
         }
 
-        findViewById<CardView>(R.id.nh_119).setOnClickListener {
-            showPopup("NH 119", "45 chairs\n2 air conditioner working")
-        }
-
-        findViewById<CardView>(R.id.nh_200).setOnClickListener {
-            showPopup("NH 200", "55 chairs\n2 air conditioner working")
+        findViewById<CardView>(R.id.mba_506).setOnClickListener {
+            showPopup("MBA 316", "55 chairs\n2 air conditioner working")
         }
 
     }
@@ -97,8 +96,8 @@ class Nh : AppCompatActivity() {
 
         popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0)
     }
-    private fun goBackToPreviousPage() {
-        onBackPressed()
-    }
 
+    override fun onClick(v: View?) {
+
+    }
 }

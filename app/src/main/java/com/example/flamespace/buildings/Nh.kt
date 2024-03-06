@@ -1,4 +1,4 @@
-package com.example.flamespace
+package com.example.flamespace.buildings
 
 
 import android.content.Context
@@ -11,61 +11,59 @@ import android.widget.Button
 import android.widget.FrameLayout
 import android.widget.LinearLayout
 import android.widget.PopupWindow
+import android.widget.Toast
 import androidx.cardview.widget.CardView
+import com.example.flamespace.profile.Current
+import com.example.flamespace.R
 
-class Be : AppCompatActivity() {
+class Nh : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_be)
+        setContentView(R.layout.activity_nh_room)
 
-        val backButton = findViewById<FrameLayout>(R.id.backButton)
-        backButton.setOnClickListener {
 
-            goBackToPreviousPage()
+        val backButton: FrameLayout = findViewById(R.id.backButton)
+        backButton.setOnClickListener { onBackPressed() }
+
+        findViewById<CardView>(R.id.nh_111).setOnClickListener {
+            showPopup("NH 111", "40 chairs\n1 air conditioner working")
+        }
+        findViewById<CardView>(R.id.nh_112).setOnClickListener {
+            showPopup("NH 112", "50 chairs\nno air conditioner working")
         }
 
-        findViewById<CardView>(R.id.be_123).setOnClickListener {
-            showPopup("BE 123", "40 chairs\n1 air conditioner working")
-        }
-        findViewById<CardView>(R.id.be_124).setOnClickListener {
-            showPopup("BE 124", "50 chairs\nno air conditioner working")
+        findViewById<CardView>(R.id.nh_113).setOnClickListener {
+            showPopup("NH 113", "60 chairs\n3 air conditioner working")
         }
 
-        findViewById<CardView>(R.id.be_125).setOnClickListener {
-            showPopup("BE 125", "60 chairs\n3 air conditioner working")
+        findViewById<CardView>(R.id.nh_114).setOnClickListener {
+            showPopup("NH 114", "57 chairs\n2 air conditioner working")
         }
 
-        findViewById<CardView>(R.id.be_126).setOnClickListener {
-            showPopup("BE 126", "57 chairs\n2 air conditioner working")
+        findViewById<CardView>(R.id.nh_115).setOnClickListener {
+            showPopup("NH 115", "44 chairs\n2 air conditioner working")
         }
 
-        findViewById<CardView>(R.id.be_127).setOnClickListener {
-            showPopup("BE 127", "44 chairs\n2 air conditioner working")
+        findViewById<CardView>(R.id.nh_116).setOnClickListener {
+            showPopup("NH 116", "49 chairs\n2 air conditioner working")
+        }
+        findViewById<CardView>(R.id.nh_117).setOnClickListener {
+            showPopup("NH 117", "52 chairs\n2 air conditioner working")
         }
 
-        findViewById<CardView>(R.id.be_128).setOnClickListener {
-            showPopup("BE 128", "49 chairs\n2 air conditioner working")
-        }
-        findViewById<CardView>(R.id.be_129).setOnClickListener {
-            showPopup("BE 129", "52 chairs\n2 air conditioner working")
+        findViewById<CardView>(R.id.nh_118).setOnClickListener {
+            showPopup("NH 118", "50 chairs\n2 air conditioner working")
         }
 
-        findViewById<CardView>(R.id.be_130).setOnClickListener {
-            showPopup("BE 130", "50 chairs\n2 air conditioner working")
+        findViewById<CardView>(R.id.nh_119).setOnClickListener {
+            showPopup("NH 119", "45 chairs\n2 air conditioner working")
         }
 
-        findViewById<CardView>(R.id.be_131).setOnClickListener {
-            showPopup("BE 131", "45 chairs\n2 air conditioner working")
+        findViewById<CardView>(R.id.nh_120).setOnClickListener {
+            showPopup("NH 200", "55 chairs\n2 air conditioner working")
         }
 
-        findViewById<CardView>(R.id.be_132).setOnClickListener {
-            showPopup("BE 132", "55 chairs\n2 air conditioner working")
-        }
-
-
-    }
-    private fun goBackToPreviousPage() {
-        onBackPressed()
     }
 
     private fun navigateToReservationActivity(roomCode: String) {
@@ -98,4 +96,5 @@ class Be : AppCompatActivity() {
 
         popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0)
     }
+
 }

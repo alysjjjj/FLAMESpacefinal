@@ -40,12 +40,8 @@
     <string name="main_logo" />
     <string name="doneandcancel">\n</string>
     <string name="basic_education">BASIC EDUCATION</string>
-    <string name="cahs_123">CAHS 123</string>
-    <string name="cahs_124">CAHS 124</string>
     <string name="be_124">BE 124</string>
     <string name="be_123">BE 123</string>
-    <string name="cam_124">CAM 124</string>
-    <string name="cma_123">CMA 123</string>
     <string name="cmaa">CMA</string>
     <string name="mba_308">MBA 308</string>
     <string name="mba_307">MBA 307</string>
@@ -67,10 +63,8 @@
     <string name="log_in">LOG IN</string>
     <string name="sign_upP">SIGN UP</string>
     <string name="sign_upPP">SIGN UP</string>
-    <string name="first_name">First name</string>
+    <string name="full_name">Full name</string>
     <string name="create_new_account">create new account</string>
-    <string name="middle_name">Middle name</string>
-    <string name="last_name">Last name</string>
     <string name="student_id">Student ID</string>
     <string name="phinma_email">PHINMA Email</string>
     <string name="passwordD">Password</string>
@@ -80,7 +74,6 @@
     <string name="log_in_your_account">Log in your account</string>
     <string name="emailx">Email</string>
     <string name="passwordX">Password</string>
-    <string name="forgot_password">Forgot Password</string>
     <string name="log_inc">LOG IN</string>
     <string name="don_t_have_an_account">Don\'t have an account?</string>
     <string name="reservation">RESERVATION</string>
@@ -189,6 +182,17 @@
         I have an account.
         <font color="#99BC85"><b>Log In</b></font>
     </string>
+
+    <string name="forgot_password">Forgot Password</string>
+    <string name="reset_password">Reset Password</string>
+
+    <string name="forgot_title">FORGOT PASSWORD</string>
+    <string name="forgot_sub_title">
+        Enter your email to
+        <font color="#99BC85"><b>reset your password.</b></font>
+    </string>
+
+
     <string name="signup_first_name">First Name</string>
     <string name="signup_middle_name">Middle Name</string>
     <string name="signup_last_name">Last Name</string>
@@ -238,18 +242,59 @@
 
     <string name="nh111">NH 111</string>
     <string name="nh112">NH 112</string>
+    <string name="nh113">NH 113</string>
+    <string name="nh114">NH 114</string>
+    <string name="nh115">NH 115</string>
+    <string name="nh116">NH 116</string>
+    <string name="nh117">NH 117</string>
+    <string name="nh118">NH 118</string>
+    <string name="nh119">NH 119</string>
+    <string name="nh120">NH 120</string>
 
     <string name="mba307">MBA 307</string>
     <string name="mba308">MBA 308</string>
+    <string name="mba309">MBA 309</string>
+    <string name="mba310">MBA 310</string>
+    <string name="mba405">MBA 405</string>
+    <string name="mba406">MBA 406</string>
+    <string name="mba407">MBA 407</string>
+    <string name="mba504">MBA 504</string>
+    <string name="mba505">MBA 505</string>
+    <string name="mba506">MBA 506</string>
 
+
+    <string name="cma123">CMA 123</string>
+    <string name="cma124">CMA 124</string>
+    <string name="cma125">CMA 125</string>
+    <string name="cma126">CMA 126</string>
+    <string name="cma127">CMA 127</string>
     <string name="cma323">CMA 323</string>
     <string name="cma324">CMA 324</string>
+    <string name="cma325">CMA 325</string>
+    <string name="cma326">CMA 326</string>
+    <string name="cma327">CMA 327</string>
 
     <string name="cahs123">CAHS 123</string>
     <string name="cahs124">CAHS 124</string>
+    <string name="cahs125">CAHS 125</string>
+    <string name="cahs223">CAHS 223</string>
+    <string name="cahs224">CAHS 224</string>
+    <string name="cahs225">CAHS 225</string>
+    <string name="cahs323">CAHS 323</string>
+    <string name="cahs324">CAHS 324</string>
+    <string name="cahs325">CAHS 325</string>
+    <string name="cahs326">CAHS 326</string>
 
+    <string name="be121">BE 121</string>
+    <string name="be122">BE 122</string>
     <string name="be123">BE 123</string>
     <string name="be124">BE 124</string>
+    <string name="be221">BE 221</string>
+    <string name="be222">BE 222</string>
+    <string name="be223">BE 223</string>
+    <string name="be224">BE 224</string>
+    <string name="be321">BE 321</string>
+    <string name="be322">BE 322</string>
 
     <string name="next_schedule">Schedule</string>
     <string name="next_reservation">Reservation</string>

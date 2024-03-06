@@ -1,5 +1,17 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <style name="Base.Theme.FLAMESpace" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/darkGreen</item>
+        <item name="colorPrimaryVariant">@color/new_darkGreen</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <item name="colorSecondary">@color/lightGreen</item>
+        <item name="colorSecondaryVariant">@color/new_lightGreen</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <item name="android:statusBarColor" >?attr/colorPrimary</item>
+        <item name="android:navigationBarColor">?attr/colorPrimary</item>
+
+
     </style>
 
     <style name="ButtonWhite">

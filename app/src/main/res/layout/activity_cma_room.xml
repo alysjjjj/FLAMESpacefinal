@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/lightGreen"
     android:padding="20dp"
-    tools:context=".Cma">
+    tools:context=".buildings.Cma">
 
     <FrameLayout
         android:id="@+id/backButton"
@@ -38,7 +38,7 @@
         android:textAlignment="center"
         android:fontFamily="@font/lemonmilk"
         android:padding="20dp"
-        android:textSize="30sp"
+        android:textSize="45sp"
         android:textStyle="bold"
         android:textColor="@color/new_darkGreen"
         app:layout_constraintEnd_toEndOf="parent"
@@ -73,10 +73,10 @@
                     android:layout_width="90dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
+                    android:contentDescription="@string/class_room"
                     android:elevation="3dp"
-                    android:contentDescription="@string/computer_room"
-                    android:src="@drawable/computer_laboratory"
-                    app:tint="@color/new_darkGreen"/>
+                    android:src="@drawable/standard_classroom"
+                    app:tint="@color/new_darkGreen" />
 
                 <TextView
                     android:id="@+id/cma_123_tv"
@@ -84,11 +84,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="120dp"
                     android:layout_marginTop="32dp"
-                    android:text="@string/cma_123"
-                    android:fontFamily="@font/gilgan2"
+                    android:fontFamily="@font/gilgan"
+                    android:text="@string/cma123"
                     android:textColor="@color/black"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+                    android:textSize="25sp" />
 
                 <ImageView
                     android:id="@+id/cma_123_pic"
@@ -96,9 +95,9 @@
                     android:layout_height="39dp"
                     android:layout_marginStart="290dp"
                     android:layout_marginTop="26dp"
-                    app:tint="@color/new_midGreen"
+                    android:contentDescription="@string/next_schedule"
                     app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
-                    android:contentDescription="@string/next_schedule" />
+                    app:tint="@color/new_midGreen" />
 
             </androidx.cardview.widget.CardView>
 
@@ -115,10 +114,10 @@
                     android:layout_width="90dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
+                    android:contentDescription="@string/class_room"
                     android:elevation="3dp"
-                    android:contentDescription="@string/computer_room"
-                    android:src="@drawable/computer_laboratory"
-                    app:tint="@color/new_darkGreen"/>
+                    android:src="@drawable/standard_classroom"
+                    app:tint="@color/new_darkGreen" />
 
                 <TextView
                     android:id="@+id/cma_124_tv"
@@ -126,11 +125,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="120dp"
                     android:layout_marginTop="32dp"
-                    android:text="@string/cam_124"
-                    android:fontFamily="@font/gilgan2"
+                    android:fontFamily="@font/gilgan"
+                    android:text="@string/cma124"
                     android:textColor="@color/black"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+                    android:textSize="25sp" />
 
                 <ImageView
                     android:id="@+id/cma_124_pic"
@@ -138,9 +136,9 @@
                     android:layout_height="39dp"
                     android:layout_marginStart="290dp"
                     android:layout_marginTop="26dp"
-                    app:tint="@color/new_midGreen"
+                    android:contentDescription="@string/next_schedule"
                     app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
-                    android:contentDescription="@string/next_schedule" />
+                    app:tint="@color/new_midGreen" />
 
             </androidx.cardview.widget.CardView>
 
@@ -157,10 +155,10 @@
                     android:layout_width="90dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
+                    android:contentDescription="@string/class_room"
                     android:elevation="3dp"
-                    android:contentDescription="@string/computer_room"
-                    android:src="@drawable/computer_laboratory"
-                    app:tint="@color/new_darkGreen"/>
+                    android:src="@drawable/standard_classroom"
+                    app:tint="@color/new_darkGreen" />
 
                 <TextView
                     android:id="@+id/cma_125_tv"
@@ -168,11 +166,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="120dp"
                     android:layout_marginTop="32dp"
-                    android:text="CMA 125"
-                    android:fontFamily="@font/gilgan2"
+                    android:fontFamily="@font/gilgan"
+                    android:text="@string/cma125"
                     android:textColor="@color/black"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+                    android:textSize="25sp" />
 
                 <ImageView
                     android:id="@+id/cma_125_pic"
@@ -180,9 +177,9 @@
                     android:layout_height="39dp"
                     android:layout_marginStart="290dp"
                     android:layout_marginTop="26dp"
-                    app:tint="@color/new_midGreen"
+                    android:contentDescription="@string/next_schedule"
                     app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
-                    android:contentDescription="@string/next_schedule" />
+                    app:tint="@color/new_midGreen" />
 
             </androidx.cardview.widget.CardView>
 
@@ -199,10 +196,10 @@
                     android:layout_width="90dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
+                    android:contentDescription="@string/class_room"
                     android:elevation="3dp"
-                    android:contentDescription="@string/computer_room"
-                    android:src="@drawable/computer_laboratory"
-                    app:tint="@color/new_darkGreen"/>
+                    android:src="@drawable/standard_classroom"
+                    app:tint="@color/new_darkGreen" />
 
                 <TextView
                     android:id="@+id/cma_126_tv"
@@ -210,11 +207,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="120dp"
                     android:layout_marginTop="32dp"
-                    android:text="CMA 126"
-                    android:fontFamily="@font/gilgan2"
+                    android:fontFamily="@font/gilgan"
+                    android:text="@string/cma126"
                     android:textColor="@color/black"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+                    android:textSize="25sp" />
 
                 <ImageView
                     android:id="@+id/cma_126_pic"
@@ -222,9 +218,9 @@
                     android:layout_height="39dp"
                     android:layout_marginStart="290dp"
                     android:layout_marginTop="26dp"
-                    app:tint="@color/new_midGreen"
+                    android:contentDescription="@string/next_schedule"
                     app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
-                    android:contentDescription="@string/next_schedule" />
+                    app:tint="@color/new_midGreen" />
 
             </androidx.cardview.widget.CardView>
 
@@ -241,10 +237,10 @@
                     android:layout_width="90dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
+                    android:contentDescription="@string/class_room"
                     android:elevation="3dp"
-                    android:contentDescription="@string/computer_room"
-                    android:src="@drawable/computer_laboratory"
-                    app:tint="@color/new_darkGreen"/>
+                    android:src="@drawable/standard_classroom"
+                    app:tint="@color/new_darkGreen" />
 
                 <TextView
                     android:id="@+id/cma_127_tv"
@@ -252,11 +248,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="120dp"
                     android:layout_marginTop="32dp"
-                    android:text="CMA 127"
-                    android:fontFamily="@font/gilgan2"
+                    android:fontFamily="@font/gilgan"
+                    android:text="@string/cma127"
                     android:textColor="@color/black"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+                    android:textSize="25sp" />
 
                 <ImageView
                     android:id="@+id/cma_127_pic"
@@ -264,14 +259,14 @@
                     android:layout_height="39dp"
                     android:layout_marginStart="290dp"
                     android:layout_marginTop="26dp"
-                    app:tint="@color/new_midGreen"
+                    android:contentDescription="@string/next_schedule"
                     app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
-                    android:contentDescription="@string/next_schedule" />
+                    app:tint="@color/new_midGreen" />
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cma_128"
+                android:id="@+id/cma_323"
                 android:layout_width="340dp"
                 android:layout_height="90dp"
                 android:layout_marginStart="18dp"
@@ -283,37 +278,36 @@
                     android:layout_width="90dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
+                    android:contentDescription="@string/class_room"
                     android:elevation="3dp"
-                    android:contentDescription="@string/computer_room"
-                    android:src="@drawable/computer_laboratory"
-                    app:tint="@color/new_darkGreen"/>
+                    android:src="@drawable/standard_classroom"
+                    app:tint="@color/new_darkGreen" />
 
                 <TextView
-                    android:id="@+id/cma_128_tv"
+                    android:id="@+id/cma_323_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="120dp"
                     android:layout_marginTop="32dp"
-                    android:text="CMA 128"
-                    android:fontFamily="@font/gilgan2"
+                    android:fontFamily="@font/gilgan"
+                    android:text="@string/cma323"
                     android:textColor="@color/black"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+                    android:textSize="25sp" />
 
                 <ImageView
-                    android:id="@+id/cma_128_pic"
+                    android:id="@+id/cma_323_pic"
                     android:layout_width="36dp"
                     android:layout_height="39dp"
                     android:layout_marginStart="290dp"
                     android:layout_marginTop="26dp"
-                    app:tint="@color/new_midGreen"
+                    android:contentDescription="@string/next_schedule"
                     app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
-                    android:contentDescription="@string/next_schedule" />
+                    app:tint="@color/new_midGreen" />
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cma_129"
+                android:id="@+id/cma_324"
                 android:layout_width="340dp"
                 android:layout_height="90dp"
                 android:layout_marginStart="18dp"
@@ -325,37 +319,36 @@
                     android:layout_width="90dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
+                    android:contentDescription="@string/class_room"
                     android:elevation="3dp"
-                    android:contentDescription="@string/computer_room"
-                    android:src="@drawable/computer_laboratory"
-                    app:tint="@color/new_darkGreen"/>
+                    android:src="@drawable/standard_classroom"
+                    app:tint="@color/new_darkGreen" />
 
                 <TextView
-                    android:id="@+id/cma_129_tv"
+                    android:id="@+id/cma_324_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="120dp"
                     android:layout_marginTop="32dp"
-                    android:text="CMA 129"
-                    android:fontFamily="@font/gilgan2"
+                    android:fontFamily="@font/gilgan"
+                    android:text="@string/cma324"
                     android:textColor="@color/black"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+                    android:textSize="25sp" />
 
                 <ImageView
-                    android:id="@+id/cma_129_pic"
+                    android:id="@+id/cma_324_pic"
                     android:layout_width="36dp"
                     android:layout_height="39dp"
                     android:layout_marginStart="290dp"
                     android:layout_marginTop="26dp"
-                    app:tint="@color/new_midGreen"
+                    android:contentDescription="@string/next_schedule"
                     app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
-                    android:contentDescription="@string/next_schedule" />
+                    app:tint="@color/new_midGreen" />
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cma_200"
+                android:id="@+id/cma_325"
                 android:layout_width="340dp"
                 android:layout_height="90dp"
                 android:layout_marginStart="18dp"
@@ -367,37 +360,36 @@
                     android:layout_width="90dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
+                    android:contentDescription="@string/class_room"
                     android:elevation="3dp"
-                    android:contentDescription="@string/computer_room"
-                    android:src="@drawable/computer_laboratory"
-                    app:tint="@color/new_darkGreen"/>
+                    android:src="@drawable/standard_classroom"
+                    app:tint="@color/new_darkGreen" />
 
                 <TextView
-                    android:id="@+id/cma_200_tv"
+                    android:id="@+id/cma_325_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="120dp"
                     android:layout_marginTop="32dp"
-                    android:text="CMA 200"
-                    android:fontFamily="@font/gilgan2"
+                    android:fontFamily="@font/gilgan"
+                    android:text="@string/cma325"
                     android:textColor="@color/black"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+                    android:textSize="25sp" />
 
                 <ImageView
-                    android:id="@+id/cma_200_pic"
+                    android:id="@+id/cma_325_pic"
                     android:layout_width="36dp"
                     android:layout_height="39dp"
                     android:layout_marginStart="290dp"
                     android:layout_marginTop="26dp"
-                    app:tint="@color/new_midGreen"
+                    android:contentDescription="@string/next_schedule"
                     app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
-                    android:contentDescription="@string/next_schedule" />
+                    app:tint="@color/new_midGreen" />
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cma_201"
+                android:id="@+id/cma_326"
                 android:layout_width="340dp"
                 android:layout_height="90dp"
                 android:layout_marginStart="18dp"
@@ -409,37 +401,36 @@
                     android:layout_width="90dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
+                    android:contentDescription="@string/class_room"
                     android:elevation="3dp"
-                    android:contentDescription="@string/computer_room"
-                    android:src="@drawable/computer_laboratory"
-                    app:tint="@color/new_darkGreen"/>
+                    android:src="@drawable/standard_classroom"
+                    app:tint="@color/new_darkGreen" />
 
                 <TextView
-                    android:id="@+id/cma_201_tv"
+                    android:id="@+id/cma_326_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="120dp"
                     android:layout_marginTop="32dp"
-                    android:text="CMA 201"
-                    android:fontFamily="@font/gilgan2"
+                    android:fontFamily="@font/gilgan"
+                    android:text="@string/cma326"
                     android:textColor="@color/black"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+                    android:textSize="25sp" />
 
                 <ImageView
-                    android:id="@+id/cma_201_pic"
+                    android:id="@+id/cma_326_pic"
                     android:layout_width="36dp"
                     android:layout_height="39dp"
                     android:layout_marginStart="290dp"
                     android:layout_marginTop="26dp"
-                    app:tint="@color/new_midGreen"
+                    android:contentDescription="@string/next_schedule"
                     app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
-                    android:contentDescription="@string/next_schedule" />
+                    app:tint="@color/new_midGreen" />
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cma_202"
+                android:id="@+id/cma_327"
                 android:layout_width="340dp"
                 android:layout_height="90dp"
                 android:layout_marginStart="18dp"
@@ -451,39 +442,38 @@
                     android:layout_width="90dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
+                    android:contentDescription="@string/class_room"
                     android:elevation="3dp"
-                    android:contentDescription="@string/computer_room"
-                    android:src="@drawable/computer_laboratory"
-                    app:tint="@color/new_darkGreen"/>
+                    android:src="@drawable/standard_classroom"
+                    app:tint="@color/new_darkGreen" />
 
                 <TextView
-                    android:id="@+id/cma_202_tv"
+                    android:id="@+id/cma_327_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="120dp"
                     android:layout_marginTop="32dp"
-                    android:text="CMA 202"
-                    android:fontFamily="@font/gilgan2"
+                    android:fontFamily="@font/gilgan"
+                    android:text="@string/cma327"
                     android:textColor="@color/black"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+                    android:textSize="25sp" />
 
                 <ImageView
-                    android:id="@+id/cma_202_pic"
+                    android:id="@+id/cma_327_pic"
                     android:layout_width="36dp"
                     android:layout_height="39dp"
                     android:layout_marginStart="290dp"
                     android:layout_marginTop="26dp"
-                    app:tint="@color/new_midGreen"
+                    android:contentDescription="@string/next_schedule"
                     app:srcCompat="@drawable/baseline_keyboard_arrow_right_24"
-                    android:contentDescription="@string/next_schedule" />
+                    app:tint="@color/new_midGreen" />
 
             </androidx.cardview.widget.CardView>
 
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="50dp" />
+                android:layout_height="130dp" />
 
         </LinearLayout>
     </ScrollView>

@@ -1,4 +1,4 @@
-package com.example.flamespace
+package com.example.flamespace.retrofit
 
 data class Reservations(
     val userId: Int,

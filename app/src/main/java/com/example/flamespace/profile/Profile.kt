@@ -1,4 +1,4 @@
-package com.example.flamespace
+package com.example.flamespace.profile
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -9,6 +9,8 @@ import android.widget.FrameLayout
 import android.widget.LinearLayout
 import android.widget.PopupWindow
 import androidx.cardview.widget.CardView
+import com.example.flamespace.user.MainActivity
+import com.example.flamespace.R
 
 class Profile : AppCompatActivity() {
 
@@ -38,10 +40,8 @@ class Profile : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val backButton = findViewById<FrameLayout>(R.id.backButton)
-        backButton.setOnClickListener {
-            goBackToPreviousPage()
-        }
+        val backButton: FrameLayout = findViewById(R.id.backButton)
+        backButton.setOnClickListener { onBackPressed() }
 
         val logoutbtn = findViewById<android.widget.Button>(R.id.buttonLogout)
         logoutbtn.setOnClickListener {
@@ -50,10 +50,6 @@ class Profile : AppCompatActivity() {
 
 
 
-    }
-
-    private fun goBackToPreviousPage() {
-        onBackPressed()
     }
 
     private fun showLogoutPopup() {

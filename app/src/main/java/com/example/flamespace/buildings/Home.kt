@@ -1,10 +1,11 @@
-package com.example.flamespace
+package com.example.flamespace.buildings
 
 import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
+import com.example.flamespace.R
 import com.example.flamespace.R.id.be
 import com.example.flamespace.R.id.cahs
 import com.example.flamespace.R.id.cite
@@ -12,6 +13,7 @@ import com.example.flamespace.R.id.cma
 import com.example.flamespace.R.id.mba
 import com.example.flamespace.R.id.nh
 import com.example.flamespace.R.id.profile
+import com.example.flamespace.profile.Profile
 
 class Home : AppCompatActivity() {
     @SuppressLint( "MissingInflatedId")

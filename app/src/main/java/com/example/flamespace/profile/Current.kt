@@ -1,10 +1,10 @@
-package com.example.flamespace
+package com.example.flamespace.profile
 
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.FrameLayout
+import com.example.flamespace.R
 
 class Current : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -12,15 +12,8 @@ class Current : AppCompatActivity() {
         setContentView(R.layout.activity_current)
 
 
-        val backButton = findViewById<FrameLayout>(R.id.backButton)
-        backButton.setOnClickListener {
-
-            goBackToPreviousPage()
-        }
-
-
+        val backButton: FrameLayout = findViewById(R.id.backButton)
+        backButton.setOnClickListener { onBackPressed() }
     }
-    private fun goBackToPreviousPage() {
-        onBackPressed()
-    }
+
 }

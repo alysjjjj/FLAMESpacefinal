@@ -1,211 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
     android:padding="20dp"
-    tools:context=".Signup">
+    tools:context=".user.Signup">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <TextView
+        android:id="@+id/tv_signup_title"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/signup_title"
+        style="@style/Title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/tv_signup_title"
+    <TextView
+        android:id="@+id/tv_signup_sub_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/signup_sub_title"
+        style="@style/SubTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_signup_title"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:hint="@string/full_name"
+        style="@style/TextInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_signup_sub_title"
+        app:startIconDrawable="@drawable/ic_account_box">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_name"
+            style="@style/TextInputEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:text="@string/signup_title"
-            style="@style/Title"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:paddingStart="48dp"
+            tools:ignore="RtlSymmetry" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:id="@+id/tv_signup_sub_title"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_signup_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="@string/phinma_email"
+        style="@style/TextInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_name"
+        app:startIconDrawable="@drawable/ic_alternate_email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_signup_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:text="@string/signup_sub_title"
-            style="@style/SubTitle"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_signup_title"/>
+            android:paddingStart="48dp"
+            style="@style/TextInputEditText"
+            tools:ignore="RtlSymmetry" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/til_first_name"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_signup_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="@string/passwordD"
+        style="@style/TextInputLayout"
+        app:passwordToggleEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_signup_email"
+        app:startIconDrawable="@drawable/ic_lock">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_signup_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:hint="@string/first_name"
-            style="@style/TextInputLayout"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_signup_sub_title"
-            app:startIconDrawable="@drawable/ic_account_box">
+            android:paddingStart="48dp"
+            tools:ignore="RtlSymmetry"
+            android:inputType="textPassword"
+            style="@style/TextInputEditText"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_first_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingStart="48dp"
-                tools:ignore="RtlSymmetry"
-                style="@style/TextInputEditText"/>
-        </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_signup_repassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="@string/re_password"
+        style="@style/TextInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_signup_password"
+        app:startIconDrawable="@drawable/ic_lock"
+        app:passwordToggleEnabled="true">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/til_middle_name"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_signup_repassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:hint="@string/middle_name"
-            style="@style/TextInputLayout"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/til_first_name"
-            app:startIconDrawable="@drawable/ic_account_box">
+            android:paddingStart="48dp"
+            style="@style/TextInputEditText"
+            android:inputType="textPassword"
+            tools:ignore="RtlSymmetry" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_middle_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingStart="48dp"
-                tools:ignore="RtlSymmetry"
-                style="@style/TextInputEditText"/>
-        </com.google.android.material.textfield.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/til_last_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:hint="@string/last_name"
-            style="@style/TextInputLayout"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/til_middle_name"
-            app:startIconDrawable="@drawable/ic_account_box">
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:text="@string/sign_up"
+        style="@style/ButtonGreen"
+        app:layout_constraintBottom_toTopOf="@id/tv_have_account"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_last_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingStart="48dp"
-                tools:ignore="RtlSymmetry"
-                style="@style/TextInputEditText"/>
-        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/til_student_id"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:hint="@string/student_id"
-            style="@style/TextInputLayout"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/til_last_name"
-            app:startIconDrawable="@drawable/ic_id">
+    <TextView
+        android:id="@+id/tv_have_account"
+        style="@style/SubTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="@string/signup_have_account"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_student_id"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingStart="48dp"
-                tools:ignore="RtlSymmetry"
-                style="@style/TextInputEditText"/>
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/til_signup_email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:hint="@string/phinma_email"
-            style="@style/TextInputLayout"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/til_student_id"
-            app:startIconDrawable="@drawable/ic_alternate_email">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_signup_email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingStart="48dp"
-                style="@style/TextInputEditText"
-                tools:ignore="RtlSymmetry" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/til_signup_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:hint="@string/passwordD"
-            style="@style/TextInputLayout"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/til_signup_email"
-            app:startIconDrawable="@drawable/ic_lock">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_signup_password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingStart="48dp"
-                tools:ignore="RtlSymmetry"
-                style="@style/TextInputEditText"/>
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/til_signup_re_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:hint="@string/re_password"
-            style="@style/TextInputLayout"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/til_signup_password"
-            app:startIconDrawable="@drawable/ic_lock">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_signup_re_password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingStart="48dp"
-                tools:ignore="RtlSymmetry"
-                style="@style/TextInputEditText"/>
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_signup"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="15dp"
-            android:text="@string/sign_ups"
-            style="@style/ButtonGreen"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/til_signup_re_password" />
-
-        <TextView
-            android:id="@+id/tv_havent_account"
-            style="@style/SubTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="30dp"
-            android:text="@string/signup_have_account"
-            android:textAlignment="center"
-            app:layout_constraintTop_toBottomOf="@id/btn_signup"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
-package com.example.flamespace
+package com.example.flamespace.profile
 
 data class HistoryItem(
     val room: String,
