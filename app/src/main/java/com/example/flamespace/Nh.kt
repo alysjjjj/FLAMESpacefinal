@@ -1,11 +1,13 @@
 package com.example.flamespace
 
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
 import android.view.LayoutInflater
+import android.widget.Button
 import android.widget.FrameLayout
 import android.widget.LinearLayout
 import android.widget.PopupWindow
@@ -72,7 +74,7 @@ class Nh : AppCompatActivity() {
     }
 
     private fun showPopup(roomCode: String, roomDetails: String) {
-        val inflater = getSystemService(LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        val inflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val popupView = inflater.inflate(R.layout.fragment_modal_popup, null)
 
         val width = LinearLayout.LayoutParams.WRAP_CONTENT
@@ -83,15 +85,13 @@ class Nh : AppCompatActivity() {
 
         val roomCodeTextView = popupView.findViewById<android.widget.TextView>(R.id.roomCodeTextView)
         val roomDetailsTextView = popupView.findViewById<android.widget.TextView>(R.id.roomDetailsTextView)
-        val reserveButton = popupView.findViewById<android.widget.Button>(R.id.reserveButton)
+        val reserveButton = popupView.findViewById<Button>(R.id.reserveButton)
 
         roomCodeTextView.text = roomCode
         roomDetailsTextView.text = roomDetails
 
         reserveButton.setOnClickListener {
-            val intent = Intent(this, Current::class.java)
-            startActivity(intent)
-            Toast.makeText(this, "Room reserved!", Toast.LENGTH_SHORT).show()
+            navigateToReservationActivity(roomCode) // Pass room code to the reservation activity
             popupWindow.dismiss()
         }
 

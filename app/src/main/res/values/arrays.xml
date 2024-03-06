@@ -4,4 +4,15 @@
         <item>@font/gilgan2</item>
 
     </array>
+
+    <string-array name="time_options">
+        <item>7:30 AM - 9:00 AM</item>
+        <item>9:00 AM - 10:30 AM</item>
+        <item>10:30 AM - 12:00 PM</item>
+        <item>12:00 PM - 1:30 PM</item>
+        <item>1:30 PM - 3:00 PM</item>
+        <item>3:00 PM - 4:30 PM</item>
+        <item>4:30 PM - 6:00 PM</item>
+
+    </string-array>
 </resources>

@@ -7,7 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.PopupWindow
-import android.widget.Toast
+import android.content.Context
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 
@@ -79,8 +80,14 @@ class Ptc : AppCompatActivity(), View.OnClickListener {
         startActivity(intent)
     }
 
+    private fun navigateToCurrentActivity(roomCode: String) {
+        val intent = Intent(this, Current::class.java)
+        intent.putExtra("ROOM_CODE", roomCode)
+        startActivity(intent)
+    }
+
     private fun showPopup(roomCode: String, roomDetails: String) {
-        val inflater = getSystemService(LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        val inflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val popupView = inflater.inflate(R.layout.fragment_modal_popup, null)
 
         val width = LinearLayout.LayoutParams.WRAP_CONTENT
@@ -91,17 +98,17 @@ class Ptc : AppCompatActivity(), View.OnClickListener {
 
         val roomCodeTextView = popupView.findViewById<android.widget.TextView>(R.id.roomCodeTextView)
         val roomDetailsTextView = popupView.findViewById<android.widget.TextView>(R.id.roomDetailsTextView)
-        val reserveButton = popupView.findViewById<android.widget.Button>(R.id.reserveButton)
+        val reserveButton = popupView.findViewById<Button>(R.id.reserveButton)
 
         roomCodeTextView.text = roomCode
         roomDetailsTextView.text = roomDetails
 
         reserveButton.setOnClickListener {
-            val intent = Intent(this, Current::class.java)
-            startActivity(intent)
-            Toast.makeText(this, "Room reserved!", Toast.LENGTH_SHORT).show()
+            navigateToReservationActivity(roomCode) // Pass room code to the reservation activity
             popupWindow.dismiss()
         }
+
+
 
         popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0)
     }
