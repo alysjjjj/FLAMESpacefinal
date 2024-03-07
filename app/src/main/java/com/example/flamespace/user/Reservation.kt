@@ -28,7 +28,6 @@ class Reservation : AppCompatActivity(), View.OnClickListener {
         val roomCodeTextView = findViewById<android.widget.TextView>(R.id.room_code)
         roomCodeTextView.text = roomCode
 
-        // Time picker setup
         val timePicker = findViewById<Spinner>(R.id.timePicker)
         ArrayAdapter.createFromResource(
             this,
