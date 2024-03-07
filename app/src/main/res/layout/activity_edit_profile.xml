@@ -63,20 +63,17 @@
         tools:ignore="RtlSymmetry" />
 
     <EditText
-        android:id="@+id/blk"
+        android:id="@+id/department_save"
         android:layout_width="279dp"
         android:layout_height="62dp"
         android:layout_below="@+id/name"
-        android:layout_alignStart="@+id/name"
-        android:layout_marginStart="2dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
-        android:autofillHints=""
-        android:backgroundTint="@color/white"
         android:background="@drawable/custom_edittxt"
+        android:backgroundTint="@color/white"
         android:fontFamily="@font/gilgan"
         android:hint="@string/enter_your_department"
-        android:paddingStart="15dp"
-        tools:ignore="RtlSymmetry,TextFields" />
+        android:paddingStart="15dp" />
 
 
     <Button
@@ -84,7 +81,7 @@
         style="@style/ButtonGreen"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/blk"
+        android:layout_below="@+id/department_save"
         android:layout_centerInParent="true"
         android:layout_marginTop="49dp"
         android:gravity="center"

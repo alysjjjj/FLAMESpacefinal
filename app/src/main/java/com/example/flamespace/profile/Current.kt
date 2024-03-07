@@ -18,16 +18,23 @@ class Current : AppCompatActivity() {
         val selectedTime = intent.getStringExtra("SELECTED_TIME")
         val subject = intent.getStringExtra("SUBJECT")
 
+
         val roomCodeTextView = findViewById<TextView>(R.id.current_room)
+        if (!roomCode.isNullOrEmpty()) {
+            roomCodeTextView.text = roomCode
+        }
+
         val timeTextView = findViewById<TextView>(R.id.current_schedule)
+        if (!selectedTime.isNullOrEmpty()) {
+            timeTextView.text = selectedTime
+        }
+
         val subjectTextView = findViewById<TextView>(R.id.current_subject)
+        if (!subject.isNullOrEmpty()) {
+            subjectTextView.text = subject
+        }
 
-        roomCodeTextView.text = roomCode
-        timeTextView.text = selectedTime
-        subjectTextView.text = subject
-
-
-        displayRoomDetails(roomCode ?: "")
+        displayRoomDetails(roomCode ?: "PTC 201 ")
 
     }
 
