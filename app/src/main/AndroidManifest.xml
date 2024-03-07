@@ -32,7 +32,7 @@
             android:name=".user.Signup"
             android:exported="false" />
         <activity
-            android:name=".buildings.Reservation"
+            android:name=".user.Reservation"
             android:exported="false" />
         <activity
             android:name=".buildings.Be"

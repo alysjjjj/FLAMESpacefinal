@@ -11,9 +11,7 @@ import android.widget.Button
 import android.widget.FrameLayout
 import android.widget.LinearLayout
 import android.widget.PopupWindow
-import android.widget.Toast
 import androidx.cardview.widget.CardView
-import com.example.flamespace.profile.Current
 import com.example.flamespace.R
 import com.example.flamespace.user.Reservation
 
@@ -62,7 +60,7 @@ class Nh : AppCompatActivity() {
         }
 
         findViewById<CardView>(R.id.nh_120).setOnClickListener {
-            showPopup("NH 200", "55 chairs\n2 air conditioner working")
+            showPopup("NH 120", "55 chairs\n2 air conditioner working")
         }
 
     }

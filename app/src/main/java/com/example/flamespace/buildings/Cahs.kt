@@ -11,9 +11,7 @@ import android.widget.Button
 import android.widget.FrameLayout
 import android.widget.LinearLayout
 import android.widget.PopupWindow
-import android.widget.Toast
 import androidx.cardview.widget.CardView
-import com.example.flamespace.profile.Current
 import com.example.flamespace.R
 import com.example.flamespace.user.Reservation
 
@@ -35,25 +33,25 @@ class Cahs : AppCompatActivity() {
             showPopup("CAHS 125", "53 chairs\n1 air conditioner working")
         }
         findViewById<CardView>(R.id.cahs_223).setOnClickListener {
-            showPopup("CAHS 126", "56 chairs\n1 air conditioner working")
+            showPopup("CAHS 223", "56 chairs\n1 air conditioner working")
         }
         findViewById<CardView>(R.id.cahs_224).setOnClickListener {
-            showPopup("CAHS 127", "40 chairs\n2 air conditioner working")
+            showPopup("CAHS 224", "40 chairs\n2 air conditioner working")
         }
         findViewById<CardView>(R.id.cahs_225).setOnClickListener {
-            showPopup("CAHS 128", "60 chairs\n1 air conditioner working")
+            showPopup("CAHS 225", "60 chairs\n1 air conditioner working")
         }
         findViewById<CardView>(R.id.cahs_323).setOnClickListener {
-            showPopup("CAHS 129", "39 chairs\n2 air conditioner working")
+            showPopup("CAHS 323", "39 chairs\n2 air conditioner working")
         }
         findViewById<CardView>(R.id.cahs_324).setOnClickListener {
-            showPopup("CAHS 130", "49 chairs\n1 air conditioner working")
+            showPopup("CAHS 324", "49 chairs\n1 air conditioner working")
         }
         findViewById<CardView>(R.id.cahs_325).setOnClickListener {
-            showPopup("CAHS 131", "55 chairs\n1 air conditioner working")
+            showPopup("CAHS 325", "55 chairs\n1 air conditioner working")
         }
         findViewById<CardView>(R.id.cahs_326).setOnClickListener {
-            showPopup("CAHS 132", "50 chairs\n2 air conditioner working")
+            showPopup("CAHS 326", "50 chairs\n2 air conditioner working")
         }
 
     }

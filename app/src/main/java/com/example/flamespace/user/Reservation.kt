@@ -6,7 +6,6 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
 import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
@@ -21,7 +20,6 @@ class Reservation : AppCompatActivity(), View.OnClickListener {
 
         val backButton = findViewById<android.widget.ImageView>(R.id.backButton)
         backButton.setOnClickListener {
-
             goBackToPreviousPage()
         }
 
@@ -55,28 +53,21 @@ class Reservation : AppCompatActivity(), View.OnClickListener {
                 // Do nothing
             }
         }
-        //reservation
-        val subject_edittext = findViewById<EditText>(R.id.subject_edittext)
-        val btnreserve = findViewById<Button>(R.id.btnreserve)
-        btnreserve.setOnClickListener {
-            val roomCode = "ptc 301" // Get the room code from your data
-            val selectedTime = timePicker.selectedItem.toString() // Get the selected time from the TimePicker
-            val subject = subject_edittext.text.toString() // Get the subject from EditText
-
-            val intent = Intent(this, Current::class.java).also {
-                it.putExtra("ROOM_CODE", roomCode)
-                it.putExtra("SELECTED_TIME", selectedTime)
-                it.putExtra("SUBJECT", subject)
-                startActivity(it)
-            }
-        }
     }
 
     private fun goBackToPreviousPage() {
         onBackPressed()
     }
 
+    private fun navigateToCurrentActivity(roomCode: String) {
+        val intent = Intent(this, Current::class.java)
+        intent.putExtra("ROOM_CODE", roomCode)
+        startActivity(intent)
+    }
+
     private fun saveReservation() {
+        // Implement save reservation logic here
+
         val intent = Intent(this, Current::class.java)
         startActivity(intent)
         Toast.makeText(this, "Room reserved", Toast.LENGTH_SHORT).show()

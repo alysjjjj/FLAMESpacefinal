@@ -10,10 +10,8 @@ import android.widget.Button
 import android.widget.FrameLayout
 import android.widget.LinearLayout
 import android.widget.PopupWindow
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
-import com.example.flamespace.profile.Current
 import com.example.flamespace.R
 import com.example.flamespace.user.Reservation
 
@@ -43,26 +41,26 @@ class Mba : AppCompatActivity(), View.OnClickListener {
         }
 
         findViewById<CardView>(R.id.mba_405).setOnClickListener {
-            showPopup("MBA 311", "44 chairs\n2 air conditioner working")
+            showPopup("MBA 405", "44 chairs\n2 air conditioner working")
         }
 
         findViewById<CardView>(R.id.mba_406).setOnClickListener {
-            showPopup("MBA 312", "49 chairs\n2 air conditioner working")
+            showPopup("MBA 406", "49 chairs\n2 air conditioner working")
         }
         findViewById<CardView>(R.id.mba_407).setOnClickListener {
-            showPopup("MBA 313", "52 chairs\n2 air conditioner working")
+            showPopup("MBA 407", "52 chairs\n2 air conditioner working")
         }
 
         findViewById<CardView>(R.id.mba_504).setOnClickListener {
-            showPopup("MBA 314", "50 chairs\n2 air conditioner working")
+            showPopup("MBA 504", "50 chairs\n2 air conditioner working")
         }
 
         findViewById<CardView>(R.id.mba_505).setOnClickListener {
-            showPopup("MBA 315", "45 chairs\n2 air conditioner working")
+            showPopup("MBA 505", "45 chairs\n2 air conditioner working")
         }
 
         findViewById<CardView>(R.id.mba_506).setOnClickListener {
-            showPopup("MBA 316", "55 chairs\n2 air conditioner working")
+            showPopup("MBA 506", "55 chairs\n2 air conditioner working")
         }
 
     }

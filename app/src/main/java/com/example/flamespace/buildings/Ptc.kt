@@ -5,15 +5,19 @@ import android.os.Bundle
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
-import android.widget.FrameLayout
 import android.widget.LinearLayout
 import android.widget.PopupWindow
 import android.content.Context
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import android.widget.Button
+import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.example.flamespace.R
+import com.example.flamespace.profile.Current
 import com.example.flamespace.user.Reservation
+import com.google.android.material.card.MaterialCardView
 
 
 class Ptc : AppCompatActivity(), View.OnClickListener {
@@ -26,6 +30,8 @@ class Ptc : AppCompatActivity(), View.OnClickListener {
 
             goBackToPreviousPage()
         }
+
+
 
         findViewById<CardView>(R.id.ptc_201).setOnClickListener {
             showPopup("PTC 201", "50 chairs\n1 air conditioner working")
@@ -77,9 +83,12 @@ class Ptc : AppCompatActivity(), View.OnClickListener {
         startActivity(intent)
     }
 
+
+
     private fun goBackToPreviousPage() {
         onBackPressed()
     }
+
 
     private fun showPopup(roomCode: String, roomDetails: String) {
         val inflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater

@@ -46,8 +46,11 @@ class Cma : AppCompatActivity() {
         findViewById<CardView>(R.id.cma_324).setOnClickListener {
             showPopup("CMA 324", "40 chairs\n1 air conditioner working")
         }
-        findViewById<CardView>(R.id.cma_324).setOnClickListener {
-            showPopup("CMA 324", "40 chairs\n1 air conditioner working")
+        findViewById<CardView>(R.id.cma_325).setOnClickListener {
+            showPopup("CMA 325", "40 chairs\n1 air conditioner working")
+        }
+        findViewById<CardView>(R.id.cma_326).setOnClickListener {
+            showPopup("CMA 326", "40 chairs\n1 air conditioner working")
         }
         findViewById<CardView>(R.id.cma_327).setOnClickListener {
             showPopup("CMA 327", "40 chairs\n1 air conditioner working")

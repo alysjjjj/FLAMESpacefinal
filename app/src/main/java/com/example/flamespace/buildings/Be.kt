@@ -12,7 +12,6 @@ import android.widget.FrameLayout
 import android.widget.LinearLayout
 import android.widget.PopupWindow
 import androidx.cardview.widget.CardView
-import com.example.flamespace.profile.Current
 import com.example.flamespace.R
 import com.example.flamespace.user.Reservation
 
@@ -25,41 +24,41 @@ class Be : AppCompatActivity() {
         backButton.setOnClickListener { onBackPressed() }
 
         findViewById<CardView>(R.id.be_121).setOnClickListener {
-            showPopup("BE 123", "40 chairs\n1 air conditioner working")
+            showPopup("BE 121", "40 chairs\n1 air conditioner working")
         }
         findViewById<CardView>(R.id.be_122).setOnClickListener {
-            showPopup("BE 124", "50 chairs\nno air conditioner working")
+            showPopup("BE 122", "50 chairs\nno air conditioner working")
         }
 
         findViewById<CardView>(R.id.be_123).setOnClickListener {
-            showPopup("BE 125", "60 chairs\n3 air conditioner working")
+            showPopup("BE 123", "60 chairs\n3 air conditioner working")
         }
 
         findViewById<CardView>(R.id.be_124).setOnClickListener {
-            showPopup("BE 126", "57 chairs\n2 air conditioner working")
+            showPopup("BE 124", "57 chairs\n2 air conditioner working")
         }
 
         findViewById<CardView>(R.id.be_221).setOnClickListener {
-            showPopup("BE 127", "44 chairs\n2 air conditioner working")
+            showPopup("BE 221", "44 chairs\n2 air conditioner working")
         }
 
         findViewById<CardView>(R.id.be_222).setOnClickListener {
             showPopup("BE 128", "49 chairs\n2 air conditioner working")
         }
         findViewById<CardView>(R.id.be_223).setOnClickListener {
-            showPopup("BE 129", "52 chairs\n2 air conditioner working")
+            showPopup("BE 222", "52 chairs\n2 air conditioner working")
         }
 
         findViewById<CardView>(R.id.be_224).setOnClickListener {
-            showPopup("BE 130", "50 chairs\n2 air conditioner working")
+            showPopup("BE 224", "50 chairs\n2 air conditioner working")
         }
 
         findViewById<CardView>(R.id.be_321).setOnClickListener {
-            showPopup("BE 131", "45 chairs\n2 air conditioner working")
+            showPopup("BE 321", "45 chairs\n2 air conditioner working")
         }
 
         findViewById<CardView>(R.id.be_322).setOnClickListener {
-            showPopup("BE 132", "55 chairs\n2 air conditioner working")
+            showPopup("BE 322", "55 chairs\n2 air conditioner working")
         }
 
 
