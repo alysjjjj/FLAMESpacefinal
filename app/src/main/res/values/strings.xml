@@ -312,5 +312,6 @@
     <string name="default_notification_channel_id">your_channel_id</string>
     <string name="subject_">Subject</string>
     <string name="subject_text">Subject</string>
+    <string name="mat">MAT</string>
 
 </resources>

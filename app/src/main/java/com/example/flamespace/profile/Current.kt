@@ -1,16 +1,15 @@
 package com.example.flamespace.profile
 
-
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.FrameLayout
+import android.widget.TextView
 import com.example.flamespace.R
 
 class Current : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_current)
-
 
         val backButton: FrameLayout = findViewById(R.id.backButton)
         backButton.setOnClickListener { onBackPressed() }
@@ -19,13 +18,23 @@ class Current : AppCompatActivity() {
         val selectedTime = intent.getStringExtra("SELECTED_TIME")
         val subject = intent.getStringExtra("SUBJECT")
 
-        val roomCodeTextView = findViewById<android.widget.TextView>(R.id.current_room)
-        val timeTextView = findViewById<android.widget.TextView>(R.id.current_schedule)
-        val subjectTextView = findViewById<android.widget.TextView>(R.id.current_subject)
+        val roomCodeTextView = findViewById<TextView>(R.id.current_room)
+        val timeTextView = findViewById<TextView>(R.id.current_schedule)
+        val subjectTextView = findViewById<TextView>(R.id.current_subject)
 
         roomCodeTextView.text = roomCode
         timeTextView.text = selectedTime
         subjectTextView.text = subject
+
+
+        displayRoomDetails(roomCode ?: "")
+
     }
 
+    private fun displayRoomDetails(roomCode: String) {
+
+        val roomCodeTextView = findViewById<TextView>(R.id.current_room)
+
+        roomCodeTextView.text = roomCode
+    }
 }
