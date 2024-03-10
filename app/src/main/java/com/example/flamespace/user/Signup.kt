@@ -3,6 +3,7 @@ package com.example.flamespace.user
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.inputmethod.EditorInfo
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -22,6 +23,33 @@ class Signup : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.etName.setOnEditorActionListener { textView, actionId, keyEvent ->
+            if (actionId == EditorInfo.IME_ACTION_NEXT) {
+                binding.etSignupEmail.requestFocus()
+                true
+            } else {
+                false
+            }
+        }
+
+        binding.etSignupEmail.setOnEditorActionListener { textView, actionId, keyEvent ->
+            if (actionId == EditorInfo.IME_ACTION_NEXT) {
+                binding.etSignupPassword.requestFocus()
+                true
+            } else {
+                false
+            }
+        }
+
+        binding.etSignupPassword.setOnEditorActionListener { textView, actionId, keyEvent ->
+            if (actionId == EditorInfo.IME_ACTION_NEXT) {
+                binding.etSignupRepassword.requestFocus()
+                true
+            } else {
+                false
+            }
+        }
 
         binding.btnSignup.setOnClickListener {
             val name = binding.etName.text.toString().trim()

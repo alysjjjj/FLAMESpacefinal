@@ -20,21 +20,18 @@ class Current : AppCompatActivity() {
 
 
         val roomCodeTextView = findViewById<TextView>(R.id.current_room)
-        if (!roomCode.isNullOrEmpty()) {
-            roomCodeTextView.text = roomCode
-        }
+        roomCodeTextView.text = roomCode
+
 
         val timeTextView = findViewById<TextView>(R.id.current_schedule)
-        if (!selectedTime.isNullOrEmpty()) {
-            timeTextView.text = selectedTime
-        }
+        timeTextView.text = selectedTime
+
 
         val subjectTextView = findViewById<TextView>(R.id.current_subject)
-        if (!subject.isNullOrEmpty()) {
-            subjectTextView.text = subject
-        }
+        subjectTextView.text = subject
 
-        displayRoomDetails(roomCode ?: "PTC 201 ")
+
+        displayRoomDetails(roomCode ?: "")
 
     }
 

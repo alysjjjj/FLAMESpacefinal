@@ -15,13 +15,14 @@ import androidx.cardview.widget.CardView
 import com.example.flamespace.R
 import com.example.flamespace.user.Reservation
 
+
 class Be : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_be)
 
-        val backButton: FrameLayout = findViewById(R.id.backButton)
-        backButton.setOnClickListener { onBackPressed() }
+        val backButton = findViewById<FrameLayout>(R.id.backButton)
+        backButton.setOnClickListener { finish() }
 
         findViewById<CardView>(R.id.be_121).setOnClickListener {
             showPopup("BE 121", "40 chairs\n1 air conditioner working")

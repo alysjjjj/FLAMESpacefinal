@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/retroica"
-        android:text="BUILDINGS"
+        android:text="@string/buildings"
         android:textColor="@color/darkGreen"
         android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -51,6 +51,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:gravity="center"
+        android:foregroundGravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -61,8 +62,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="0dp"
             android:layout_marginTop="30dp"
+            android:layout_gravity="center"
             android:orientation="horizontal">
 
             <androidx.cardview.widget.CardView

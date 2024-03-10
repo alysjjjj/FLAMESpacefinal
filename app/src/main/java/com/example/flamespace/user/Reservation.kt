@@ -24,6 +24,8 @@ class Reservation : AppCompatActivity(), View.OnClickListener {
             goBackToPreviousPage()
         }
 
+
+
         val roomCode = intent.getStringExtra("ROOM_CODE")
         val roomCodeTextView = findViewById<android.widget.TextView>(R.id.room_code)
         roomCodeTextView.text = roomCode

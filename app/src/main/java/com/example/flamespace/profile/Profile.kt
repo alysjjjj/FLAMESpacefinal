@@ -10,6 +10,7 @@ import android.widget.LinearLayout
 import android.widget.PopupWindow
 import androidx.cardview.widget.CardView
 import com.example.flamespace.R
+import com.example.flamespace.buildings.Home
 import com.example.flamespace.user.MainActivity
 
 class Profile : AppCompatActivity() {
@@ -26,14 +27,13 @@ class Profile : AppCompatActivity() {
 
         // Update the TextViews with the new values if they are not empty
         val usernameTextView: android.widget.TextView = findViewById(R.id.Username)
-        if (!newName.isNullOrEmpty()) {
-            usernameTextView.text = newName
-        }
+        usernameTextView.text = newName
+
 
         val departmentTextView: android.widget.TextView = findViewById(R.id.department_et)
-        if (!newDepartment.isNullOrEmpty()) {
-            departmentTextView.text = newDepartment
-        }
+       // if (!newDepartment.isNullOrEmpty()) {
+        departmentTextView.text = newDepartment
+
 
         // Update UI elements with the new data
 
@@ -57,8 +57,12 @@ class Profile : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val backButton: FrameLayout = findViewById(R.id.backButton)
-        backButton.setOnClickListener { onBackPressed() }
+
+        val buttonClick = findViewById<FrameLayout>(R.id.backButton)
+        buttonClick.setOnClickListener {
+            val intent = Intent(this, Home::class.java)
+            startActivity(intent)
+        }
 
         val logoutbtn = findViewById<android.widget.Button>(R.id.buttonLogout)
         logoutbtn.setOnClickListener {

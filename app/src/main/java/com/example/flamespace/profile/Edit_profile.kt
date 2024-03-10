@@ -7,12 +7,14 @@ import android.provider.MediaStore
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
+import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
 import com.example.flamespace.R
 import com.example.flamespace.databinding.ActivityEditProfileBinding
 import com.bumptech.glide.Glide
+import com.example.flamespace.user.SignIn
 
 class Edit_profile : AppCompatActivity() {
 
@@ -26,6 +28,12 @@ class Edit_profile : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityEditProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val buttonClick = findViewById<FrameLayout>(R.id.backButton)
+        buttonClick.setOnClickListener {
+            val intent = Intent(this, Profile::class.java)
+            startActivity(intent)
+        }
 
         nameEditText = binding.name
         departmentSpinner = binding.departmentSave

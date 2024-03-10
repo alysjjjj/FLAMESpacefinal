@@ -48,6 +48,9 @@
             style="@style/TextInputEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:inputType="textShortMessage"
+            android:imeOptions="actionNext"
             android:paddingStart="48dp"
             tools:ignore="RtlSymmetry" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -68,7 +71,10 @@
             android:id="@+id/et_signup_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
             android:paddingStart="48dp"
+            android:maxLines="1"
+            android:imeOptions="actionNext"
             style="@style/TextInputEditText"
             tools:ignore="RtlSymmetry" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -91,6 +97,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingStart="48dp"
+            android:maxLines="1"
+            android:imeOptions="actionNext"
             tools:ignore="RtlSymmetry"
             android:inputType="textPassword"
             style="@style/TextInputEditText"/>
@@ -114,6 +122,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingStart="48dp"
+            android:maxLines="1"
+            android:imeOptions="actionNext"
             style="@style/TextInputEditText"
             android:inputType="textPassword"
             tools:ignore="RtlSymmetry" />

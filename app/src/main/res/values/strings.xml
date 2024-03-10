@@ -313,5 +313,7 @@
     <string name="subject_">Subject</string>
     <string name="subject_text">Subject</string>
     <string name="mat">MAT</string>
+    <string name="cancelbtn">Cancel</string>
+    <string name="buildings">BUILDINGS</string>
 
 </resources>

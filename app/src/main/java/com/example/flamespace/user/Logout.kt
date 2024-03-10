@@ -3,6 +3,7 @@ package com.example.flamespace.user
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.example.flamespace.R
@@ -23,6 +24,7 @@ class Logout : AppCompatActivity() {
         btnCancel.setOnClickListener {
             finish()
         }
+
     }
 
     private fun logout() {
@@ -32,17 +34,18 @@ class Logout : AppCompatActivity() {
 
     private fun clearSessionData() {
         val sharedPreferences = getSharedPreferences("YourSessionData", Context.MODE_PRIVATE)
-        val editor = sharedPreferences.edit()
-
-        editor.clear()
-        editor.apply()
+        sharedPreferences.edit().apply {
+            clear()
+            apply()
+        }
     }
 
     private fun navigateToLoginScreen() {
-        val intent = Intent(this, MainActivity::class.java)
+        val intent = Intent(this, MainActivity::class.java).apply {
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        }
         startActivity(intent)
-        finish()
+        finishAffinity() // Finish all activities in the stack and navigate to the login screen
     }
-
 
 }

@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.FrameLayout
 import android.widget.TextView
 import androidx.fragment.app.DialogFragment
 import com.example.flamespace.R
@@ -32,6 +33,12 @@ class Modal_popup : DialogFragment() {
             intent.putExtra("ROOM_CODE", roomCode) // Assuming roomCode is obtained from the selected room
             startActivity(intent)
             dismiss() // Dismiss the dialog after starting the activity
+        }
+
+        //x
+        val backButton: FrameLayout = view.findViewById(R.id.closeButton)
+        backButton.setOnClickListener {
+            dismiss()
         }
 
         return view
