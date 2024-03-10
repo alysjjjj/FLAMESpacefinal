@@ -89,7 +89,7 @@ class Nh : AppCompatActivity() {
         roomDetailsTextView.text = roomDetails
 
         reserveButton.setOnClickListener {
-            navigateToReservationActivity(roomCode) // Pass room code to the reservation activity
+            navigateToReservationActivity(roomCode)
             popupWindow.dismiss()
         }
 

@@ -87,9 +87,9 @@ class Be : AppCompatActivity() {
 
         roomCodeTextView.text = roomCode
         roomDetailsTextView.text = roomDetails
-
+        // Pass room code to the reservation activity ito
         reserveButton.setOnClickListener {
-            navigateToReservationActivity(roomCode) // Pass room code to the reservation activity
+            navigateToReservationActivity(roomCode)
             popupWindow.dismiss()
         }
 

@@ -43,7 +43,7 @@ class Edit_profile : AppCompatActivity() {
         loadProfileData()
 
         binding.profilePic.setOnClickListener {
-            // Open gallery for image selection
+            // Open gallery
             val galleryIntent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
             startActivityForResult(galleryIntent, REQUEST_IMAGE_GALLERY)
         }
@@ -60,7 +60,7 @@ class Edit_profile : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // Populate spinner with department options
+        // spinner
         val departmentOptions = arrayOf("CITE", "CMA", "CAS", "CEA", "CAHS", "CELA", "CCJE")
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, departmentOptions)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
@@ -68,22 +68,20 @@ class Edit_profile : AppCompatActivity() {
     }
 
     private fun loadProfileData() {
-        // Load profile name and department
         val sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
         val profileName = sharedPreferences.getString("name", "")
         val department = sharedPreferences.getString("department", "")
 
         nameEditText.setText(profileName)
-        // Select the saved department in the spinner
         val departmentPosition = department?.let { departmentSpinner.selectedItemPosition }
         departmentPosition?.let { departmentSpinner.setSelection(it) }
 
-        // Load profile picture using Glide or Picasso
+
         val profileImageUrl = "URL_TO_YOUR_PROFILE_IMAGE"
         Glide.with(this@Edit_profile)
             .load(profileImageUrl)
-            .placeholder(R.drawable.dp) // Placeholder image
-            .error(R.drawable.dp) // Error image
+            .placeholder(R.drawable.dp) // Placeholderimage
+            .error(R.drawable.dp) // Errorimage
             .into(profileImageView)
     }
 
@@ -99,8 +97,6 @@ class Edit_profile : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == REQUEST_IMAGE_GALLERY && resultCode == RESULT_OK && data != null) {
             val imageUri = data.data
-            // Handle image URI (upload to server, etc.)
-            // For example, you can display the selected image directly using Glide:
             Glide.with(this@Edit_profile)
                 .load(imageUri)
                 .into(profileImageView)

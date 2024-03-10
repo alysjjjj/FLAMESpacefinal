@@ -22,11 +22,8 @@ class History : AppCompatActivity() {
     }
 
     private fun getHistoryList(): List<HistoryItem> {
-        // Replace this with your actual data fetching logic
         val historyList = mutableListOf<HistoryItem>()
-        // Add sample data
         historyList.add(HistoryItem("PTC 301", "Sched Example", "February 29, 2024"))
-        // Add more items as needed
         return historyList
     }
 

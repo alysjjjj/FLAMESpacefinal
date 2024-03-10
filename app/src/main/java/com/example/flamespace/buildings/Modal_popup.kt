@@ -18,21 +18,22 @@ class Modal_popup : DialogFragment() {
                               savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_modal_popup, container, false)
 
-        // Get the room code from the arguments bundle
+
+
+
+
         val roomCode = arguments?.getString("ROOM_CODE")
 
-        // Set the room code to the TextView
         val roomCodeTextView = view.findViewById<TextView>(R.id.roomCodeTextView)
         roomCodeTextView.text = roomCode
 
-        // Set up button click listener
         val buttonClick = view.findViewById<Button>(R.id.reserveButton)
         buttonClick.setOnClickListener {
-            // Handle button click
+
             val intent = Intent(requireActivity(), Reservation::class.java)
-            intent.putExtra("ROOM_CODE", roomCode) // Assuming roomCode is obtained from the selected room
+            intent.putExtra("ROOM_CODE", roomCode)
             startActivity(intent)
-            dismiss() // Dismiss the dialog after starting the activity
+            dismiss()
         }
 
         //x
@@ -46,7 +47,6 @@ class Modal_popup : DialogFragment() {
 
     override fun onResume() {
         super.onResume()
-        // Apply blurry background when the dialog is resumed (shown)
         dialog?.window?.setBackgroundDrawableResource(android.R.color.transparent)
         dialog?.window?.setLayout(
             ViewGroup.LayoutParams.MATCH_PARENT,

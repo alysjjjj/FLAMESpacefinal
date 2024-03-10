@@ -26,7 +26,8 @@ class AlarmReceiver : BroadcastReceiver() {
             PendingIntent.FLAG_UPDATE_CURRENT
         )
 
-        // Create the notification
+
+        //not sure pa ito
         val notificationBuilder = NotificationCompat.Builder(context, "channel_id")
             .setContentTitle("Notification Title")
             .setContentText("Notification Content")
@@ -35,12 +36,12 @@ class AlarmReceiver : BroadcastReceiver() {
             .setContentIntent(pendingIntent)
             .setAutoCancel(true)
 
-        // Set sound and vibration for the notification
+
         val defaultSoundUri: Uri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
         notificationBuilder.setSound(defaultSoundUri)
         notificationBuilder.setVibrate(longArrayOf(1000, 1000, 1000, 1000, 1000))
 
-        // Set notification LED light
+        // Set notif LED light
         notificationBuilder.setLights(Color.RED, 3000, 3000)
 
         notificationManager.notify(0, notificationBuilder.build())

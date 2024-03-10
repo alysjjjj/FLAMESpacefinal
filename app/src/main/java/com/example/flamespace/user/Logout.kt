@@ -3,7 +3,6 @@ package com.example.flamespace.user
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.example.flamespace.R
@@ -45,7 +44,7 @@ class Logout : AppCompatActivity() {
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         }
         startActivity(intent)
-        finishAffinity() // Finish all activities in the stack and navigate to the login screen
+        finishAffinity()
     }
 
 }

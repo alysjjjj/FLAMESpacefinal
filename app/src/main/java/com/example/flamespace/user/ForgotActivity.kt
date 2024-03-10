@@ -36,7 +36,7 @@ class ForgotActivity : AppCompatActivity() {
                                 Toast.LENGTH_SHORT
                             ).show()
                         } else {
-                            // Handle password reset failure
+                            // password reset failure
                             Toast.makeText(
                                 this@ForgotActivity,
                                 "Failed to reset password. Please try again later",
@@ -46,7 +46,7 @@ class ForgotActivity : AppCompatActivity() {
                     }
 
                     override fun onFailure(call: Call<Void>, t: Throwable) {
-                        // Handle network error
+                        //  network error
                         Toast.makeText(
                             this@ForgotActivity,
                             "Network error. Please try again",

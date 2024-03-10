@@ -23,9 +23,6 @@ class Profile : AppCompatActivity() {
         val profileCardView = findViewById<CardView>(R.id.profile_cardview)
         val newName = intent.getStringExtra("newName")
         val newDepartment = intent.getStringExtra("newDepartment")
-
-
-        // Update the TextViews with the new values if they are not empty
         val usernameTextView: android.widget.TextView = findViewById(R.id.Username)
         usernameTextView.text = newName
 
@@ -33,9 +30,6 @@ class Profile : AppCompatActivity() {
         val departmentTextView: android.widget.TextView = findViewById(R.id.department_et)
        // if (!newDepartment.isNullOrEmpty()) {
         departmentTextView.text = newDepartment
-
-
-        // Update UI elements with the new data
 
 
 
