@@ -48,71 +48,82 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/dp" />
 
-    <EditText
-        android:id="@+id/name"
-        android:layout_width="279dp"
-        android:layout_height="62dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="220dp"
-        android:backgroundTint="@color/white"
-        android:background="@drawable/custom_edittxt"
-        android:fontFamily="@font/gilgan"
-        android:hint="@string/enter_your_name"
-        android:paddingStart="15dp"
-        tools:ignore="RtlSymmetry" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/department_save"
-        android:layout_width="279dp"
-        android:layout_height="62dp"
-        android:layout_below="@+id/name"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/custom_edittxt"
-        android:backgroundTint="@color/white"
-        android:fontFamily="@font/gilgan"
-        android:hint="@string/enter_your_department"
-        android:paddingStart="15dp" />
+        <TextView
+            android:id="@+id/editTextName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:fontFamily="@font/gilgan"
+            android:layout_marginTop="200dp"
+            android:text="@string/name"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="279dp"
+            android:layout_height="62dp"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="@color/white"
+            android:layout_gravity="center"
+            android:background="@drawable/custom_edittxt"
+            android:fontFamily="@font/gilgan"
+            android:hint="@string/enter_your_name"
+            android:paddingStart="15dp"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/blockEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/gilgan"
+            android:text="@string/department"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="279dp"
+            android:layout_height="62dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:paddingStart="15dp"
+            android:gravity="center"
+            android:backgroundTint="@color/white"
+            android:background="@drawable/custom_edittxt"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/department_save"
+                android:layout_width="229dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:autofillHints="Department"
+                android:backgroundTint="@color/darkGreen"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonsave"
+            style="@style/ButtonGreen"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="49dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="@string/save"
+            android:textSize="18sp" />
 
 
-    <Button
-        android:id="@+id/buttonsave"
-        style="@style/ButtonGreen"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/department_save"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="49dp"
-        android:gravity="center"
-        android:text="@string/save"
-        android:textSize="18sp" />
 
-    <TextView
-        android:id="@+id/editTextName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="48dp"
-        android:fontFamily="@font/gilgan"
-        android:layout_marginTop="200dp"
-        android:text="@string/name"
-        android:textSize="15sp"
-        android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/blockEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="310dp"
-        android:fontFamily="@font/gilgan"
-        android:text="@string/department"
-        android:textSize="15sp"
-        android:textStyle="bold" />
 
+    </LinearLayout>
 
 </RelativeLayout>

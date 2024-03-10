@@ -15,4 +15,15 @@
         <item>4:30 PM - 6:00 PM</item>
 
     </string-array>
+
+    <string-array name="department_options">
+        <item>CITE</item>
+        <item>CEA</item>
+        <item>CMA</item>
+        <item>CCJE</item>
+        <item>CAS</item>
+        <item>CAHS</item>
+        <item>4:30 PM - 6:00 PM</item>
+
+    </string-array>
 </resources>
