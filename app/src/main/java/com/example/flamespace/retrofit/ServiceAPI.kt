@@ -2,6 +2,7 @@ package com.example.flamespace.retrofit
 
 import okhttp3.MultipartBody
 import retrofit2.Call
+import retrofit2.http.Body
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
@@ -44,6 +45,14 @@ interface ServiceAPI {
 
     @GET("/users/{id}")
     fun getUsers(): Call<List<User>>
+
+    //added
+    @GET("user")
+    fun getUser(): Call<List<User>>
+    @POST("api/auth/signup")
+    fun register(@Body user: User):Call<User>
+    @POST("api/auth/login")
+    fun loginUser(@Body loginUser: LoginUser): Call<LoginResponse>
 }
 
 
