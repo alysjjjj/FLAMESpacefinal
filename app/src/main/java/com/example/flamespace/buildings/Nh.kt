@@ -7,7 +7,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
 import android.view.LayoutInflater
-import android.widget.Button
 import android.widget.FrameLayout
 import android.widget.LinearLayout
 import android.widget.PopupWindow
@@ -83,13 +82,18 @@ class Nh : AppCompatActivity() {
 
         val roomCodeTextView = popupView.findViewById<android.widget.TextView>(R.id.roomCodeTextView)
         val roomDetailsTextView = popupView.findViewById<android.widget.TextView>(R.id.roomDetailsTextView)
-        val reserveButton = popupView.findViewById<Button>(R.id.reserveButton)
+        val reserveButton = popupView.findViewById<android.widget.Button>(R.id.reserveButton)
+        val btnCancel = popupView.findViewById<android.widget.Button>(R.id.cancelButton)
 
         roomCodeTextView.text = roomCode
         roomDetailsTextView.text = roomDetails
 
         reserveButton.setOnClickListener {
             navigateToReservationActivity(roomCode)
+            popupWindow.dismiss()
+        }
+
+        btnCancel.setOnClickListener {
             popupWindow.dismiss()
         }
 

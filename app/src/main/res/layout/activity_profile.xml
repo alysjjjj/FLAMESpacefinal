@@ -33,26 +33,27 @@
             android:contentDescription="@string/back_button"
             tools:ignore="RtlSymmetry" />
     </FrameLayout>
+
     <ImageView
         android:id="@+id/profile_pic"
-        android:layout_width="131dp"
-        android:layout_height="109dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_gravity="center"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="56dp"
+        android:contentDescription="@string/image_profile"
         android:elevation="10dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/dp"
-        android:contentDescription="@string/image_profile" />
+        app:srcCompat="@drawable/profile_pic" />
 
     <TextView
         android:id="@+id/Username"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
-        android:layout_marginTop="8dp"
         android:fontFamily="@font/gilgan"
-        android:text="Elyssa Salvador"
+        android:text="@string/set_name"
         android:textColor="@color/black"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,7 +73,7 @@
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.684">
+        app:layout_constraintVertical_bias="0.718">
 
 
         <androidx.cardview.widget.CardView
@@ -181,9 +182,9 @@
         android:id="@+id/department_et"
         android:layout_width="wrap_content"
         android:layout_height="35dp"
-        android:layout_marginTop="1dp"
+        android:layout_marginTop="-10dp"
         android:fontFamily="@font/gilgan"
-        android:text="CITE"
+        android:text="@string/set_your_department"
         android:textColor="@color/black"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"

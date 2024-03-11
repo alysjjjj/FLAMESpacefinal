@@ -83,13 +83,18 @@ class Mba : AppCompatActivity(), View.OnClickListener {
 
         val roomCodeTextView = popupView.findViewById<android.widget.TextView>(R.id.roomCodeTextView)
         val roomDetailsTextView = popupView.findViewById<android.widget.TextView>(R.id.roomDetailsTextView)
-        val reserveButton = popupView.findViewById<Button>(R.id.reserveButton)
+        val reserveButton = popupView.findViewById<android.widget.Button>(R.id.reserveButton)
+        val btnCancel = popupView.findViewById<android.widget.Button>(R.id.cancelButton)
 
         roomCodeTextView.text = roomCode
         roomDetailsTextView.text = roomDetails
 
         reserveButton.setOnClickListener {
             navigateToReservationActivity(roomCode)
+            popupWindow.dismiss()
+        }
+
+        btnCancel.setOnClickListener {
             popupWindow.dismiss()
         }
 

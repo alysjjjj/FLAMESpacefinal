@@ -23,13 +23,17 @@ class Profile : AppCompatActivity() {
         val profileCardView = findViewById<CardView>(R.id.profile_cardview)
         val newName = intent.getStringExtra("newName")
         val newDepartment = intent.getStringExtra("newDepartment")
+
         val usernameTextView: android.widget.TextView = findViewById(R.id.Username)
-        usernameTextView.text = newName
+        if (!newDepartment.isNullOrEmpty()) {
+            usernameTextView.text = newName
+        }
 
 
         val departmentTextView: android.widget.TextView = findViewById(R.id.department_et)
-       // if (!newDepartment.isNullOrEmpty()) {
-        departmentTextView.text = newDepartment
+       if (!newDepartment.isNullOrEmpty()) {
+           departmentTextView.text = newDepartment
+       }
 
 
 

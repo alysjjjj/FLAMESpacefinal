@@ -57,5 +57,16 @@
         <item name="android:fontFamily">@font/gilgan</item>
     </style>
 
+    <style name="ButtonGray">
+        <item name="android:background">@drawable/bg_button</item>
+        <item name="backgroundTint">@color/gray</item>
+        <item name="cardCornerRadius">5dp</item>
+        <item name="fontFamily">@font/retroica</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+
     <style name="Theme.FLAMESpace" parent="Base.Theme.FLAMESpace" />
 </resources>

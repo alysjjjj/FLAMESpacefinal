@@ -315,5 +315,15 @@
     <string name="mat">MAT</string>
     <string name="cancelbtn">Cancel</string>
     <string name="buildings">BUILDINGS</string>
+    <string name="ptc_201_room">PTC 201</string>
+    <string name="cancel_btn">Cancel</string>
+    <string name="logout_btn">Logout</string>
+    <string name="are_you_sure_you_want_nto_log_out">Are you sure you want \nto log out?</string>
+    <string name="edit_picture_btn">Edit profile</string>
+    <string name="edit_picture">Edit picture</string>
+    <string name="cancel_">Cancel</string>
+    <string name="elyssa_salvador_">Elyssa Salvador</string>
+    <string name="set_name">Set Name</string>
+    <string name="set_your_department">Set your department</string>
 
 </resources>

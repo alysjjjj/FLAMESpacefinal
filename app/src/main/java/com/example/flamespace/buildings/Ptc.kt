@@ -8,16 +8,10 @@ import android.view.View
 import android.widget.LinearLayout
 import android.widget.PopupWindow
 import android.content.Context
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.Button
-import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.example.flamespace.R
-import com.example.flamespace.profile.Current
 import com.example.flamespace.user.Reservation
-import com.google.android.material.card.MaterialCardView
 
 
 class Ptc : AppCompatActivity(), View.OnClickListener {
@@ -75,6 +69,8 @@ class Ptc : AppCompatActivity(), View.OnClickListener {
 
 
 
+
+
     }
 
     private fun navigateToReservationActivity(roomCode: String) {
@@ -102,7 +98,8 @@ class Ptc : AppCompatActivity(), View.OnClickListener {
 
         val roomCodeTextView = popupView.findViewById<android.widget.TextView>(R.id.roomCodeTextView)
         val roomDetailsTextView = popupView.findViewById<android.widget.TextView>(R.id.roomDetailsTextView)
-        val reserveButton = popupView.findViewById<Button>(R.id.reserveButton)
+        val reserveButton = popupView.findViewById<android.widget.Button>(R.id.reserveButton)
+        val btnCancel = popupView.findViewById<android.widget.Button>(R.id.cancelButton)
 
         roomCodeTextView.text = roomCode
         roomDetailsTextView.text = roomDetails
@@ -112,9 +109,15 @@ class Ptc : AppCompatActivity(), View.OnClickListener {
             popupWindow.dismiss()
         }
 
+        btnCancel.setOnClickListener {
+            popupWindow.dismiss()
+        }
+
         popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0)
     }
 
     override fun onClick(v: View?) {
+        TODO("Not yet implemented")
     }
+
 }

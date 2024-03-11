@@ -80,8 +80,8 @@ class Edit_profile : AppCompatActivity() {
         val profileImageUrl = "URL_TO_YOUR_PROFILE_IMAGE"
         Glide.with(this@Edit_profile)
             .load(profileImageUrl)
-            .placeholder(R.drawable.dp) // Placeholderimage
-            .error(R.drawable.dp) // Errorimage
+            .placeholder(R.drawable.profile_pic) // Placeholderimage
+            .error(R.drawable.profile_pic) // Errorimage
             .into(profileImageView)
     }
 

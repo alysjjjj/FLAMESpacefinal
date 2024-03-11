@@ -117,6 +117,8 @@
         android:backgroundTint="@color/white"
         android:fontFamily="@font/retroica"
         android:contentDescription="@string/doneandcancel"
+        android:text="@string/cancel_"
+        android:textColor="@color/darkGreen"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"

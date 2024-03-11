@@ -6,21 +6,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.FrameLayout
 import android.widget.TextView
 import androidx.fragment.app.DialogFragment
 import com.example.flamespace.R
 import com.example.flamespace.user.Reservation
 
-class Modal_popup : DialogFragment() {
+class Modalpopup : DialogFragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_modal_popup, container, false)
-
-
-
-
 
         val roomCode = arguments?.getString("ROOM_CODE")
 
@@ -29,18 +24,12 @@ class Modal_popup : DialogFragment() {
 
         val buttonClick = view.findViewById<Button>(R.id.reserveButton)
         buttonClick.setOnClickListener {
-
             val intent = Intent(requireActivity(), Reservation::class.java)
             intent.putExtra("ROOM_CODE", roomCode)
             startActivity(intent)
             dismiss()
         }
 
-        //x
-        val backButton: FrameLayout = view.findViewById(R.id.closeButton)
-        backButton.setOnClickListener {
-            dismiss()
-        }
 
         return view
     }
@@ -54,3 +43,6 @@ class Modal_popup : DialogFragment() {
         )
     }
 }
+
+
+
