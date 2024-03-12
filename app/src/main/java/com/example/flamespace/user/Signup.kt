@@ -3,9 +3,7 @@ package com.example.flamespace.user
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.view.inputmethod.EditorInfo
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.flamespace.buildings.Home
 import com.example.flamespace.databinding.ActivitySignUpBinding
@@ -24,33 +22,6 @@ class Signup : AppCompatActivity() {
         binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.etName.setOnEditorActionListener { textView, actionId, keyEvent ->
-            if (actionId == EditorInfo.IME_ACTION_NEXT) {
-                binding.etSignupEmail.requestFocus()
-                true
-            } else {
-                false
-            }
-        }
-
-        binding.etSignupEmail.setOnEditorActionListener { textView, actionId, keyEvent ->
-            if (actionId == EditorInfo.IME_ACTION_NEXT) {
-                binding.etSignupPassword.requestFocus()
-                true
-            } else {
-                false
-            }
-        }
-
-        binding.etSignupPassword.setOnEditorActionListener { textView, actionId, keyEvent ->
-            if (actionId == EditorInfo.IME_ACTION_NEXT) {
-                binding.etSignupRepassword.requestFocus()
-                true
-            } else {
-                false
-            }
-        }
-
         binding.btnSignup.setOnClickListener {
             val name = binding.etName.text.toString().trim()
             val email = binding.etSignupEmail.text.toString().trim()
@@ -62,7 +33,7 @@ class Signup : AppCompatActivity() {
             } else if (password != rePassword) {
                 Toast.makeText(this, "Passwords do not match", Toast.LENGTH_SHORT).show()
             } else {
-                showConfirmationDialog(name, email, password)
+                signUp(name, email, password)
             }
         }
 
@@ -71,22 +42,8 @@ class Signup : AppCompatActivity() {
         }
     }
 
-    private fun showConfirmationDialog(name: String, email: String, password: String) {
-        AlertDialog.Builder(this)
-            .setTitle("Confirm Information")
-            .setMessage("Please confirm that all information is correct before signing up.")
-            .setPositiveButton("Confirm") { dialog, which ->
-                // Call the sign up API
-                signUp(name, email, password)
-            }
-            .setNegativeButton("Cancel") { dialog, which ->
-                // Do nothing
-            }
-            .show()
-    }
-
     private fun signUp(name: String, email: String, password: String) {
-        val service = RetrofitHelper.getInstance().create(ServiceAPI::class.java)
+        val service = RetrofitHelper.getInstance()
         service.signUp(name, email, password).enqueue(object : Callback<Void> {
             override fun onResponse(call: Call<Void>, response: Response<Void>) {
                 if (response.isSuccessful) {
@@ -110,7 +67,7 @@ class Signup : AppCompatActivity() {
     }
 
     private fun login(email: String, password: String) {
-        val service = RetrofitHelper.getInstance().create(ServiceAPI::class.java)
+        val service = RetrofitHelper.getInstance()
         service.login(email, password).enqueue(object : Callback<Void> {
             override fun onResponse(call: Call<Void>, response: Response<Void>) {
                 if (response.isSuccessful) {

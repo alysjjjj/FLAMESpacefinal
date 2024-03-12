@@ -26,7 +26,7 @@ class ForgotActivity : AppCompatActivity() {
                 Toast.makeText(this, "Please enter your email", Toast.LENGTH_SHORT).show()
             } else {
                 // Call the API endpoint to reset the password
-                val service = RetrofitHelper.getInstance().create(ServiceAPI::class.java)
+                val service = RetrofitHelper.getInstance() // Change this line
                 service.resetPassword(email).enqueue(object : Callback<Void> {
                     override fun onResponse(call: Call<Void>, response: Response<Void>) {
                         if (response.isSuccessful) {

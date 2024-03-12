@@ -14,7 +14,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.flamespace.R
 import com.example.flamespace.databinding.ActivityEditProfileBinding
 import com.bumptech.glide.Glide
-import com.example.flamespace.user.SignIn
 
 class Edit_profile : AppCompatActivity() {
 

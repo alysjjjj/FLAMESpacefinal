@@ -30,7 +30,7 @@ class SignIn : AppCompatActivity() {
                 Toast.makeText(this, "Please fill in all the fields", Toast.LENGTH_SHORT).show()
             } else {
                 // Call the login API
-                val service = RetrofitHelper.getInstance().create(ServiceAPI::class.java)
+                val service = RetrofitHelper.getInstance()
                 service.login(email, password).enqueue(object : Callback<Void> {
                     override fun onResponse(call: Call<Void>, response: Response<Void>) {
                         if (response.isSuccessful) {
@@ -40,29 +40,19 @@ class SignIn : AppCompatActivity() {
                                 Toast.LENGTH_SHORT
                             ).show()
                             // Navigate to the next screen or perform any other action
-                            startActivity(Intent(this@SignIn, Home::class.java))
-                            finish()
                         } else {
-                            if (response.code() == 404) {
-                                // Account doesn't exist
-                                Toast.makeText(
-                                    this@SignIn,
-                                    "Account does not exist",
-                                    Toast.LENGTH_SHORT
-                                ).show()
-                            } else {
-                                // Email or password is incorrect
-                                Toast.makeText(
-                                    this@SignIn,
-                                    "Incorrect email or password",
-                                    Toast.LENGTH_SHORT
-                                ).show()
-                            }
+                            // Handle unsuccessful login
+                            Toast.makeText(
+                                this@SignIn,
+                                "Login failed",
+                                Toast.LENGTH_SHORT
+                            ).show()
                         }
                     }
 
                     override fun onFailure(call: Call<Void>, t: Throwable) {
-                        Log.e("Login", "Network error: ${t.message}", t)
+                        // Handle network error
+                        Log.e("SignInActivity", "Network error: ${t.message}", t)
                         Toast.makeText(
                             this@SignIn,
                             "Network error. Please try again",
@@ -74,12 +64,15 @@ class SignIn : AppCompatActivity() {
         }
 
         binding.tvHaventAccount.setOnClickListener {
-                startActivity(Intent(this, Home::class.java))
+            startActivity(Intent(this, Home::class.java))
         }
 
         binding.tvForgotPw.setOnClickListener {
             startActivity(Intent(this, ForgotActivity::class.java))
         }
-
     }
 }
+
+
+
+

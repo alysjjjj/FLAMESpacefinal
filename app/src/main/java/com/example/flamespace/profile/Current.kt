@@ -1,15 +1,25 @@
 package com.example.flamespace.profile
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.FrameLayout
 import android.widget.TextView
 import com.example.flamespace.R
+import com.example.flamespace.buildings.Home
 
 class Current : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_current)
+
+        val buttonClick = findViewById<Button>(R.id.cancel_doneButton)
+        buttonClick.setOnClickListener {
+            //CANCEL RESERVATION FUNCTION HERE AH
+            val intent = Intent(this, Home::class.java)
+            startActivity(intent)
+        }
 
         val backButton: FrameLayout = findViewById(R.id.backButton)
         backButton.setOnClickListener { onBackPressed() }
