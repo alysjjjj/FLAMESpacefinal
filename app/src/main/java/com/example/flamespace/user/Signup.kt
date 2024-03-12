@@ -8,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.flamespace.buildings.Home
 import com.example.flamespace.databinding.ActivitySignUpBinding
 import com.example.flamespace.retrofit.RetrofitHelper
-import com.example.flamespace.retrofit.ServiceAPI
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
