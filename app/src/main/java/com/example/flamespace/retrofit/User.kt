@@ -1,6 +1,7 @@
 package com.example.flamespace.retrofit
 
 import com.google.gson.annotations.SerializedName
+
 data class User(
     @SerializedName("id")
     val id: String? = null,
@@ -17,18 +18,25 @@ data class User(
     @SerializedName("confirm_password")
     val confirm_password: String? = null,
 )
-data class Post(
-    val userId: Int,
-    val id: Int,
-    val title: String,
-    val body: String
-)
 data class LoginUser(
     val email: String,
     val password: String
 )
 
 data class LoginResponse(
-    @SerializedName("token")
-    val token: String // Assuming the login endpoint returns a token
+    val token: String,
+    val user: User,
+    val message: String // Add this field if your server sends a message
+)
+
+
+data class UserRequestBody(
+    @SerializedName("name") val name: String,
+    @SerializedName("email") val email: String,
+    @SerializedName("password") val password: String
+)
+
+data class ReservationResponse(
+    val status: String,
+    val message: String
 )

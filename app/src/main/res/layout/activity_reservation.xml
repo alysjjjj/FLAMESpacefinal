@@ -99,6 +99,7 @@
                 android:layout_width="260dp"
                 android:layout_height="56dp"
                 android:layout_gravity="center"
+                android:backgroundTint="@color/white"
                 android:paddingStart="18dp"
                 android:layout_marginTop="10dp">
 
@@ -133,9 +134,10 @@
                 android:layout_height="56dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white"
                 android:background="@drawable/custom_edittxt"
                 android:ems="10"
-                android:hint="@string/subject_"
+                android:hint="Ex. GEN 001"
                 android:inputType="text"
                 android:paddingStart="15dp" />
 

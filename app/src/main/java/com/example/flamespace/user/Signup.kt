@@ -8,6 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.flamespace.buildings.Home
 import com.example.flamespace.databinding.ActivitySignUpBinding
 import com.example.flamespace.retrofit.RetrofitHelper
+import com.example.flamespace.retrofit.User
+import com.example.flamespace.retrofit.UserRequestBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -42,71 +44,33 @@ class Signup : AppCompatActivity() {
     }
 
     private fun signUp(name: String, email: String, password: String) {
-        val service = RetrofitHelper.getInstance()
-        service.signUp(name, email, password).enqueue(object : Callback<Void> {
-            override fun onResponse(call: Call<Void>, response: Response<Void>) {
+        val service = RetrofitHelper.getService()
+        val userRequestBody = UserRequestBody(name = name, email = email, password = password)
+        service.signUp(userRequestBody).enqueue(object : Callback<User> {
+            override fun onResponse(call: Call<User>, response: Response<User>) {
                 if (response.isSuccessful) {
                     Toast.makeText(this@Signup, "Sign up successful", Toast.LENGTH_SHORT).show()
-                    // Call the login API upon successful sign up
+                    // Upon successful sign up, attempt login
                     login(email, password)
                 } else {
                     handleSignUpFailure(response)
                 }
             }
 
-            override fun onFailure(call: Call<Void>, t: Throwable) {
+            override fun onFailure(call: Call<User>, t: Throwable) {
                 Log.e("Signup", "Network error: ${t.message}", t)
-                Toast.makeText(
-                    this@Signup,
-                    "Network error. Please try again",
-                    Toast.LENGTH_SHORT
-                ).show()
+                Toast.makeText(this@Signup, "Network error. Please try again", Toast.LENGTH_SHORT).show()
             }
         })
     }
 
     private fun login(email: String, password: String) {
-        val service = RetrofitHelper.getInstance()
-        service.login(email, password).enqueue(object : Callback<Void> {
-            override fun onResponse(call: Call<Void>, response: Response<Void>) {
-                if (response.isSuccessful) {
-                    // Login successful
-                    startActivity(Intent(this@Signup, Home::class.java))
-                    finish()
-                } else {
-                    handleLoginFailure(response)
-                }
-            }
-
-            override fun onFailure(call: Call<Void>, t: Throwable) {
-                // Handle network error
-                Log.e("Signup", "Login network error: ${t.message}", t)
-                Toast.makeText(
-                    this@Signup,
-                    "Login network error. Please try again",
-                    Toast.LENGTH_SHORT
-                ).show()
-            }
-        })
+        // Implement your login logic here
     }
 
-    private fun handleSignUpFailure(response: Response<Void>) {
+    private fun handleSignUpFailure(response: Response<User>) {
         val errorBody = response.errorBody()?.string()
         Log.e("Signup", "Sign up failed: ${response.code()}, $errorBody")
-        Toast.makeText(
-            this@Signup,
-            "Sign up failed. Please check logs for details",
-            Toast.LENGTH_SHORT
-        ).show()
-    }
-
-    private fun handleLoginFailure(response: Response<Void>) {
-        val errorBody = response.errorBody()?.string()
-        Log.e("Signup", "Login failed after sign up: ${response.code()}, $errorBody")
-        Toast.makeText(
-            this@Signup,
-            "Login failed after sign up. Please check logs for details",
-            Toast.LENGTH_SHORT
-        ).show()
+        Toast.makeText(this@Signup, "Sign up failed. Please check logs for details", Toast.LENGTH_SHORT).show()
     }
 }

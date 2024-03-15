@@ -25,7 +25,7 @@ class ForgotActivity : AppCompatActivity() {
                 Toast.makeText(this, "Please enter your email", Toast.LENGTH_SHORT).show()
             } else {
                 // Call the API endpoint to reset the password
-                val service = RetrofitHelper.getInstance() // Change this line
+                val service = RetrofitHelper.getService()
                 service.resetPassword(email).enqueue(object : Callback<Void> {
                     override fun onResponse(call: Call<Void>, response: Response<Void>) {
                         if (response.isSuccessful) {
@@ -45,7 +45,7 @@ class ForgotActivity : AppCompatActivity() {
                     }
 
                     override fun onFailure(call: Call<Void>, t: Throwable) {
-                        //  network error
+                        // network error
                         Toast.makeText(
                             this@ForgotActivity,
                             "Network error. Please try again",

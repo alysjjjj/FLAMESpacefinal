@@ -7,7 +7,10 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.flamespace.buildings.Home
 import com.example.flamespace.databinding.ActivitySignInBinding
+import com.example.flamespace.retrofit.LoginResponse
+import com.example.flamespace.retrofit.LoginUser
 import com.example.flamespace.retrofit.RetrofitHelper
+import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -29,36 +32,7 @@ class SignIn : AppCompatActivity() {
                 Toast.makeText(this, "Please fill in all the fields", Toast.LENGTH_SHORT).show()
             } else {
                 // Call the login API
-                val service = RetrofitHelper.getInstance()
-                service.login(email, password).enqueue(object : Callback<Void> {
-                    override fun onResponse(call: Call<Void>, response: Response<Void>) {
-                        if (response.isSuccessful) {
-                            Toast.makeText(
-                                this@SignIn,
-                                "Login successful",
-                                Toast.LENGTH_SHORT
-                            ).show()
-                            // Navigate to the next screen or perform any other action
-                        } else {
-                            // Handle unsuccessful login
-                            Toast.makeText(
-                                this@SignIn,
-                                "Login failed",
-                                Toast.LENGTH_SHORT
-                            ).show()
-                        }
-                    }
-
-                    override fun onFailure(call: Call<Void>, t: Throwable) {
-                        // Handle network error
-                        Log.e("SignInActivity", "Network error: ${t.message}", t)
-                        Toast.makeText(
-                            this@SignIn,
-                            "Network error. Please try again",
-                            Toast.LENGTH_SHORT
-                        ).show()
-                    }
-                })
+                loginUser(email, password)
             }
         }
 
@@ -70,8 +44,40 @@ class SignIn : AppCompatActivity() {
             startActivity(Intent(this, ForgotActivity::class.java))
         }
     }
+
+    private fun loginUser(email: String, password: String) {
+        val apiService = RetrofitHelper.getService()
+        val call = apiService.loginUser(LoginUser(email = email, password = password))
+
+        call.enqueue(object : Callback<LoginResponse> {
+            override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
+                if (response.isSuccessful) {
+                    val loginResponse = response.body()
+                    if (loginResponse != null) {
+                        val authToken = "Bearer ${loginResponse.token}"
+                        val intent = Intent(this@SignIn, Home::class.java)
+                        intent.putExtra("authToken", authToken)
+                        startActivity(intent)
+                        finish()
+                        // Add toast for successful login
+                        Toast.makeText(this@SignIn, "Login successful", Toast.LENGTH_SHORT).show()
+                    } else {
+                        // Handle null response body
+                        Toast.makeText(this@SignIn, "Login failed", Toast.LENGTH_SHORT).show()
+                    }
+                }
+                else {
+                    // Handle unsuccessful response
+                    val errorBody = response.errorBody()?.string()
+                    val errorMessage = JSONObject(errorBody).getString("message")
+                    Toast.makeText(this@SignIn, errorMessage, Toast.LENGTH_SHORT).show()
+                }
+            }
+
+            override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
+                Log.e("SignInActivity", "Network error: ${t.message}", t)
+                Toast.makeText(this@SignIn, "Network error. Please try again", Toast.LENGTH_SHORT).show()
+            }
+        })
+    }
 }
-
-
-
-

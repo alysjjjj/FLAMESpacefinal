@@ -39,7 +39,8 @@ class MainActivity : AppCompatActivity() {
     private fun showNotification() {
         val notificationManager = NotificationManagerCompat.from(this)
         val intent = Intent(this, Current::class.java)
-        val pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT)
+        val pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_IMMUTABLE)
+
 
         val channelId = getString(R.string.default_notification_channel_id)
         val notificationBuilder = NotificationCompat.Builder(this, channelId)

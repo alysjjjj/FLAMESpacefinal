@@ -26,4 +26,13 @@
         <item>4:30 PM - 6:00 PM</item>
 
     </string-array>
+
+    <string-array name="set_up">
+        <item>Mr.</item>
+        <item>Ms.</item>
+        <item>Mrs.</item>
+        <item>Mx.</item>
+    </string-array>
+
+
 </resources>

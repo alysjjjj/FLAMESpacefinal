@@ -21,48 +21,49 @@
 
             <TextView
                 android:id="@+id/tv_room"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="PTC 301"
                 style="@style/Title"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"/>
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="19dp"
+                android:layout_marginEnd="198dp"
+                android:gravity="center"
+                android:text="PTC 301"
+                android:textAlignment="center"
+                android:textSize="35dp" />
 
             <TextView
                 android:id="@+id/history_time"
-                android:layout_width="wrap_content"
+                android:layout_width="132dp"
                 android:layout_height="wrap_content"
-                android:text="@string/sched_example"
-                android:textSize="11sp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="196dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="33dp"
                 android:fontFamily="@font/gilgan"
-                android:layout_marginTop="5dp"
-                android:layout_marginStart="20dp"
-                android:layout_below="@id/tv_room"
-                android:layout_alignParentStart="true"/>
+                android:text="@string/sched_example"
+                android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/history_date"
-                android:layout_width="wrap_content"
+                android:layout_width="136dp"
                 android:layout_height="wrap_content"
-                android:text="February 29, 2024"
-                android:textSize="11sp"
-                android:textStyle="bold"
-                android:fontFamily="@font/gilgan"
-                android:layout_marginTop="5dp"
-                android:layout_marginStart="20dp"
                 android:layout_below="@id/history_time"
-                android:layout_alignParentStart="true"/>
-
-            <ImageView
-                android:id="@+id/arrowIcon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_arrow_right"
+                android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:layout_marginEnd="20dp"/>
+                android:layout_marginStart="194dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="31dp"
+                android:textAlignment="center"
+                android:fontFamily="@font/gilgan"
+                android:text="2/28/2024"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
         </RelativeLayout>
 

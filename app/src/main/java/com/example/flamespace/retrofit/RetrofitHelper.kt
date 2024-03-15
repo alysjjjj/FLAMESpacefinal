@@ -6,11 +6,11 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 interface RetrofitHelper {
-    companion object {
+    companion object{
         private const val BASE_URL = "https://quiet-beach-04492-d8a02ae21cbc.herokuapp.com/"
 
-        fun getInstance(): ServiceAPI {
-            val loggingInterceptor = HttpLoggingInterceptor().apply {
+        fun getService(): ServiceAPI{
+            val loggingInterceptor = HttpLoggingInterceptor().apply{
                 level = HttpLoggingInterceptor.Level.BODY
             }
             val client = OkHttpClient.Builder()
