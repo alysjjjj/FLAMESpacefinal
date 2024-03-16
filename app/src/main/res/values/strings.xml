@@ -325,5 +325,9 @@
     <string name="elyssa_salvador_">Elyssa Salvador</string>
     <string name="set_name">Set Name</string>
     <string name="set_your_department">Set your department</string>
+    <string name="name_enter">Name</string>
+    <string name="mr">Mr.</string>
+    <string name="time_ends">Time ends</string>
+    <string name="ex_gen_001">Ex. GEN 001</string>
 
 </resources>

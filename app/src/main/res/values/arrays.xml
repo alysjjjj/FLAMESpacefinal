@@ -6,13 +6,49 @@
     </array>
 
     <string-array name="time_options">
-        <item>7:30 AM - 9:00 AM</item>
-        <item>9:00 AM - 10:30 AM</item>
-        <item>10:30 AM - 12:00 PM</item>
-        <item>12:00 PM - 1:30 PM</item>
-        <item>1:30 PM - 3:00 PM</item>
-        <item>3:00 PM - 4:30 PM</item>
-        <item>4:30 PM - 6:00 PM</item>
+        <item>7:30 AM </item>
+        <item>80:00 AM </item>
+        <item>9:00 AM </item>
+        <item>9:30 AM </item>
+        <item>10:00 AM </item>
+        <item>10:30 AM </item>
+        <item>11:00 AM </item>
+        <item>11:30 AM </item>
+        <item>12:00 PM </item>
+        <item>12:30 PM </item>
+        <item>1:00 PM </item>
+        <item>1:30 PM </item>
+        <item>2:00 PM </item>
+        <item>2:30 PM </item>
+        <item>3:00 PM </item>
+        <item>3:30 PM </item>
+        <item>4:00 PM </item>
+        <item>4:30 PM </item>
+        <item> 5:00 PM</item>
+        <item> 5:30 PM</item>
+    </string-array>
+
+    <string-array name="time_ends">
+        <item>8:00 AM </item>
+        <item>9:00 AM </item>
+        <item>9:30 AM </item>
+        <item>10:00 AM </item>
+        <item>10:30 AM </item>
+        <item>11:00 AM </item>
+        <item>11:30 AM </item>
+        <item>12:00 PM </item>
+        <item>12:30 PM </item>
+        <item>1:00 PM </item>
+        <item>1:30 PM </item>
+        <item>2:00 PM </item>
+        <item>2:30 PM </item>
+        <item>3:00 PM </item>
+        <item>3:30 PM </item>
+        <item>4:00 PM </item>
+        <item>4:30 PM </item>
+        <item> 5:00 PM</item>
+        <item> 5:30 PM</item>
+        <item> 6:00 PM</item>
 
     </string-array>
 
@@ -23,7 +59,6 @@
         <item>CCJE</item>
         <item>CAS</item>
         <item>CAHS</item>
-        <item>4:30 PM - 6:00 PM</item>
 
     </string-array>
 
@@ -34,5 +69,10 @@
         <item>Mx.</item>
     </string-array>
 
+    <string-array name="title_choices">
+        <item>Mr.</item>
+        <item>Mrs.</item>
+        <item>Ms.</item>
+    </string-array>
 
 </resources>

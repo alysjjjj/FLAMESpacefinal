@@ -26,6 +26,7 @@ class Current : AppCompatActivity() {
 
         val roomCode = intent.getStringExtra("ROOM_CODE")
         val selectedTime = intent.getStringExtra("SELECTED_TIME")
+        val selectedTime2 = intent.getStringExtra("SELECTED_TIME_2")
         val subject = intent.getStringExtra("SUBJECT")
 
 
@@ -35,6 +36,9 @@ class Current : AppCompatActivity() {
 
         val timeTextView = findViewById<TextView>(R.id.current_schedule)
         timeTextView.text = selectedTime
+
+        val timeTextView2 = findViewById<TextView>(R.id.current_schedule2)
+        timeTextView2.text = selectedTime2
 
 
         val subjectTextView = findViewById<TextView>(R.id.current_subject)
