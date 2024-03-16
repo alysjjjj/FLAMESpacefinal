@@ -5,7 +5,7 @@ import retrofit2.http.*
 
 interface ServiceAPI {
 
-    @GET("/users")
+    @GET("/api/users")
     fun getUsers(): Call<List<User>>
 
     @POST("/api/users")
@@ -14,10 +14,13 @@ interface ServiceAPI {
     @POST("/api/auth/login")
     fun loginUser(@Body loginUser: LoginUser): Call<LoginResponse>
 
-    @PUT("/users/{id}")
+    @GET("/api/users/{id}")
+    fun getUserById(@Path("id") id: String): Call<User>
+
+    @PUT("/api/users/{id}")
     fun updateUser(@Path("id") id: Int, @Body user: UserRequestBody): Call<User>
 
-    @DELETE("/users/{id}")
+    @DELETE("/api/users/{id}")
     fun deleteUser(@Path("id") id: Int): Call<Void>
 
     @POST("/resetPassword")

@@ -17,6 +17,9 @@ data class User(
 
     @SerializedName("confirm_password")
     val confirm_password: String? = null,
+
+    @SerializedName("department") // Add department property
+    val department: String? = null
 )
 
 data class LoginUser(
