@@ -57,17 +57,17 @@
             android:focusable="true"/>
 
 
-<!--        <TextView-->
-<!--            android:id="@+id/textView"-->
-<!--            android:layout_width="96dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_gravity="center"-->
-<!--            android:layout_marginTop="10dp"-->
-<!--            android:fontFamily="@font/gilgan"-->
-<!--            android:gravity="center"-->
-<!--            android:text="@string/edit_picture"-->
-<!--            android:textSize="15sp"-->
-<!--            android:textStyle="bold" />-->
+        <!--        <TextView-->
+        <!--            android:id="@+id/textView"-->
+        <!--            android:layout_width="96dp"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_gravity="center"-->
+        <!--            android:layout_marginTop="10dp"-->
+        <!--            android:fontFamily="@font/gilgan"-->
+        <!--            android:gravity="center"-->
+        <!--            android:text="@string/edit_picture"-->
+        <!--            android:textSize="15sp"-->
+        <!--            android:textStyle="bold" />-->
 
 
         <TextView
@@ -102,31 +102,26 @@
             android:layout_marginStart="25dp"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/gilgan"
-            android:text="@string/department"
+            android:text="@string/txt"
             android:textSize="15sp"
             android:textStyle="bold" />
 
-        <LinearLayout
+        <EditText
+            android:id="@+id/email"
             android:layout_width="279dp"
             android:layout_height="62dp"
             android:layout_gravity="center"
             android:layout_marginTop="5dp"
             android:background="@drawable/custom_edittxt"
             android:backgroundTint="@color/white"
-            android:gravity="center"
-            android:orientation="horizontal"
+            android:fontFamily="@font/gilgan"
+            android:hint="@string/email_txt"
+            android:autofillHints="name"
+            android:inputType="textEmailAddress"
             android:paddingStart="15dp"
-            android:paddingEnd="15dp">
+            tools:ignore="RtlSymmetry" />
 
-            <Spinner
-                android:id="@+id/department_save"
-                android:layout_width="229dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:autofillHints="Department"
-                android:backgroundTint="@color/darkGreen"
-                android:visibility="visible" />
-        </LinearLayout>
+
 
         <Button
             android:id="@+id/buttonsave"

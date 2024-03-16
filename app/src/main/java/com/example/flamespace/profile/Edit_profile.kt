@@ -1,16 +1,13 @@
 package com.example.flamespace.profile
 
-import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.provider.MediaStore
-import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
 import android.widget.FrameLayout
 import android.widget.ImageView
-import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
 import com.example.flamespace.R
 import com.example.flamespace.databinding.ActivityEditProfileBinding
@@ -20,7 +17,7 @@ class Edit_profile : AppCompatActivity() {
 
     private lateinit var binding: ActivityEditProfileBinding
     private lateinit var nameEditText: EditText
-    private lateinit var departmentSpinner: Spinner
+    private lateinit var emailEditText: EditText
     private lateinit var buttonSave: Button
     private lateinit var profileImageView: ImageView
 
@@ -36,7 +33,7 @@ class Edit_profile : AppCompatActivity() {
         }
 
         nameEditText = binding.name
-        departmentSpinner = binding.departmentSave
+        emailEditText = binding.email
         buttonSave = binding.buttonsave
         profileImageView = binding.profilePic
         //titleSpinner = binding.titleSpinner
@@ -51,22 +48,18 @@ class Edit_profile : AppCompatActivity() {
 
         buttonSave.setOnClickListener {
             val newName = nameEditText.text.toString()
-            val newDepartment = departmentSpinner.selectedItem.toString()
+            val newEmail = emailEditText.text.toString()
 
 
-            saveProfileData(newName, newDepartment)
+            saveProfileData(newName, newEmail)
 
             val intent = Intent(this@Edit_profile, Profile::class.java)
             intent.putExtra("newName", newName)
-            intent.putExtra("newDepartment", newDepartment)
+            intent.putExtra("newDepartment", newEmail)
             startActivity(intent)
         }
 
         // spinner
-        val departmentOptions = arrayOf("CITE", "CMA", "CAS", "CEA", "CAHS", "CELA", "CCJE")
-        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, departmentOptions)
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        departmentSpinner.adapter = adapter
 
 
     }
@@ -74,11 +67,8 @@ class Edit_profile : AppCompatActivity() {
     private fun loadProfileData() {
         val sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
         val profileName = sharedPreferences.getString("name", "")
-        val department = sharedPreferences.getString("department", "")
+        val email = sharedPreferences.getString("email", "")
 
-        nameEditText.setText(profileName)
-        val departmentPosition = department?.let { departmentSpinner.selectedItemPosition }
-        departmentPosition?.let { departmentSpinner.setSelection(it) }
 
         val profileImageUrl = "URL_TO_YOUR_PROFILE_IMAGE"
         Glide.with(this@Edit_profile)
@@ -88,11 +78,11 @@ class Edit_profile : AppCompatActivity() {
             .into(profileImageView)
     }
 
-    private fun saveProfileData(name: String, department: String) {
+    private fun saveProfileData(name: String, email: String) {
         val sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
         val editor = sharedPreferences.edit()
         editor.putString("name", name)
-        editor.putString("department", department)
+        editor.putString("email", email)
         editor.apply()
     }
 

@@ -21,16 +21,17 @@ class Profile : AppCompatActivity() {
 
         val profileCardView = findViewById<CardView>(R.id.profile_cardview)
         val newName = intent.getStringExtra("newName")
-        val newDepartment = intent.getStringExtra("newDepartment")
+        val newEmail = intent.getStringExtra("newEmail")
+
 
         val usernameTextView: android.widget.TextView = findViewById(R.id.Username)
-        if (!newDepartment.isNullOrEmpty()) {
+        if (!newName.isNullOrEmpty()) {
             usernameTextView.text = newName
         }
 
-        val departmentTextView: android.widget.TextView = findViewById(R.id.department_et)
-        if (!newDepartment.isNullOrEmpty()) {
-            departmentTextView.text = newDepartment
+        val emailTextView: android.widget.TextView = findViewById(R.id.email_prf)
+        if (!newEmail.isNullOrEmpty()) {
+            emailTextView.text = newEmail
         }
 
         val editCardView = profileCardView.findViewById<CardView>(R.id.edit_cv)

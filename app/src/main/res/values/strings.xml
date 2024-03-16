@@ -329,5 +329,10 @@
     <string name="mr">Mr.</string>
     <string name="time_ends">Time ends</string>
     <string name="ex_gen_001">Ex. GEN 001</string>
+    <string name="email_">Email</string>
+    <string name="email_text">Email</string>
+    <string name="emailtxt">Email</string>
+    <string name="email_txt">Email</string>
+    <string name="txt">Email</string>
 
 </resources>
