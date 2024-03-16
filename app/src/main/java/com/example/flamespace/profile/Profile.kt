@@ -1,16 +1,16 @@
 package com.example.flamespace.profile
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.widget.FrameLayout
 import android.widget.LinearLayout
 import android.widget.PopupWindow
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.example.flamespace.R
-import com.example.flamespace.buildings.Home
 import com.example.flamespace.user.MainActivity
 
 class Profile : AppCompatActivity() {
@@ -19,56 +19,46 @@ class Profile : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
 
+        val newName = intent.getStringExtra("userName")
+        val newDepartment = intent.getStringExtra("userDepartment")
 
-        val profileCardView = findViewById<CardView>(R.id.profile_cardview)
-        val newName = intent.getStringExtra("newName")
-        val newDepartment = intent.getStringExtra("newDepartment")
-
-        val usernameTextView: android.widget.TextView = findViewById(R.id.Username)
-        if (!newDepartment.isNullOrEmpty()) {
+        val usernameTextView: TextView = findViewById(R.id.Username)
+        if (!newName.isNullOrEmpty()) {
             usernameTextView.text = newName
         }
 
+        val departmentTextView: TextView = findViewById(R.id.department_et)
+        if (!newDepartment.isNullOrEmpty()) {
+            departmentTextView.text = newDepartment
+        }
 
-        val departmentTextView: android.widget.TextView = findViewById(R.id.department_et)
-       if (!newDepartment.isNullOrEmpty()) {
-           departmentTextView.text = newDepartment
-       }
-
-
-
-        val editCardView = profileCardView.findViewById<CardView>(R.id.edit_cv)
+        val editCardView = findViewById<CardView>(R.id.edit_cv)
         editCardView.setOnClickListener {
             val intent = Intent(this, Edit_profile::class.java)
             startActivity(intent)
         }
 
-        val currentCardView = profileCardView.findViewById<CardView>(R.id.current_cv)
+        val currentCardView = findViewById<CardView>(R.id.current_cv)
         currentCardView.setOnClickListener {
             val intent = Intent(this, Current::class.java)
             startActivity(intent)
         }
 
-        val historyCardView = profileCardView.findViewById<CardView>(R.id.history_cv)
+        val historyCardView = findViewById<CardView>(R.id.history_cv)
         historyCardView.setOnClickListener {
             val intent = Intent(this, History::class.java)
             startActivity(intent)
         }
 
-
-        val buttonClick = findViewById<FrameLayout>(R.id.backButton)
-        buttonClick.setOnClickListener {
-            val intent = Intent(this, Home::class.java)
-            startActivity(intent)
+        val backButton = findViewById<FrameLayout>(R.id.backButton)
+        backButton.setOnClickListener {
+            finish() // This will close the current activity and go back to the previous one
         }
 
         val logoutbtn = findViewById<android.widget.Button>(R.id.buttonLogout)
         logoutbtn.setOnClickListener {
             showLogoutPopup()
         }
-
-
-
     }
 
     private fun showLogoutPopup() {
@@ -96,13 +86,8 @@ class Profile : AppCompatActivity() {
     }
 
     private fun logout() {
-
-        clearSessionData()
+        // Implement your logout logic here
         navigateToLoginScreen()
-    }
-
-    private fun clearSessionData() {
-        // Clear session data logic
     }
 
     private fun navigateToLoginScreen() {

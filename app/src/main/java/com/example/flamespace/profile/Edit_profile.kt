@@ -28,10 +28,9 @@ class Edit_profile : AppCompatActivity() {
         binding = ActivityEditProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val buttonClick = findViewById<FrameLayout>(R.id.backButton)
-        buttonClick.setOnClickListener {
-            val intent = Intent(this, Profile::class.java)
-            startActivity(intent)
+        val backButton = findViewById<FrameLayout>(R.id.backButton)
+        backButton.setOnClickListener {
+            finish() // This will close the current activity and go back to the previous one
         }
 
         nameEditText = binding.name

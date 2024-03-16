@@ -64,6 +64,7 @@ class Signup : AppCompatActivity() {
         })
     }
 
+
     private fun login(email: String, password: String) {
         // Implement your login logic here
     }

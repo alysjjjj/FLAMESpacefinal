@@ -137,6 +137,7 @@
                 android:backgroundTint="@color/white"
                 android:background="@drawable/custom_edittxt"
                 android:ems="10"
+                android:maxLines="1"
                 android:hint="Ex. GEN 001"
                 android:inputType="text"
                 android:paddingStart="15dp" />

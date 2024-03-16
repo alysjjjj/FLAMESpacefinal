@@ -24,15 +24,18 @@ class Reservation : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_reservation)
 
+        // Initialize UI elements
         val backButton = findViewById<android.widget.ImageView>(R.id.backButton)
         backButton.setOnClickListener {
             goBackToPreviousPage()
         }
 
+        // Retrieve room code from intent
         val roomCode = intent.getStringExtra("ROOM_CODE")
         val roomCodeTextView = findViewById<android.widget.TextView>(R.id.room_code)
         roomCodeTextView.text = roomCode
 
+        // Setup spinner for selecting time options
         val timePicker = findViewById<Spinner>(R.id.timePicker)
         ArrayAdapter.createFromResource(
             this,
@@ -43,17 +46,7 @@ class Reservation : AppCompatActivity(), View.OnClickListener {
             timePicker.adapter = adapter
         }
 
-        timePicker.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
-                val selectedTime = parent.getItemAtPosition(position).toString()
-                // Do something with selected time if needed
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>) {
-                // Do nothing
-            }
-        }
-
+        // Handle button click to save reservation
         val saveButton = findViewById<Button>(R.id.btnreserve)
         saveButton.setOnClickListener {
             val roomCode = intent.getStringExtra("ROOM_CODE") ?: ""
@@ -61,7 +54,6 @@ class Reservation : AppCompatActivity(), View.OnClickListener {
             saveReservation(roomCode, selectedTime)
         }
     }
-
     private fun navigateToCurrentActivity(roomCode: String, selectedTime: String, subject: String) {
         val intent = Intent(this, Current::class.java).apply {
             putExtra("ROOM_CODE", roomCode)

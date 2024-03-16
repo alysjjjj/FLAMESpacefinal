@@ -8,7 +8,7 @@ interface ServiceAPI {
     @GET("/users")
     fun getUsers(): Call<List<User>>
 
-    @POST("/api/auth/register")
+    @POST("/api/users")
     fun signUp(@Body user: UserRequestBody): Call<User>
 
     @POST("/api/auth/login")
@@ -24,7 +24,7 @@ interface ServiceAPI {
     @FormUrlEncoded
     fun resetPassword(@Field("email") email: String): Call<Void>
 
-    @POST("/createReservation")
+    @POST("/api/schedules")
     fun createReservation(@Query("roomCode") roomCode: String, @Query("selectedTime") selectedTime: String, @Query("subject") subject: String): Call<ReservationResponse>
 }
 

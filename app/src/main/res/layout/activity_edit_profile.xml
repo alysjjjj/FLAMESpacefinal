@@ -50,6 +50,7 @@
             android:layout_height="160dp"
             android:layout_marginTop="70dp"
             android:layout_gravity="center"
+            android:contentDescription="@string/profile"
             android:src="@drawable/profile_pic"
             android:elevation="10dp"
             android:clickable="true"
@@ -89,6 +90,8 @@
             android:backgroundTint="@color/white"
             android:fontFamily="@font/gilgan"
             android:hint="@string/enter_your_name"
+            android:autofillHints="name"
+            android:inputType="text"
             android:paddingStart="15dp"
             tools:ignore="RtlSymmetry" />
 
@@ -112,7 +115,8 @@
             android:backgroundTint="@color/white"
             android:gravity="center"
             android:orientation="horizontal"
-            android:paddingStart="15dp">
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp">
 
             <Spinner
                 android:id="@+id/department_save"

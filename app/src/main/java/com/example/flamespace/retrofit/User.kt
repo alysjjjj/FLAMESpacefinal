@@ -18,6 +18,7 @@ data class User(
     @SerializedName("confirm_password")
     val confirm_password: String? = null,
 )
+
 data class LoginUser(
     val email: String,
     val password: String
@@ -25,10 +26,9 @@ data class LoginUser(
 
 data class LoginResponse(
     val token: String,
-    val user: User,
+    val user: User, // Add this property to hold the user information
     val message: String // Add this field if your server sends a message
 )
-
 
 data class UserRequestBody(
     @SerializedName("name") val name: String,
