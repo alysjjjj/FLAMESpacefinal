@@ -1,5 +1,6 @@
 package com.example.flamespace.profile
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -23,6 +24,7 @@ class Edit_profile : AppCompatActivity() {
     private lateinit var buttonSave: Button
     private lateinit var profileImageView: ImageView
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityEditProfileBinding.inflate(layoutInflater)
@@ -37,6 +39,7 @@ class Edit_profile : AppCompatActivity() {
         departmentSpinner = binding.departmentSave
         buttonSave = binding.buttonsave
         profileImageView = binding.profilePic
+        //titleSpinner = binding.titleSpinner
 
         loadProfileData()
 
@@ -49,6 +52,7 @@ class Edit_profile : AppCompatActivity() {
         buttonSave.setOnClickListener {
             val newName = nameEditText.text.toString()
             val newDepartment = departmentSpinner.selectedItem.toString()
+
 
             saveProfileData(newName, newDepartment)
 
@@ -63,6 +67,8 @@ class Edit_profile : AppCompatActivity() {
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, departmentOptions)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         departmentSpinner.adapter = adapter
+
+
     }
 
     private fun loadProfileData() {
@@ -73,7 +79,6 @@ class Edit_profile : AppCompatActivity() {
         nameEditText.setText(profileName)
         val departmentPosition = department?.let { departmentSpinner.selectedItemPosition }
         departmentPosition?.let { departmentSpinner.setSelection(it) }
-
 
         val profileImageUrl = "URL_TO_YOUR_PROFILE_IMAGE"
         Glide.with(this@Edit_profile)
@@ -104,4 +109,7 @@ class Edit_profile : AppCompatActivity() {
     companion object {
         private const val REQUEST_IMAGE_GALLERY = 100
     }
+
+    // Dropdown initialization function
+
 }

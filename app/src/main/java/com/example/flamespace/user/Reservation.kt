@@ -3,7 +3,6 @@ package com.example.flamespace.user
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
@@ -46,18 +45,31 @@ class Reservation : AppCompatActivity(), View.OnClickListener {
             timePicker.adapter = adapter
         }
 
+        //time ends
+        val timeEnd = findViewById<Spinner>(R.id.timeEnd)
+        ArrayAdapter.createFromResource(
+            this,
+            R.array.time_ends,
+            android.R.layout.simple_spinner_item
+        ).also { adapter ->
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            timeEnd.adapter = adapter
+        }
+
         // Handle button click to save reservation
         val saveButton = findViewById<Button>(R.id.btnreserve)
         saveButton.setOnClickListener {
             val roomCode = intent.getStringExtra("ROOM_CODE") ?: ""
-            val selectedTime = timePicker.selectedItem.toString() // Retrieve selected time
-            saveReservation(roomCode, selectedTime)
+            val selectedTime = timePicker.selectedItem.toString()
+            val selectedTime2 = timeEnd.selectedItem.toString()// Retrieve selected time
+            saveReservation(roomCode, selectedTime, selectedTime2)
         }
     }
-    private fun navigateToCurrentActivity(roomCode: String, selectedTime: String, subject: String) {
+    private fun navigateToCurrentActivity(roomCode: String, selectedTime: String,selectedTime2: String, subject: String) {
         val intent = Intent(this, Current::class.java).apply {
             putExtra("ROOM_CODE", roomCode)
             putExtra("SELECTED_TIME", selectedTime)
+            putExtra("SELECTED_TIME_2", selectedTime2)
             putExtra("SUBJECT", subject)
         }
         startActivity(intent)
@@ -67,12 +79,12 @@ class Reservation : AppCompatActivity(), View.OnClickListener {
         onBackPressed()
     }
 
-    private fun saveReservation(roomCode: String, selectedTime: String) {
+    private fun saveReservation(roomCode: String, selectedTime: String, selectedTime2: String) {
         val subjectEditText = findViewById<EditText>(R.id.subject_edittext)
         val subject = subjectEditText.text.toString().trim()
 
         val service = RetrofitHelper.getService()
-        val call = service.createReservation(roomCode, selectedTime, subject)
+        val call = service.createReservation(roomCode, selectedTime, subject, selectedTime2)
 
         call.enqueue(object : Callback<ReservationResponse> {
             override fun onResponse(call: Call<ReservationResponse>, response: Response<ReservationResponse>) {

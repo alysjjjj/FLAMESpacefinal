@@ -89,7 +89,17 @@
                 android:layout_below="@id/current_room"
                 android:fontFamily="@font/gilgan"
                 android:padding="10dp"
-                android:text="@string/sched_example"
+                android:text="7:00 AM"
+                android:textAlignment="center"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/current_schedule2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/current_schedule"
+                android:fontFamily="@font/gilgan"
+                android:padding="10dp"
+                android:text="9:30 AM"
                 android:textAlignment="center"
                 android:textSize="15sp" />
 
@@ -97,7 +107,7 @@
                 android:id="@+id/current_subject"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/current_schedule"
+                android:layout_below="@id/current_schedule2"
                 android:fontFamily="@font/gilgan"
                 android:layout_marginTop="-10dp"
                 android:padding="10dp"

@@ -62,8 +62,8 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_reservation"
         android:layout_width="300dp"
-        android:layout_height="320dp"
-        android:layout_marginTop="52dp"
+        android:layout_height="411dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="@color/darkGreen"
         android:padding="20dp"
         app:cardCornerRadius="10dp"
@@ -75,7 +75,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="240dp"
+            android:layout_height="310dp"
             android:layout_gravity="center"
             android:orientation="vertical">
 
@@ -87,21 +87,22 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/gilgan"
-                android:text="@string/time"
+                android:text="Time start"
                 android:textColor="@color/white"
                 android:textSize="15sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <LinearLayout
-                android:orientation="horizontal"
-                android:background="@drawable/custom_edittxt"
                 android:layout_width="260dp"
                 android:layout_height="56dp"
                 android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_edittxt"
                 android:backgroundTint="@color/white"
+                android:orientation="horizontal"
                 android:paddingStart="18dp"
-                android:layout_marginTop="10dp">
+                tools:ignore="RtlSymmetry">
 
                 <Spinner
                     android:id="@+id/timePicker"
@@ -113,6 +114,39 @@
                     android:visibility="visible" />
             </LinearLayout>
 
+            <TextView
+                android:id="@+id/tv_time_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/gilgan"
+                android:text="@string/time_ends"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="260dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_edittxt"
+                android:backgroundTint="@color/white"
+                android:orientation="horizontal"
+                android:paddingStart="18dp"
+                tools:ignore="RtlSymmetry">
+
+                <Spinner
+                    android:id="@+id/timeEnd"
+                    android:layout_width="237dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:autofillHints="Select time"
+                    android:backgroundTint="@color/darkGreen"
+                    android:visibility="visible" />
+            </LinearLayout>
 
 
             <TextView
@@ -134,13 +168,15 @@
                 android:layout_height="56dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:backgroundTint="@color/white"
                 android:background="@drawable/custom_edittxt"
+                android:backgroundTint="@color/white"
                 android:ems="10"
-                android:maxLines="1"
-                android:hint="Ex. GEN 001"
+                android:hint="@string/ex_gen_001"
                 android:inputType="text"
-                android:paddingStart="15dp" />
+                android:maxLines="1"
+                android:paddingStart="15dp"
+                tools:ignore="RtlSymmetry"
+                android:autofillHints="" />
 
 
         </LinearLayout>

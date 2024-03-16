@@ -51,26 +51,30 @@ class SignIn : AppCompatActivity() {
 
         call.enqueue(object : Callback<LoginResponse> {
             override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
-                if (response.isSuccessful) {
-                    val loginResponse = response.body()
-                    if (loginResponse != null) {
-                        val authToken = "Bearer ${loginResponse.token}"
-                        val intent = Intent(this@SignIn, Home::class.java)
-                        intent.putExtra("authToken", authToken)
-                        startActivity(intent)
-                        finish()
-                        // Add toast for successful login
-                        Toast.makeText(this@SignIn, "Login successful", Toast.LENGTH_SHORT).show()
+                try {
+                    if (response.isSuccessful) {
+                        val loginResponse = response.body()
+                        if (loginResponse != null) {
+                            val authToken = "Bearer ${loginResponse.token}"
+                            val intent = Intent(this@SignIn, Home::class.java)
+                            intent.putExtra("authToken", authToken)
+                            startActivity(intent)
+                            finish()
+                            // Add toast for successful login
+                            Toast.makeText(this@SignIn, "Login successful", Toast.LENGTH_SHORT).show()
+                        } else {
+                            // Handle null response body
+                            Toast.makeText(this@SignIn, "Login failed", Toast.LENGTH_SHORT).show()
+                        }
                     } else {
-                        // Handle null response body
-                        Toast.makeText(this@SignIn, "Login failed", Toast.LENGTH_SHORT).show()
+                        // Handle unsuccessful response
+                        val errorBody = response.errorBody()?.string()
+                        val errorMessage = JSONObject(errorBody).getString("message")
+                        Toast.makeText(this@SignIn, errorMessage, Toast.LENGTH_SHORT).show()
                     }
-                }
-                else {
-                    // Handle unsuccessful response
-                    val errorBody = response.errorBody()?.string()
-                    val errorMessage = JSONObject(errorBody).getString("message")
-                    Toast.makeText(this@SignIn, errorMessage, Toast.LENGTH_SHORT).show()
+                } catch (e: Exception) {
+                    Log.e("SignInActivity", "Error during login: ${e.message}", e)
+                    Toast.makeText(this@SignIn, "An error occurred. Please try again", Toast.LENGTH_SHORT).show()
                 }
             }
 
@@ -80,4 +84,5 @@ class SignIn : AppCompatActivity() {
             }
         })
     }
+
 }
