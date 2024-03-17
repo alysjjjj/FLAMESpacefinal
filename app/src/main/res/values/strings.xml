@@ -334,5 +334,6 @@
     <string name="emailtxt">Email</string>
     <string name="email_txt">Email</string>
     <string name="txt">Email</string>
+    <string name="emailtext">Email</string>
 
 </resources>

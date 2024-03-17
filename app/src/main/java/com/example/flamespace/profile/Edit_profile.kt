@@ -3,65 +3,44 @@ package com.example.flamespace.profile
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.provider.MediaStore
 import android.widget.Button
 import android.widget.EditText
 import android.widget.FrameLayout
-import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.flamespace.R
-import com.example.flamespace.databinding.ActivityEditProfileBinding
-import com.bumptech.glide.Glide
 
 class Edit_profile : AppCompatActivity() {
 
-    private lateinit var binding: ActivityEditProfileBinding
     private lateinit var nameEditText: EditText
     private lateinit var emailEditText: EditText
     private lateinit var buttonSave: Button
-    private lateinit var profileImageView: ImageView
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityEditProfileBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_edit_profile)
 
         val backButton = findViewById<FrameLayout>(R.id.backButton)
         backButton.setOnClickListener {
             finish() // This will close the current activity and go back to the previous one
         }
 
-        nameEditText = binding.name
-        emailEditText = binding.email
-        buttonSave = binding.buttonsave
-        profileImageView = binding.profilePic
-        //titleSpinner = binding.titleSpinner
+        nameEditText = findViewById(R.id.name)
+        emailEditText = findViewById(R.id.email)
+        buttonSave = findViewById(R.id.buttonsave)
 
         loadProfileData()
-
-        binding.profilePic.setOnClickListener {
-            // Open gallery
-            val galleryIntent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
-            startActivityForResult(galleryIntent, REQUEST_IMAGE_GALLERY)
-        }
 
         buttonSave.setOnClickListener {
             val newName = nameEditText.text.toString()
             val newEmail = emailEditText.text.toString()
 
-
             saveProfileData(newName, newEmail)
 
             val intent = Intent(this@Edit_profile, Profile::class.java)
             intent.putExtra("newName", newName)
-            intent.putExtra("newDepartment", newEmail)
+            intent.putExtra("newEmail", newEmail)
             startActivity(intent)
         }
-
-        // spinner
-
-
     }
 
     private fun loadProfileData() {
@@ -69,13 +48,8 @@ class Edit_profile : AppCompatActivity() {
         val profileName = sharedPreferences.getString("name", "")
         val email = sharedPreferences.getString("email", "")
 
-
-        val profileImageUrl = "URL_TO_YOUR_PROFILE_IMAGE"
-        Glide.with(this@Edit_profile)
-            .load(profileImageUrl)
-            .placeholder(R.drawable.profile_pic) // Placeholderimage
-            .error(R.drawable.profile_pic) // Errorimage
-            .into(profileImageView)
+        nameEditText.setText(profileName)
+        emailEditText.setText(email)
     }
 
     private fun saveProfileData(name: String, email: String) {
@@ -85,21 +59,4 @@ class Edit_profile : AppCompatActivity() {
         editor.putString("email", email)
         editor.apply()
     }
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == REQUEST_IMAGE_GALLERY && resultCode == RESULT_OK && data != null) {
-            val imageUri = data.data
-            Glide.with(this@Edit_profile)
-                .load(imageUri)
-                .into(profileImageView)
-        }
-    }
-
-    companion object {
-        private const val REQUEST_IMAGE_GALLERY = 100
-    }
-
-    // Dropdown initialization function
-
 }
