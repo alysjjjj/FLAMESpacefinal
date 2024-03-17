@@ -51,3 +51,11 @@ data class ReservationRequestBody(
     @SerializedName("start_time") val startTime: String,
     @SerializedName("end_time") val endTime: String
 )
+
+data class Room(
+    val id: Int,
+    val roomNumber: String,
+    val building: String
+)
+
+

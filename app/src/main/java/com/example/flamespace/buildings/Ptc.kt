@@ -1,123 +1,121 @@
 package com.example.flamespace.buildings
 
-import android.content.Intent
 import android.os.Bundle
-import android.view.Gravity
-import android.view.LayoutInflater
 import android.view.View
-import android.widget.LinearLayout
-import android.widget.PopupWindow
-import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
-import androidx.cardview.widget.CardView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.flamespace.R
-import com.example.flamespace.user.Reservation
+import com.example.flamespace.retrofit.RetrofitHelper
+import com.example.flamespace.retrofit.Room
+import android.widget.Toast
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
+class Ptc<ImageView : View?> : AppCompatActivity() {
 
-class Ptc : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_room)
 
-        val backButton = findViewById<android.widget.ImageView>(R.id.backButton)
-        backButton.setOnClickListener {
-
-            goBackToPreviousPage()
+        // Initialize views and set up RecyclerView
+        val backButton = findViewById<ImageView>(R.id.backButton)
+        if (backButton != null) {
+            backButton.setOnClickListener {
+                onBackPressed()
+            }
         }
 
+        val recyclerView = findViewById<RecyclerView>(R.id.ptc_recycler)
+        recyclerView.layoutManager = LinearLayoutManager(this)
 
-
-        findViewById<CardView>(R.id.ptc_201).setOnClickListener {
-            showPopup("PTC 201", "50 chairs\n1 air conditioner working")
-        }
-
-        findViewById<CardView>(R.id.ptc_301).setOnClickListener {
-            showPopup("PTC 301", "45 chairs\n2 air conditioner working")
-        }
-
-        findViewById<CardView>(R.id.ptc_302).setOnClickListener {
-            showPopup("PTC 302", "60 chairs\n3 air conditioner working")
-        }
-
-        findViewById<CardView>(R.id.ptc_303).setOnClickListener {
-            showPopup("PTC 303", "55 chairs\n2 air conditioner working")
-        }
-
-        findViewById<CardView>(R.id.ptc_304).setOnClickListener {
-            showPopup("PTC 304", "40 chairs\n1 air conditioner working")
-        }
-
-        findViewById<CardView>(R.id.ptc_305).setOnClickListener {
-            showPopup("PTC 305", "48 chairs\n2 air conditioner working")
-        }
-
-        findViewById<CardView>(R.id.ptc_306).setOnClickListener {
-            showPopup("PTC 306", "48 chairs\n2 air conditioner working")
-        }
-        findViewById<CardView>(R.id.ptc_403).setOnClickListener {
-            showPopup("PTC 403", "48 chairs\n2 air conditioner working")
-        }
-        findViewById<CardView>(R.id.ptc_404).setOnClickListener {
-            showPopup("PTC 404", "48 chairs\n2 air conditioner working")
-        }
-        findViewById<CardView>(R.id.ptc_405).setOnClickListener {
-            showPopup("PTC 405", "48 chairs\n2 air conditioner working")
-        }
-        findViewById<CardView>(R.id.ptc_406).setOnClickListener {
-            showPopup("PTC 406", "48 chairs\n2 air conditioner working")
-        }
-
-
-
-
-
+        // Fetch rooms grouped by buildings from API
+        fetchRoomsGroupedByBuilding(recyclerView)
     }
 
-    private fun navigateToReservationActivity(roomCode: String) {
-        val intent = Intent(this, Reservation::class.java)
-        intent.putExtra("ROOM_CODE", roomCode)
-        startActivity(intent)
+    private fun fetchRoomsGroupedByBuilding(recyclerView: RecyclerView) {
+        val apiService = RetrofitHelper.getService()
+        val call = apiService.getRooms()
+
+        call.enqueue(object : Callback<List<Room>> {
+            override fun onResponse(call: Call<List<Room>>, response: Response<List<Room>>) {
+                if (response.isSuccessful) {
+                    val rooms = response.body()
+                    if (rooms != null) {
+                        // Filter rooms for the "PTC" building
+                        val ptcRooms = rooms.filter { it.building == "PTC" }
+                        // Group rooms by building
+                        val roomsByBuilding = ptcRooms.groupBy { it.building }
+                        val adapter = RoomAdapter(roomsByBuilding)
+                        recyclerView.adapter = adapter
+                    }
+                } else {
+                    // Handle error
+                    Toast.makeText(this@Ptc, "Failed to fetch rooms", Toast.LENGTH_SHORT).show()
+                }
+            }
+
+            override fun onFailure(call: Call<List<Room>>, t: Throwable) {
+                // Handle failure
+                Toast.makeText(this@Ptc, "Network error", Toast.LENGTH_SHORT).show()
+            }
+        })
     }
 
-
-
-    private fun goBackToPreviousPage() {
-        onBackPressed()
+    // Function to fetch latest rooms after adding a room
+    private fun fetchLatestRooms() {
+        val recyclerView = findViewById<RecyclerView>(R.id.ptc_recycler)
+        fetchRoomsGroupedByBuilding(recyclerView)
     }
 
-
-    private fun showPopup(roomCode: String, roomDetails: String) {
-        val inflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-        val popupView = inflater.inflate(R.layout.fragment_modal_popup, null)
-
-        val width = LinearLayout.LayoutParams.WRAP_CONTENT
-        val height = LinearLayout.LayoutParams.WRAP_CONTENT
-        val focusable = true
-
-        val popupWindow = PopupWindow(popupView, width, height, focusable)
-
-        val roomCodeTextView = popupView.findViewById<android.widget.TextView>(R.id.roomCodeTextView)
-        val roomDetailsTextView = popupView.findViewById<android.widget.TextView>(R.id.roomDetailsTextView)
-        val reserveButton = popupView.findViewById<android.widget.Button>(R.id.reserveButton)
-        val btnCancel = popupView.findViewById<android.widget.Button>(R.id.cancelButton)
-
-        roomCodeTextView.text = roomCode
-        roomDetailsTextView.text = roomDetails
-
-        reserveButton.setOnClickListener {
-            navigateToReservationActivity(roomCode)
-            popupWindow.dismiss()
-        }
-
-        btnCancel.setOnClickListener {
-            popupWindow.dismiss()
-        }
-
-        popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0)
+    // Assume you have a function to add a new room
+    private fun addNewRoom() {
+        // Code to add a new room
+        // After adding a room, fetch the latest rooms
+        fetchLatestRooms()
     }
-
-    override fun onClick(v: View?) {
-        TODO("Not yet implemented")
-    }
-
 }
+
+
+//        findViewById<CardView>(R.id.ptc_201).setOnClickListener {
+//            showPopup("PTC 201", "50 chairs\n1 air conditioner working")
+//        }
+//
+//        findViewById<CardView>(R.id.ptc_301).setOnClickListener {
+//            showPopup("PTC 301", "45 chairs\n2 air conditioner working")
+//        }
+//
+//        findViewById<CardView>(R.id.ptc_302).setOnClickListener {
+//            showPopup("PTC 302", "60 chairs\n3 air conditioner working")
+//        }
+//
+//        findViewById<CardView>(R.id.ptc_303).setOnClickListener {
+//            showPopup("PTC 303", "55 chairs\n2 air conditioner working")
+//        }
+//
+//        findViewById<CardView>(R.id.ptc_304).setOnClickListener {
+//            showPopup("PTC 304", "40 chairs\n1 air conditioner working")
+//        }
+//
+//        findViewById<CardView>(R.id.ptc_305).setOnClickListener {
+//            showPopup("PTC 305", "48 chairs\n2 air conditioner working")
+//        }
+//
+//        findViewById<CardView>(R.id.ptc_306).setOnClickListener {
+//            showPopup("PTC 306", "48 chairs\n2 air conditioner working")
+//        }
+//        findViewById<CardView>(R.id.ptc_403).setOnClickListener {
+//            showPopup("PTC 403", "48 chairs\n2 air conditioner working")
+//        }
+//        findViewById<CardView>(R.id.ptc_404).setOnClickListener {
+//            showPopup("PTC 404", "48 chairs\n2 air conditioner working")
+//        }
+//        findViewById<CardView>(R.id.ptc_405).setOnClickListener {
+//            showPopup("PTC 405", "48 chairs\n2 air conditioner working")
+//        }
+//        findViewById<CardView>(R.id.ptc_406).setOnClickListener {
+//            showPopup("PTC 406", "48 chairs\n2 air conditioner working")
+//        }
+
+

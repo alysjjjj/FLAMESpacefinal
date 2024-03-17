@@ -31,4 +31,8 @@ interface ServiceAPI {
     fun createReservation(
         @Body reservation: ReservationRequestBody
     ): Call<ReservationResponse>
+
+    @GET("/api/rooms")
+    fun getRooms(): Call<List<Room>>
+
 }
