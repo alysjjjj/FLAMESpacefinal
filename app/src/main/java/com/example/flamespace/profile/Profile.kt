@@ -10,7 +10,6 @@ import android.widget.LinearLayout
 import android.widget.PopupWindow
 import androidx.cardview.widget.CardView
 import com.example.flamespace.R
-import com.example.flamespace.buildings.Home
 import com.example.flamespace.user.MainActivity
 
 class Profile : AppCompatActivity() {
@@ -54,7 +53,7 @@ class Profile : AppCompatActivity() {
 
         val backButton = findViewById<FrameLayout>(R.id.backButton)
         backButton.setOnClickListener {
-            finish() // This will close the current activity and go back to the previous one
+            finish()
         }
 
         val logoutbtn = findViewById<android.widget.Button>(R.id.buttonLogout)

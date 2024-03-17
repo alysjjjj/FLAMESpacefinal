@@ -88,19 +88,21 @@
     <!-- android:id="@+id/email_prf" -->
 
     <!--  -->
+
     <androidx.cardview.widget.CardView
         android:id="@+id/profile_cardview"
-        android:layout_width="320dp"
-        android:layout_height="300dp"
+        android:layout_width="304dp"
+        android:layout_height="230dp"
         android:layout_marginBottom="92dp"
         android:backgroundTint="@color/darkGreen"
         app:cardCornerRadius="30dp"
         app:cardElevation="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email_prf">
+        app:layout_constraintTop_toBottomOf="@+id/email_prf"
+        app:layout_constraintVertical_bias="0.356">
 
 
         <androidx.cardview.widget.CardView
@@ -108,7 +110,7 @@
             android:layout_width="250dp"
             android:layout_height="65dp"
             android:layout_gravity="center"
-            android:layout_marginTop="-80dp"
+            android:layout_marginTop="-40dp"
             app:cardCornerRadius="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
@@ -141,7 +143,7 @@
             android:layout_width="250dp"
             android:layout_height="65dp"
             android:layout_gravity="center"
-            android:layout_marginTop="-5dp"
+            android:layout_marginTop="35dp"
             app:cardCornerRadius="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
@@ -166,39 +168,6 @@
                 android:layout_marginTop="24dp"
                 android:contentDescription="@string/currentbtn"
                 app:srcCompat="@drawable/gobtn" />
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/history_cv"
-            android:layout_width="250dp"
-            android:layout_height="65dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="70dp"
-            app:cardCornerRadius="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
-
-
-            <TextView
-                android:id="@+id/textView21"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:fontFamily="@font/gilgan"
-                android:text="@string/historybtn"
-                android:textSize="17sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <ImageView
-                android:id="@+id/his"
-                android:layout_width="35dp"
-                android:layout_height="16dp"
-                android:layout_marginStart="205dp"
-                android:layout_marginTop="24dp"
-                android:contentDescription="@string/history_btn"
-                app:srcCompat="@drawable/gobtn" />
-
         </androidx.cardview.widget.CardView>
 
 
