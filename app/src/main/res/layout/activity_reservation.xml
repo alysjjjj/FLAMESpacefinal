@@ -93,6 +93,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+
             <LinearLayout
                 android:layout_width="260dp"
                 android:layout_height="56dp"
@@ -104,15 +105,18 @@
                 android:paddingStart="18dp"
                 tools:ignore="RtlSymmetry">
 
-                <Spinner
+                <EditText
                     android:id="@+id/timePicker"
-                    android:layout_width="237dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="225dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:autofillHints="Select time"
-                    android:backgroundTint="@color/darkGreen"
-                    android:visibility="visible" />
+                    android:clickable="true"
+                    android:drawableEnd="@drawable/baseline_keyboard_arrow_down_24"
+                    android:drawablePadding="8dp"
+                    android:focusable="false"
+                    android:hint="Select Time" />
             </LinearLayout>
+
 
             <TextView
                 android:id="@+id/tv_time_end"
@@ -138,14 +142,16 @@
                 android:paddingStart="18dp"
                 tools:ignore="RtlSymmetry">
 
-                <Spinner
-                    android:id="@+id/timeEnd"
-                    android:layout_width="237dp"
-                    android:layout_height="match_parent"
+                <EditText
+                    android:id="@+id/timePickerEditText"
+                    android:layout_width="225dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:autofillHints="Select time"
-                    android:backgroundTint="@color/darkGreen"
-                    android:visibility="visible" />
+                    android:clickable="true"
+                    android:drawableEnd="@drawable/baseline_keyboard_arrow_down_24"
+                    android:drawablePadding="8dp"
+                    android:focusable="false"
+                    android:hint="Select Time" />
             </LinearLayout>
 
 
