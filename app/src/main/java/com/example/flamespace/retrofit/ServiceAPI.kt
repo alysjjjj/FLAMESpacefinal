@@ -36,4 +36,5 @@ interface ServiceAPI {
     fun getRooms(): Call<List<Room>>
 
     fun createReservation(@Query("roomCode") roomCode: String, @Query("selectedTime") selectedTime: String,@Query("subject") subject: String): Call<ReservationResponse>
+    abstract fun createReservation(roomCode: String, selectedTime: String, selectedTime2: String, subject: String): Any
 }
