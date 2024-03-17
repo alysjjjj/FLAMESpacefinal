@@ -4,9 +4,8 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
-    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"
-        />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -17,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FLAMESpace"
         tools:targetApi="31">
+        <activity
+            android:name=".profile.ChangePassword"
+            android:exported="false" />
         <activity
             android:name=".user.ForgotActivity"
             android:exported="false" />
@@ -78,11 +80,11 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_channel_id"
             android:value="@string/default_notification_channel_id" />
-            <receiver android:name=".notification.AlarmReceiver" />
+
+        <receiver android:name=".notification.AlarmReceiver" />
     </application>
 
 </manifest>

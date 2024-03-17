@@ -41,6 +41,12 @@ class Edit_profile : AppCompatActivity() {
             intent.putExtra("newEmail", newEmail)
             startActivity(intent)
         }
+
+        val btnChangePass: Button = findViewById(R.id.btn_changepass)
+        btnChangePass.setOnClickListener {
+            val intent = Intent(this, ChangePassword::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun loadProfileData() {

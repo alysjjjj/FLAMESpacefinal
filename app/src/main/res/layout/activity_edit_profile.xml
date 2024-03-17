@@ -126,12 +126,23 @@
         <Button
             android:id="@+id/buttonsave"
             style="@style/ButtonGreen"
-            android:layout_width="150dp"
+            android:layout_width="230dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="35dp"
             android:gravity="center"
             android:text="@string/save"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_changepass"
+            style="@style/ButtonGray"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/change_password_"
             android:textSize="18sp" />
 
 
