@@ -45,11 +45,6 @@ class Profile : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val historyCardView = profileCardView.findViewById<CardView>(R.id.history_cv)
-        historyCardView.setOnClickListener {
-            val intent = Intent(this, History::class.java)
-            startActivity(intent)
-        }
 
         val backButton = findViewById<FrameLayout>(R.id.backButton)
         backButton.setOnClickListener {
