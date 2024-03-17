@@ -54,7 +54,7 @@ data class ReservationRequestBody(
 
 data class Room(
     val id: Int,
-    val roomNumber: String,
+    @SerializedName("room_number")val roomNumber: String,
     val building: String
 )
 

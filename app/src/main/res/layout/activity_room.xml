@@ -19,13 +19,13 @@
         <ImageView
             android:id="@+id/backButton"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingStart="8dp"
-            android:padding="15dp"
-            app:tint="@color/new_darkGreen"
-            android:src="@drawable/ic_arrow_back_white"
+            android:layout_height="56dp"
             android:layout_gravity="center"
             android:contentDescription="@string/back_button"
+            android:padding="15dp"
+            android:paddingStart="8dp"
+            android:src="@drawable/ic_arrow_back_white"
+            app:tint="@color/new_darkGreen"
             tools:ignore="RtlSymmetry" />
     </FrameLayout>
 
@@ -47,23 +47,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ScrollView
-        android:layout_width="376dp"
-        android:layout_height="600dp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ptc_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:foregroundGravity="center"
+        tools:listitem="@layout/rooms_rv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tit_ptc">
+    </androidx.recyclerview.widget.RecyclerView>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/ptc_recycler"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/tit_history">
-        </androidx.recyclerview.widget.RecyclerView>
-
-    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

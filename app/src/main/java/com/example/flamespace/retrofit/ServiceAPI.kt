@@ -35,6 +35,12 @@ interface ServiceAPI {
     @GET("/api/rooms")
     fun getRooms(): Call<List<Room>>
 
-    fun createReservation(@Query("roomCode") roomCode: String, @Query("selectedTime") selectedTime: String,@Query("subject") subject: String): Call<ReservationResponse>
-    abstract fun createReservation(roomCode: String, selectedTime: String, selectedTime2: String, subject: String): Any
+    // Removed duplicate declaration and corrected the annotation to @Field
+    @FormUrlEncoded
+    @POST("/api/reservations")
+    fun createReservation(
+        @Field("roomCode") roomCode: String,
+        @Field("selectedTime") selectedTime: String,
+        @Field("subject") subject: String
+    ): Call<ReservationResponse>
 }
