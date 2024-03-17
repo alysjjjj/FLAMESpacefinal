@@ -28,6 +28,12 @@ interface ServiceAPI {
     fun resetPassword(@Field("email") email: String): Call<Void>
 
     @POST("/api/schedules")
+    fun createReservation(
+        @Body reservation: ReservationRequestBody
+    ): Call<ReservationResponse>
+
+    @GET("/api/rooms")
+    fun getRooms(): Call<List<Room>>
+
     fun createReservation(@Query("roomCode") roomCode: String, @Query("selectedTime") selectedTime: String,@Query("subject") subject: String): Call<ReservationResponse>
 }
-
