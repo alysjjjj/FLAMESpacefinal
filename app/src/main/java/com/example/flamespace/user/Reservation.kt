@@ -2,15 +2,19 @@ package com.example.flamespace.user
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Toast
 import android.widget.Spinner
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.flamespace.R
 import com.example.flamespace.profile.Current
+import com.example.flamespace.retrofit.ReservationRequestBody
 import com.example.flamespace.retrofit.RetrofitHelper
 import com.example.flamespace.retrofit.ReservationResponse
 import retrofit2.Call
@@ -24,17 +28,17 @@ class Reservation : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_reservation)
 
         // Initialize UI elements
-        val backButton = findViewById<android.widget.ImageView>(R.id.backButton)
+        val backButton = findViewById<ImageView>(R.id.backButton)
         backButton.setOnClickListener {
             goBackToPreviousPage()
         }
 
-        // Retrieve room code from intent
-        val roomCode = intent.getStringExtra("ROOM_CODE")
-        val roomCodeTextView = findViewById<android.widget.TextView>(R.id.room_code)
+        // Retrieve room code from intent and set it to the TextView
+        val roomCode = intent.getStringExtra("ROOM_CODE") ?: ""
+        val roomCodeTextView = findViewById<TextView>(R.id.room_code)
         roomCodeTextView.text = roomCode
 
-        // Setup spinner for selecting time options
+        // Setup Spinners for selecting start and end times
         val timePicker = findViewById<Spinner>(R.id.timePicker)
         ArrayAdapter.createFromResource(
             this,
@@ -45,7 +49,6 @@ class Reservation : AppCompatActivity(), View.OnClickListener {
             timePicker.adapter = adapter
         }
 
-        //time ends
         val timeEnd = findViewById<Spinner>(R.id.timeEnd)
         ArrayAdapter.createFromResource(
             this,
@@ -59,13 +62,15 @@ class Reservation : AppCompatActivity(), View.OnClickListener {
         // Handle button click to save reservation
         val saveButton = findViewById<Button>(R.id.btnreserve)
         saveButton.setOnClickListener {
-            val roomCode = intent.getStringExtra("ROOM_CODE") ?: ""
             val selectedTime = timePicker.selectedItem.toString()
-            val selectedTime2 = timeEnd.selectedItem.toString()// Retrieve selected time
-            saveReservation(roomCode, selectedTime, selectedTime2)
+            val selectedTime2 = timeEnd.selectedItem.toString()
+            val subjectEditText = findViewById<EditText>(R.id.subject_edittext)
+            val subject = subjectEditText.text.toString().trim()
+            saveReservation(roomCode, selectedTime, selectedTime2, subject)
         }
     }
-    private fun navigateToCurrentActivity(roomCode: String, selectedTime: String,selectedTime2: String, subject: String) {
+
+    private fun navigateToCurrentActivity(roomCode: String, selectedTime: String, selectedTime2: String, subject: String) {
         val intent = Intent(this, Current::class.java).apply {
             putExtra("ROOM_CODE", roomCode)
             putExtra("SELECTED_TIME", selectedTime)
@@ -76,23 +81,31 @@ class Reservation : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun goBackToPreviousPage() {
+        Log.d("ReservationActivity", "Going back to previous page")
         onBackPressed()
     }
 
-    private fun saveReservation(roomCode: String, selectedTime: String, selectedTime2: String) {
-        val subjectEditText = findViewById<EditText>(R.id.subject_edittext)
-        val subject = subjectEditText.text.toString().trim()
+    private fun saveReservation(roomCode: String, selectedTime: String, selectedTime2: String, subject: String) {
+        // Validate subject before proceeding
+        if (subject.isEmpty()) {
+            Toast.makeText(this, "Please enter a subject", Toast.LENGTH_SHORT).show()
+            return
+        }
 
+        // Retrofit service initialization
         val service = RetrofitHelper.getService()
-        val call = service.createReservation(roomCode, selectedTime, subject, selectedTime2)
+
+        // Create reservation request
+        val reservationRequestBody = ReservationRequestBody(roomCode, selectedTime, selectedTime2, subject)
+        val call = service.createReservation(reservationRequestBody)
 
         call.enqueue(object : Callback<ReservationResponse> {
             override fun onResponse(call: Call<ReservationResponse>, response: Response<ReservationResponse>) {
                 if (response.isSuccessful) {
-                    val reservationResponse = response.body()
                     // Handle success response
+                    val reservationResponse = response.body()
                     Toast.makeText(this@Reservation, "Reservation successful", Toast.LENGTH_SHORT).show()
-                    // Optionally, you can navigate to another activity or perform other actions
+                    navigateToCurrentActivity(roomCode, selectedTime, selectedTime2, subject)
                 } else {
                     // Handle error response
                     Toast.makeText(this@Reservation, "Reservation failed", Toast.LENGTH_SHORT).show()
@@ -106,16 +119,10 @@ class Reservation : AppCompatActivity(), View.OnClickListener {
         })
     }
 
+
     override fun onClick(v: View?) {
         // Handle click events if needed
     }
+
+    // Add other methods as needed
 }
-
-
-//    private fun saveReservation(roomCode: String, selectedTime: String) {
-//        val subjectEditText = findViewById<EditText>(R.id.subject_edittext)
-//        val subject = subjectEditText.text.toString().trim()
-//
-//        navigateToCurrentActivity(roomCode, selectedTime, subject)
-//        Toast.makeText(this, "Room reserved", Toast.LENGTH_SHORT).show()
-//    }

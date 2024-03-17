@@ -29,9 +29,10 @@ data class LoginUser(
 
 data class LoginResponse(
     val token: String,
-    val user: User, // Add this property to hold the user information
-    val message: String // Add this field if your server sends a message
+    val user: User,
+    val message: String
 )
+
 
 data class UserRequestBody(
     @SerializedName("name") val name: String,
@@ -42,4 +43,11 @@ data class UserRequestBody(
 data class ReservationResponse(
     val status: String,
     val message: String
+)
+
+data class ReservationRequestBody(
+    @SerializedName("room_id") val roomId: String,
+    @SerializedName("user_id") val userId: String,
+    @SerializedName("start_time") val startTime: String,
+    @SerializedName("end_time") val endTime: String
 )
